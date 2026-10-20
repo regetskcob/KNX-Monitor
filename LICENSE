@@ -1,0 +1,29 @@
+KNX Monitor – End User License Agreement
+Copyright (c) 2026 regetskcob. All rights reserved.
+
+1. Scope. This agreement covers the KNX Monitor builds published by the
+   copyright holder: desktop downloads, Home Assistant add-on images and KNX Box
+   images ("the Software"). Builds obtained from the App Store or Google Play
+   are governed by the terms of that store; Apple's Standard EULA applies to
+   the App Store.
+
+2. License. You may install and use the Software for private and commercial
+   purposes on devices you own or control. Features that require a paid plan
+   may only be used with a valid license.
+
+3. Restrictions. You may not copy, modify, distribute, sublicense, rent or
+   sell the Software, and you may not decompile, disassemble or otherwise
+   reverse engineer it, except where applicable law expressly permits this
+   despite this restriction.
+
+4. Third-party components. The Software contains open-source components under
+   their own licenses (listed in the app under "About KNX Monitor and
+   licenses"). Those licenses take precedence for the respective components.
+
+5. No warranty. The Software is provided "as is". It sends and reads telegrams
+   on a KNX installation; you are responsible for its use on your installation.
+   Liability for intent and gross negligence, for injury to life, body or
+   health, and under mandatory product liability law remains unaffected.
+
+6. Earlier versions. Versions released before 20 October 2026 under the MIT
+   License remain available under that license.

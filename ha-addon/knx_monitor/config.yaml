@@ -1,0 +1,27 @@
+name: KNX Monitor
+version: "1.5.1"
+slug: knx_monitor
+description: KNX bus monitor, continuous recording, health check and commissioning in the sidebar
+url: https://github.com/regetskcob/KNX-Monitor
+# Prebuilt images from GitHub Actions (.github/workflows/addon.yml). For local
+# development tool/build_ha_addon.sh removes this line so HA builds the image itself.
+image: ghcr.io/regetskcob/{arch}-knx-monitor
+arch:
+  - aarch64
+  - amd64
+init: false
+startup: application
+boot: auto
+# Host network: KNXnet/IP via UDP straight into the LAN, gateway discovery.
+host_network: true
+# Alarm notifications as HA notification or push (Supervisor API)
+homeassistant_api: true
+options:
+  notify_service: ""
+schema:
+  notify_service: str?
+ingress: true
+ingress_port: 8765
+panel_icon: mdi:lan-connect
+panel_title: KNX Monitor
+backup: hot

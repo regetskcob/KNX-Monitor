@@ -1,0 +1,6 @@
+configuration:
+  notify_service:
+    name: Benachrichtigungsdienst
+    description: >-
+      Optional: Dienst für Alarm-Mitteilungen, z. B. „notify.mobile_app_iphone“.
+      Leer lassen für eine Benachrichtigung in Home Assistant.
