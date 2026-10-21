@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.7.0
+
+- Watchers run in the add-on: they keep working without an open browser and
+  send a Home Assistant notification (also as push with `notify_service`).
+  Watchers are stored in the add-on and shared by all browsers.
+- Bus monitor works next to the add-on: the add-on hands its tunnel over while
+  the bus monitor is open (before, the gateway reported no free tunnels).
+- Switching away from the KNX Monitor panel and back keeps the last values and
+  telegrams instead of starting empty.
+- ETS project import shows its progress and opens password-protected ETS5
+  projects faster.
+- Topology stays smooth with long recordings.
+- Charts: on/off values get a row of their own; charts can be prepared with
+  project addresses that have not sent yet; "free selection" is gone.
+- Project check uses two columns on wider screens.
+- Sidebar starts with the overview.
+
 ## 1.6.0
 
 - Topology: lines, couplers and devices as a tree with a detail area; line

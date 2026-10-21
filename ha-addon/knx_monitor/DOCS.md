@@ -14,8 +14,9 @@ the ETS catalog, recordings and long-term history in the add-on's data folder
 - Access only through Home Assistant (Ingress) – requests to the port from
   anywhere else in the LAN are rejected.
 - The add-on keeps **one** connection to the bus, shared by all open views
-  (tunnel, routing, IP Secure or the Home Assistant KNX integration). The bus
-  monitor tool opens one extra tunnel while it is open.
+  (tunnel, routing, IP Secure or the Home Assistant KNX integration). While
+  the bus monitor tool is open, the add-on hands its tunnel over to it –
+  recording pauses for that time and resumes when you close the bus monitor.
 - Use **Pause** on the start screen to free the tunnel, e.g. for ETS.
 - The add-on uses the host network so it can reach the gateway via UDP and
   discover gateways on your network.
@@ -68,6 +69,16 @@ When a group address switches to an alarm or fault state, the add-on creates a
 Home Assistant notification (at most one per address every 5 minutes; can be
 turned off in the app menu under "Alarm notifications"). With continuous
 recording this also works without an open browser.
+
+## Watchers
+
+Watchers (Tools → Watchers) report a group address as soon as it is sent,
+optionally only for a certain value. In the add-on they run on the server:
+they keep working without an open browser and send a Home Assistant
+notification (at most one per watcher and minute; also as push if
+`notify_service` is set). An open KNX Monitor additionally plays the sound
+and shows the hit. Watchers are stored in the add-on and shared by all
+browsers.
 
 ## Configuration
 
