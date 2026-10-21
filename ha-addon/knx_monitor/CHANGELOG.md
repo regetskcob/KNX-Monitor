@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.6.0
+
+- Topology: lines, couplers and devices as a tree with a detail area; line
+  couplers, power supplies, actuators, push buttons, presence detectors,
+  weather stations and smoke detectors are drawn like the real devices, with
+  status LEDs and telegram pulses on the bus cable.
+- Switching objects can be sent as 0/1 directly from the object list and the
+  topology.
+- Project import reads the flags of the communication objects (C R W T U);
+  the project check compares the ETS project without any bus traffic.
+- Group objects of ETS modules get the right object numbers.
+- Import your ETS project once more to see the flags and the corrected
+  object numbers.
+- Values without a project: 3- and 8-byte values are shown as date and time.
+- Bus monitor on narrow screens: value below the destination, full raw data,
+  tap a sender to filter the list.
+- Very wide screens show the live list as a column next to the overview.
+- Diagnostics package for support: error report, recording, project and
+  technical details as a ZIP, without personal data.
+- Data is now stored per installation; existing data moves into the first
+  installation automatically at start.
+
 ## 1.5.1
 
 - Security: the add-on's own files – the bus connection with the IP Secure
