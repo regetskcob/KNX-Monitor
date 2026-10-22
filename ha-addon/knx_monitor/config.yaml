@@ -1,5 +1,5 @@
 name: KNX Monitor
-version: "1.7.1"
+version: "1.7.2"
 slug: knx_monitor
 description: KNX bus monitor, continuous recording, health check and commissioning in the sidebar
 url: https://github.com/regetskcob/KNX-Monitor

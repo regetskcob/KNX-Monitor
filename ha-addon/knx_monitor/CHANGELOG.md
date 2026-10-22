@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.2
+
+- Actuators of all manufacturers use the app's own drawing again. Device
+  graphics that were only meant for testing are no longer included.
+
 ## 1.7.1
 
 - Topology and device, coupler and actuator details use far less CPU in the
