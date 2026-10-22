@@ -20,6 +20,9 @@ body:
       multiple: true
       options:
         - Home Assistant add-on
+        - Linux
         - iOS / iPadOS
         - Android
-        - Desktop
+        - macOS
+        - Windows
+        - KNX Box

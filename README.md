@@ -2,8 +2,8 @@
 
 Bus monitor and diagnostic tool for KNX. Available today as a Home Assistant
 add-on and for Linux; the apps for iPhone, iPad, Android, Mac and Windows
-follow in the coming weeks. Later the KNX Box, a Raspberry Pi that records on
-site, joins them.
+follow in the coming weeks. The KNX Box, a Raspberry Pi that records on site,
+is a first preview, set up with the app; its image is listed under Downloads.
 
 **Website:** <https://knx-monitor.de>
 
@@ -19,7 +19,7 @@ public.
 - **iPhone, iPad, Mac:** App Store, coming in the next weeks
 - **Android:** Google Play, coming in the next weeks
 - **Windows:** coming in the next weeks
-- **KNX Box (Raspberry Pi image):** releases tagged `box-v…`
+- **KNX Box (Raspberry Pi image, preview):** releases tagged `box-v…`
 
 ## Home Assistant add-on
 
