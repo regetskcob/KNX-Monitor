@@ -1,1 +1,4 @@
 User-agent: *
+Disallow:
+
+Sitemap: https://knx-monitor.de/sitemap.xml

@@ -2,7 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://knx-monitor.de/en/delete-account/</loc>
+    <lastmod>2026-10-21T08:40:40+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://knx-monitor.de/konto-loeschen/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://knx-monitor.de/en/delete-account/"
+                />
+  </url><url>
     <loc>https://knx-monitor.de/en/box/</loc>
+    <lastmod>2026-10-22T17:56:38+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de-DE"
@@ -15,6 +29,7 @@
                 />
   </url><url>
     <loc>https://knx-monitor.de/en/</loc>
+    <lastmod>2026-10-22T12:55:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de-DE"
@@ -24,6 +39,32 @@
                 rel="alternate"
                 hreflang="en-US"
                 href="https://knx-monitor.de/en/"
+                />
+  </url><url>
+    <loc>https://knx-monitor.de/en/privacy/</loc>
+    <lastmod>2026-10-22T13:35:55+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://knx-monitor.de/datenschutz/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://knx-monitor.de/en/privacy/"
+                />
+  </url><url>
+    <loc>https://knx-monitor.de/en/support/</loc>
+    <lastmod>2026-10-17T19:14:38+02:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://knx-monitor.de/support/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://knx-monitor.de/en/support/"
                 />
   </url>
 </urlset>
