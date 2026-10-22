@@ -1,8 +1,8 @@
 name: KNX Monitor
-version: "1.7.2"
+version: "1.7.3"
 slug: knx_monitor
 description: KNX bus monitor, continuous recording, health check and commissioning in the sidebar
-url: https://github.com/regetskcob/KNX-Monitor
+url: https://knx-monitor.de
 # Prebuilt images from GitHub Actions (.github/workflows/addon.yml). For local
 # development tool/build_ha_addon.sh removes this line so HA builds the image itself.
 image: ghcr.io/regetskcob/{arch}-knx-monitor

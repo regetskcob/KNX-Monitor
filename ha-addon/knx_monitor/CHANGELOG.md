@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.7.3
+
+- The add-on links to its website knx-monitor.de, with support, privacy
+  policy and FAQ.
+
 ## 1.7.2
 
 - Actuators of all manufacturers use the app's own drawing again. Device
