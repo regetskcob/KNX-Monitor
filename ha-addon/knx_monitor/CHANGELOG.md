@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.7.1
+
+- Topology and device, coupler and actuator details use far less CPU in the
+  add-on: no animations, drawings refresh at most once per second.
+- Diagnostic package contains the whole session instead of the last 5000
+  telegrams shown, and can use days from the long-term history as source.
+- Chart tiles show values over time like the full-screen chart, on/off values
+  as narrow bands.
+- Dialogs, favourites and pins look clearer; the web app starts in the colours
+  of the splash screen.
+
 ## 1.7.0
 
 - Watchers run in the add-on: they keep working without an open browser and
