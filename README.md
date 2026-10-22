@@ -1,9 +1,11 @@
 # KNX Monitor
 
-Group monitor and diagnostic tool for KNX on iPad, iPhone, Android, Mac,
-Windows, Linux, as a Home Assistant add-on and as the KNX Box on a Raspberry Pi.
+Bus monitor and diagnostic tool for KNX. Available today as a Home Assistant
+add-on and for Linux; the apps for iPhone, iPad, Android, Mac and Windows
+follow in the coming weeks. Later the KNX Box, a Raspberry Pi that records on
+site, joins them.
 
-**Website:** <https://www.regetskcob.de/knx/>
+**Website:** <https://knx-monitor.de>
 
 This repository hosts the Home Assistant add-on repository, the Linux and
 KNX Box downloads, and the issue tracker. The source code of KNX Monitor is not
