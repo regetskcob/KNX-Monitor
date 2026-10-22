@@ -5,7 +5,7 @@ Windows, Linux, as a Home Assistant add-on and as the KNX Box on a Raspberry Pi.
 
 **Website:** <https://www.regetskcob.de/knx/>
 
-This repository hosts the Home Assistant add-on repository, the desktop and
+This repository hosts the Home Assistant add-on repository, the Linux and
 KNX Box downloads, and the issue tracker. The source code of KNX Monitor is not
 public.
 
@@ -13,9 +13,10 @@ public.
 
 ## Downloads
 
-- **iPhone, iPad, Mac:** App Store
-- **Android:** Google Play
-- **Windows, Linux:** [latest release](https://github.com/regetskcob/KNX-Monitor/releases/latest)
+- **Linux:** [latest release](https://github.com/regetskcob/KNX-Monitor/releases/latest)
+- **iPhone, iPad, Mac:** App Store, coming in the next weeks
+- **Android:** Google Play, coming in the next weeks
+- **Windows:** coming in the next weeks
 - **KNX Box (Raspberry Pi image):** releases tagged `box-v…`
 
 ## Home Assistant add-on
