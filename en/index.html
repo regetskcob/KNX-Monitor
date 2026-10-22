@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en-US" data-product="knx">
+<head>
+	<meta name="generator" content="Hugo 0.154.5">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KNX Monitor – KNX bus monitor &amp; diagnostics</title>
+<meta name="description" content="KNX Monitor: a modern KNX bus monitor and diagnostics tool as a Home Assistant add-on, soon for iPhone, iPad, Android and desktop too. Reads ETS projects, checks your installation, your data stays local.">
+<link rel="canonical" href="https://knx-monitor.de/en/">
+<link rel="alternate" hreflang="de-DE" href="https://knx-monitor.de/">
+<link rel="alternate" hreflang="en-US" href="https://knx-monitor.de/en/">
+<link rel="alternate" hreflang="x-default" href="https://knx-monitor.de/">
+<meta name="theme-color" content="#437F18" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121311" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KNX Monitor">
+<meta property="og:title" content="KNX Monitor – KNX bus monitor &amp; diagnostics">
+<meta property="og:description" content="KNX Monitor: a modern KNX bus monitor and diagnostics tool as a Home Assistant add-on, soon for iPhone, iPad, Android and desktop too. Reads ETS projects, checks your installation, your data stays local.">
+<meta property="og:url" content="https://knx-monitor.de/en/">
+<meta property="og:image" content="https://knx-monitor.de/images/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/teaser.min.0d32790cb913d452fc11647c5ddc3c4cccd238e2e52021a94f272536fd9033d9.css" integrity="sha256-DTJ5DLkT1FL8EWR8Xdw8TMzSOOLlICGpTyclNv2QM9k=">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"UtilitiesApplication","description":"KNX Monitor: a modern KNX bus monitor and diagnostics tool as a Home Assistant add-on, soon for iPhone, iPad, Android and desktop too. Reads ETS projects, checks your installation, your data stays local.","name":"KNX Monitor","operatingSystem":"iOS, iPadOS, Android, macOS, Windows, Linux, Home Assistant","url":"https://knx-monitor.de/en/"}</script>
+</head>
+<body class="hz tz">
+<nav class="hz-horizon" data-hz-horizon data-product="knx" aria-label="Horizont">
+  <span class="hz-horizon-line" aria-hidden="true"></span>
+  <span class="hz-horizon-done" aria-hidden="true"></span>
+  <a class="hz-horizon-back" href="#" data-hz-back hidden aria-label="Zurück zur vorigen Seite"><span aria-hidden="true">←</span> Zurück</a>
+  <a class="hz-walker" href="https://www.regetskcob.de/karte/" data-hz-open-karte data-hint="Karte" data-place="KNX Monitor" aria-label="Flurkarte, du bist in KNX Monitor"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="28" height="28" viewBox="0 0 100 100" role="img" aria-label="KNX Monitor" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H32.14M67.86 66.7H96"/>
+  <g stroke="none">
+    <rect x="32.14" y="35.71" width="17.86" height="39.29" rx="2.5" style="fill:#D23C2E"/>
+    <rect x="50" y="35.71" width="17.86" height="39.29" rx="2.5" style="fill:light-dark(#3A3D38, #5C6058)"/>
+    <path d="M35.71 39.29h10.72v10.71H35.71z" style="fill:#A82C21"/>
+    <path d="M53.57 39.29h10.72v10.71H53.57z" style="fill:light-dark(#262824, #44473F)"/>
+  </g>
+</svg>
+</a>
+  <span class="hz-horizon-lang"><span class="hz-horizon-lang-here" aria-current="true">EN</span><a href="/" hreflang="de" lang="de">DE</a>
+  </span>
+</nav>
+<dialog class="hz-karte-dialog" data-hz-karte aria-label="Flurkarte">
+  <form method="dialog" class="hz-karte-top">
+    <span class="t-kennung hz-kennung">Flurkarte · KNX Monitor</span>
+    <span class="hz-karte-actions">
+      <button class="hz-button hz-button--secondary" type="button" data-hz-back hidden>Zurück</button>
+      <button class="hz-button hz-button--secondary" type="submit">Schließen</button>
+    </span>
+  </form>
+  <nav class="hz-karte" aria-label="Flurkarte" lang="de">
+<div class="hz-karte-grid">
+  <div class="hz-gem" data-product="regetskcob">
+    <p class="t-kennung hz-kennung"><a href="https://www.regetskcob.de/">Gemarkung regetskcob</a></p>
+    <ul class="hz-parzellen">
+      <li style="--cols:3;--rows:4;--ang:45deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/blog/">
+          <span class="hz-parzelle-count">151 Beiträge</span>
+          <span class="hz-parzelle-name">Blog</span>
+        </a>
+      </li>
+      <li style="--cols:2;--rows:2;--ang:0deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/galerie/">
+          <span class="hz-parzelle-count">100 Fotos</span>
+          <span class="hz-parzelle-name">Galerie</span>
+        </a>
+      </li>
+      <li style="--cols:1;--rows:2;--ang:90deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/niederrhein/">
+          <span class="hz-parzelle-count">52 Fotos · Serie</span>
+          <span class="hz-parzelle-name">Niederrhein.</span>
+        </a>
+      </li>
+      <li style="--cols:2;--rows:1;--ang:135deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/ausruestung/">
+          <span class="hz-parzelle-count">33 Teile</span>
+          <span class="hz-parzelle-name">Ausrüstung</span>
+        </a>
+      </li>
+      <li style="--cols:1;--rows:1;--ang:60deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/rezepte/">
+          <span class="hz-parzelle-count">3 Rezepte</span>
+          <span class="hz-parzelle-name">Film-Rezepte</span>
+        </a>
+      </li>
+      <li style="--cols:3;--rows:1;--ang:0deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/about/">
+          <span class="hz-parzelle-count"></span>
+          <span class="hz-parzelle-name">Über</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <span class="hz-weg" aria-hidden="true"></span>
+  <div class="hz-gem hz-gem--prod">
+    <p class="t-kennung hz-kennung">Projekte</p>
+    <ul class="hz-parzellen">
+      <li data-product="regetskcob">
+        <a class="hz-parzelle hz-parzelle--prod" href="https://www.regetskcob.de/horizont/">
+          <span class="hz-parzelle-count">Designsystem</span>
+          <span class="hz-parzelle-name"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="20" height="20" viewBox="0 0 100 100" role="img" aria-label="Horizont" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H96"/>
+  <path d="M27 66.7a23 23 0 0 1 46 0"/>
+</svg>
+Horizont</span>
+        </a>
+      </li>
+      <li data-product="knx">
+        <a class="hz-parzelle hz-parzelle--prod" href="https://www.regetskcob.de/knx/" aria-current="page">
+          <span class="hz-parzelle-count">Vorschau · Busmonitor &amp; Diagnose</span>
+          <span class="hz-parzelle-name"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="20" height="20" viewBox="0 0 100 100" role="img" aria-label="KNX Monitor" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H35M65 66.7H96"/>
+  <path d="M35 40h30v34H35zM50 40v34"/>
+</svg>
+KNX Monitor</span>
+        </a>
+      </li>
+      <li data-product="panzergefecht">
+        <a class="hz-parzelle hz-parzelle--prod" href="https://www.regetskcob.de/wargame/">
+          <span class="hz-parzelle-count">Vorschau · Panzerduelle und Verteidigung</span>
+          <span class="hz-parzelle-name"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="20" height="20" viewBox="0 0 100 100" role="img" aria-label="Panzergefecht" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H96"/>
+  <path d="M24 66.7l4-12h44l4 12M40 54.7V44h18v10.7M58 49h24"/>
+</svg>
+Panzergefecht</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+</dialog>
+<div class="hz-feld tz-feld">
+<main id="main" class="tz-main">
+  <section class="hz-feld-hero tz-hero">
+    <div class="tz-words">
+      <div class="tz-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" class="hz-app-icon" width="64" height="64" viewBox="0 0 100 100" role="img" aria-label="App-Icon KNX Monitor">
+  <defs>
+    <clipPath id="hzi2c"><rect x="0" y="0" width="100" height="100" rx="22.4"/></clipPath>
+    <linearGradient id="hzi2s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C6E59A"/><stop offset="1" stop-color="#8CC63F"/></linearGradient>
+    <filter id="hzi2b" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+    <filter id="hzi2d" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="1.2" dy="2.4" stdDeviation="1.6" flood-color="#12200A" flood-opacity=".5"/></filter>
+  </defs>
+  <g clip-path="url(#hzi2c)">
+    <rect x="0" y="0" width="100" height="66.7" fill="url(#hzi2s)"/>
+    <rect x="0" y="66.7" width="100" height="33.3" fill="#437F18"/>
+    <g filter="url(#hzi2b)" opacity=".7">
+      <ellipse cx="18" cy="22" rx="24" ry="11" fill="#8CC63F"/>
+      <ellipse cx="80" cy="44" rx="22" ry="9" fill="#C6E59A"/>
+      <ellipse cx="62" cy="10" rx="20" ry="8" fill="#C6E59A"/>
+      <ellipse cx="24" cy="86" rx="26" ry="8" fill="#2F6410"/>
+      <ellipse cx="82" cy="94" rx="22" ry="7" fill="#2F6410"/>
+    </g>
+
+    <rect x="0" y="65.9" width="100" height="1.6" fill="#EAF6D8"/>
+    <g filter="url(#hzi2d)" stroke="#12200A" stroke-width="1.6" stroke-linejoin="round">
+      <rect x="-2" y="64" width="104" height="5.4" fill="#3A7215"/>
+      <path d="M0 65.6h100" stroke="#EAF6D8" stroke-width=".8" opacity=".45"/>
+      <rect x="31" y="38" width="19" height="34" rx="2.6" fill="#D23C2E"/>
+      <rect x="50" y="38" width="19" height="34" rx="2.6" fill="#3A3D38"/>
+      <g stroke="none">
+        <path d="M33.6 39.6h13.8v9H33.6z" fill="#A82C21"/>
+        <path d="M52.6 39.6h13.8v9H52.6z" fill="#262824"/>
+        <circle cx="35.8" cy="44.1" r="1.25" fill="#12200A"/><circle cx="39.1" cy="44.1" r="1.25" fill="#12200A"/><circle cx="42.3" cy="44.1" r="1.25" fill="#12200A"/><circle cx="45.4" cy="44.1" r="1.25" fill="#12200A"/><circle cx="54.8" cy="44.1" r="1.25" fill="#12200A"/><circle cx="58.1" cy="44.1" r="1.25" fill="#12200A"/><circle cx="61.3" cy="44.1" r="1.25" fill="#12200A"/><circle cx="64.4" cy="44.1" r="1.25" fill="#12200A"/>
+      </g>
+    </g>
+  </g>
+</svg>
+
+        <span class="tz-name">KNX Monitor</span>
+      </div>
+      <span class="t-kennung hz-kennung">Bus monitor &amp; diagnostics for KNX</span>
+      <h1 class="t-display">See what happens on your KNX bus.</h1>
+      <p>Every telegram, made sense of with your ETS project: devices, rooms and values instead of columns of hex. Plus a check of your installation for silent sensors, wrong datapoint types and bus problems.</p>
+      <div class="hz-feld-actions">
+        <a class="hz-button hz-button--primary" href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor">As a Home Assistant add-on<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a>
+      </div>
+      <p class="tz-note t-caption">Coming soon for iPhone, iPad, Android, Mac, Windows and Linux. No account needed, your installation data never leaves your network.</p>
+    </div>
+    <div class="tz-aside">
+      <svg class="knx-board" viewBox="0 0 400 220" role="img" aria-label="A small distribution board with power supply, IP interface, switch, blind and dimming actuator. Telegrams run as dots of light along the green bus cable, the channel LEDs follow." data-trunk="147" data-exit="352">
+  <rect class="knx-board-cabinet" x="18" y="14" width="364" height="156" rx="10"/>
+  <rect class="knx-board-back" x="26" y="22" width="348" height="140" rx="5"/>
+  <rect class="knx-board-rail" x="32" y="77" width="336" height="16" rx="1"/>
+  <rect class="knx-board-rail-slot" x="32" y="83" width="336" height="4"/>
+  <path class="knx-board-cable" d="M55.5 147 H344 Q352 147 352 155 V220"/>
+  <g class="knx-board-device" data-device="0" data-id="power" data-bus="55.5" transform="translate(44.5 44)">
+    <text class="knx-board-addr" x="27" y="-7">1.1.1</text>
+    <path class="knx-board-core knx-board-core--minus" d="M9.5 81 V88"/>
+    <path class="knx-board-core knx-board-core--plus" d="M12.5 81 V88"/>
+    <path class="knx-board-cable" d="M11 87 V103"/>
+    <rect class="dv-housing" x="3.2399999999999998" y="0.3" width="47.52" height="11.6" rx="0.6"/>
+    <rect class="dv-slot" x="4.32" y="3.7" width="45.36" height="8" rx="0.4"/>
+    <rect class="dv-terminal" x="4.92" y="4.3" width="44.16" height="6.8" rx="0.4"/><circle class="dv-screw" cx="8.82" cy="7.7" r="1.9"/><path class="dv-slit" d="M7.720000000000001 8.8 l2.2 -2.2"/><circle class="dv-screw" cx="17.82" cy="7.7" r="1.9"/><path class="dv-slit" d="M16.72 8.8 l2.2 -2.2"/><circle class="dv-screw" cx="26.82" cy="7.7" r="1.9"/><path class="dv-slit" d="M25.72 8.8 l2.2 -2.2"/><circle class="dv-screw" cx="35.82" cy="7.7" r="1.9"/><path class="dv-slit" d="M34.72 8.8 l2.2 -2.2"/><circle class="dv-screw" cx="44.82" cy="7.7" r="1.9"/><path class="dv-slit" d="M43.72 8.8 l2.2 -2.2"/>
+    <rect class="dv-step" x="1.6199999999999999" y="11.4" width="50.76" height="10"/>
+    <rect class="dv-step" x="2.16" y="63.6" width="49.68" height="8.6"/>
+    <rect class="dv-housing" x="3.7800000000000002" y="71.4" width="47.52" height="10.3" rx="0.6"/>
+    <rect class="dv-bus-minus" x="6" y="73" width="5" height="8.2"/><rect class="dv-bus-plus" x="11" y="73" width="5" height="8.2"/>
+    <rect class="dv-front" x="0.15" y="20.2" width="53.7" height="44.4" rx="2"/>
+    <text class="dv-type" x="27" y="31">KNX</text>
+    <text class="dv-key" x="27" y="36">640 mA</text>
+    <circle class="dv-led is-on" cx="13.5" cy="46" r="1.6"/>
+    <text class="dv-key" x="13.5" y="52">Run</text>
+    <circle class="dv-led" cx="27" cy="46" r="1.6"/>
+    <text class="dv-key" x="27" y="52">I&gt;Imax</text>
+    <circle class="dv-led" cx="40.5" cy="46" r="1.6"/>
+    <text class="dv-key" x="40.5" y="52">Reset</text>
+    <circle class="dv-prog" cx="47" cy="58" r="2.2"/>
+  </g>
+  <g class="knx-board-device" data-device="1" data-id="ip" data-bus="110.5" transform="translate(99.5 44)">
+    <text class="knx-board-addr" x="18" y="-7">1.1.20</text>
+    <path class="knx-board-core knx-board-core--minus" d="M9.5 81 V88"/>
+    <path class="knx-board-core knx-board-core--plus" d="M12.5 81 V88"/>
+    <path class="knx-board-cable" d="M11 87 V103"/>
+    <rect class="dv-housing" x="2.16" y="0.3" width="31.68" height="11.6" rx="0.6"/>
+    <rect class="dv-slot" x="2.88" y="3.7" width="30.24" height="8" rx="0.4"/>
+    <rect class="dv-terminal" x="3.48" y="4.3" width="29.04" height="6.8" rx="0.4"/><circle class="dv-screw" cx="7.38" cy="7.7" r="1.9"/><path class="dv-slit" d="M6.279999999999999 8.8 l2.2 -2.2"/><circle class="dv-screw" cx="16.38" cy="7.7" r="1.9"/><path class="dv-slit" d="M15.28 8.8 l2.2 -2.2"/><circle class="dv-screw" cx="25.38" cy="7.7" r="1.9"/><path class="dv-slit" d="M24.279999999999998 8.8 l2.2 -2.2"/>
+    <rect class="dv-step" x="1.08" y="11.4" width="33.839999999999996" height="10"/>
+    <rect class="dv-step" x="1.44" y="63.6" width="33.120000000000005" height="8.6"/>
+    <rect class="dv-housing" x="2.5200000000000005" y="71.4" width="31.68" height="10.3" rx="0.6"/>
+    <rect class="dv-bus-minus" x="6" y="73" width="5" height="8.2"/><rect class="dv-bus-plus" x="11" y="73" width="5" height="8.2"/>
+    <rect class="dv-front" x="0.15" y="20.2" width="35.7" height="44.4" rx="2"/>
+    <text class="dv-type" x="18" y="31">IP</text>
+    <rect class="dv-port" x="11" y="40" width="14" height="12" rx="1"/>
+    <rect class="dv-slot" x="14" y="43" width="8" height="6" rx="0.5"/>
+    <circle class="dv-led dv-led--traffic" cx="7.2" cy="58" r="1.6"/>
+    <circle class="dv-led is-on" cx="16.2" cy="58" r="1.6"/>
+    <circle class="dv-prog" cx="29" cy="58" r="2.2"/>
+  </g>
+  <g class="knx-board-device" data-device="2" data-id="switch" data-bus="147.5" transform="translate(136.5 44)">
+    <text class="knx-board-addr" x="54" y="-7">1.1.10</text>
+    <path class="knx-board-core knx-board-core--minus" d="M9.5 81 V88"/>
+    <path class="knx-board-core knx-board-core--plus" d="M12.5 81 V88"/>
+    <path class="knx-board-cable" d="M11 87 V103"/>
+    <rect class="dv-housing" x="6.4799999999999995" y="0.3" width="95.04" height="11.6" rx="0.6"/>
+    <rect class="dv-slot" x="8.64" y="3.7" width="90.72" height="8" rx="0.4"/>
+    <rect class="dv-terminal" x="9.24" y="4.3" width="89.52" height="6.8" rx="0.4"/>
+    <circle class="dv-screw" cx="16.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M15.500000000000002 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="21.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M20.299999999999997 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="26.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M25.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="31.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M30.299999999999997 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="36.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M35.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="41.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M40.3 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="46.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M45.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="51.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M50.3 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="56.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M55.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="61.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M60.3 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="66.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M65.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="71.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M70.30000000000001 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="76.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M75.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="81.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M80.30000000000001 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="86.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M85.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="91.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M90.30000000000001 8.8 l2.2 -2.2"/>
+    <rect class="dv-step" x="3.2399999999999998" y="11.4" width="101.52" height="10"/>
+    <rect class="dv-step" x="4.32" y="63.6" width="99.36" height="8.6"/>
+    <rect class="dv-housing" x="7.5600000000000005" y="71.4" width="95.04" height="10.3" rx="0.6"/>
+    <rect class="dv-bus-minus" x="6" y="73" width="5" height="8.2"/><rect class="dv-bus-plus" x="11" y="73" width="5" height="8.2"/>
+    <rect class="dv-front" x="0.15" y="20.2" width="107.7" height="44.4" rx="2"/>
+    <path class="dv-ink" d="M15.8 27.4 V29 H17.8 L20.4 27.7 M20.6 29 H22.2 V27.4"/>
+    <circle class="dv-led" data-channel="0" cx="19" cy="35" r="1.6"/>
+    <text class="dv-key" x="19" y="41.2">1</text>
+    <path class="dv-ink" d="M25.8 27.4 V29 H27.8 L30.4 27.7 M30.6 29 H32.2 V27.4"/>
+    <circle class="dv-led" data-channel="1" cx="29" cy="35" r="1.6"/>
+    <text class="dv-key" x="29" y="41.2">2</text>
+    <path class="dv-ink" d="M35.8 27.4 V29 H37.8 L40.4 27.7 M40.6 29 H42.2 V27.4"/>
+    <circle class="dv-led" data-channel="2" cx="39" cy="35" r="1.6"/>
+    <text class="dv-key" x="39" y="41.2">3</text>
+    <path class="dv-ink" d="M45.8 27.4 V29 H47.8 L50.4 27.7 M50.6 29 H52.2 V27.4"/>
+    <circle class="dv-led" data-channel="3" cx="49" cy="35" r="1.6"/>
+    <text class="dv-key" x="49" y="41.2">4</text>
+    <path class="dv-ink" d="M55.8 27.4 V29 H57.8 L60.4 27.7 M60.6 29 H62.2 V27.4"/>
+    <circle class="dv-led" data-channel="4" cx="59" cy="35" r="1.6"/>
+    <text class="dv-key" x="59" y="41.2">5</text>
+    <path class="dv-ink" d="M65.8 27.4 V29 H67.8 L70.4 27.7 M70.6 29 H72.2 V27.4"/>
+    <circle class="dv-led" data-channel="5" cx="69" cy="35" r="1.6"/>
+    <text class="dv-key" x="69" y="41.2">6</text>
+    <path class="dv-ink" d="M75.8 27.4 V29 H77.8 L80.4 27.7 M80.6 29 H82.2 V27.4"/>
+    <circle class="dv-led" data-channel="6" cx="79" cy="35" r="1.6"/>
+    <text class="dv-key" x="79" y="41.2">7</text>
+    <path class="dv-ink" d="M85.8 27.4 V29 H87.8 L90.4 27.7 M90.6 29 H92.2 V27.4"/>
+    <circle class="dv-led" data-channel="7" cx="89" cy="35" r="1.6"/>
+    <text class="dv-key" x="89" y="41.2">8</text>
+    <circle class="dv-prog" cx="101" cy="58" r="2.2"/>
+  </g>
+  <g class="knx-board-device" data-device="3" data-id="blinds" data-bus="256.5" transform="translate(245.5 44)">
+    <text class="knx-board-addr" x="27" y="-7">1.1.12</text>
+    <path class="knx-board-core knx-board-core--minus" d="M9.5 81 V88"/>
+    <path class="knx-board-core knx-board-core--plus" d="M12.5 81 V88"/>
+    <path class="knx-board-cable" d="M11 87 V103"/>
+    <rect class="dv-housing" x="3.2399999999999998" y="0.3" width="47.52" height="11.6" rx="0.6"/>
+    <rect class="dv-slot" x="4.32" y="3.7" width="45.36" height="8" rx="0.4"/>
+    <rect class="dv-terminal" x="4.92" y="4.3" width="44.16" height="6.8" rx="0.4"/>
+    <circle class="dv-screw" cx="9.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M8.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="14.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M13.3 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="19.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M18.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="24.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M23.299999999999997 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="29.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M28.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="34.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M33.3 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="39.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M38.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="44.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M43.3 8.8 l2.2 -2.2"/>
+    <rect class="dv-step" x="1.6199999999999999" y="11.4" width="50.76" height="10"/>
+    <rect class="dv-step" x="2.16" y="63.6" width="49.68" height="8.6"/>
+    <rect class="dv-housing" x="3.7800000000000002" y="71.4" width="47.52" height="10.3" rx="0.6"/>
+    <rect class="dv-bus-minus" x="6" y="73" width="5" height="8.2"/><rect class="dv-bus-plus" x="11" y="73" width="5" height="8.2"/>
+    <rect class="dv-front" x="0.15" y="20.2" width="53.7" height="44.4" rx="2"/>
+    <path class="dv-ink" d="M8.8 27.4 V29 H10.8 L13.4 27.7 M13.6 29 H15.2 V27.4"/>
+    <circle class="dv-led" data-channel="0" cx="12" cy="35" r="1.6"/>
+    <text class="dv-key" x="12" y="41.2">A</text>
+    <path class="dv-ink" d="M18.8 27.4 V29 H20.8 L23.4 27.7 M23.6 29 H25.2 V27.4"/>
+    <circle class="dv-led" data-channel="1" cx="22" cy="35" r="1.6"/>
+    <text class="dv-key" x="22" y="41.2">B</text>
+    <path class="dv-ink" d="M28.8 27.4 V29 H30.8 L33.4 27.7 M33.6 29 H35.2 V27.4"/>
+    <circle class="dv-led" data-channel="2" cx="32" cy="35" r="1.6"/>
+    <text class="dv-key" x="32" y="41.2">C</text>
+    <path class="dv-ink" d="M38.8 27.4 V29 H40.8 L43.4 27.7 M43.6 29 H45.2 V27.4"/>
+    <circle class="dv-led" data-channel="3" cx="42" cy="35" r="1.6"/>
+    <text class="dv-key" x="42" y="41.2">D</text>
+    <circle class="dv-prog" cx="47" cy="58" r="2.2"/>
+  </g>
+  <g class="knx-board-device" data-device="4" data-id="dim" data-bus="311.5" transform="translate(300.5 44)">
+    <text class="knx-board-addr" x="27" y="-7">1.1.11</text>
+    <path class="knx-board-core knx-board-core--minus" d="M9.5 81 V88"/>
+    <path class="knx-board-core knx-board-core--plus" d="M12.5 81 V88"/>
+    <path class="knx-board-cable" d="M11 87 V103"/>
+    <rect class="dv-housing" x="3.2399999999999998" y="0.3" width="47.52" height="11.6" rx="0.6"/>
+    <rect class="dv-slot" x="4.32" y="3.7" width="45.36" height="8" rx="0.4"/>
+    <rect class="dv-terminal" x="4.92" y="4.3" width="44.16" height="6.8" rx="0.4"/>
+    <circle class="dv-screw" cx="9.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M8.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="14.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M13.3 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="19.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M18.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="24.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M23.299999999999997 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="29.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M28.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="34.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M33.3 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="39.6" cy="7.7" r="1.9"/><path class="dv-slit" d="M38.5 8.8 l2.2 -2.2"/>
+    <circle class="dv-screw" cx="44.4" cy="7.7" r="1.9"/><path class="dv-slit" d="M43.3 8.8 l2.2 -2.2"/>
+    <rect class="dv-step" x="1.6199999999999999" y="11.4" width="50.76" height="10"/>
+    <rect class="dv-step" x="2.16" y="63.6" width="49.68" height="8.6"/>
+    <rect class="dv-housing" x="3.7800000000000002" y="71.4" width="47.52" height="10.3" rx="0.6"/>
+    <rect class="dv-bus-minus" x="6" y="73" width="5" height="8.2"/><rect class="dv-bus-plus" x="11" y="73" width="5" height="8.2"/>
+    <rect class="dv-front" x="0.15" y="20.2" width="53.7" height="44.4" rx="2"/>
+    <path class="dv-ink" d="M8.8 27.4 V29 H10.8 L13.4 27.7 M13.6 29 H15.2 V27.4"/>
+    <circle class="dv-led" data-channel="0" cx="12" cy="35" r="1.6"/>
+    <text class="dv-key" x="12" y="41.2">A</text>
+    <path class="dv-ink" d="M18.8 27.4 V29 H20.8 L23.4 27.7 M23.6 29 H25.2 V27.4"/>
+    <circle class="dv-led" data-channel="1" cx="22" cy="35" r="1.6"/>
+    <text class="dv-key" x="22" y="41.2">B</text>
+    <path class="dv-ink" d="M28.8 27.4 V29 H30.8 L33.4 27.7 M33.6 29 H35.2 V27.4"/>
+    <circle class="dv-led" data-channel="2" cx="32" cy="35" r="1.6"/>
+    <text class="dv-key" x="32" y="41.2">C</text>
+    <path class="dv-ink" d="M38.8 27.4 V29 H40.8 L43.4 27.7 M43.6 29 H45.2 V27.4"/>
+    <circle class="dv-led" data-channel="3" cx="42" cy="35" r="1.6"/>
+    <text class="dv-key" x="42" y="41.2">D</text>
+    <circle class="dv-prog" cx="47" cy="58" r="2.2"/>
+  </g>
+  <rect class="knx-board-gland" x="347" y="167" width="10" height="7" rx="1.5"/>
+  <circle class="knx-board-pulse" r="2.6" cx="-10" cy="-10"/>
+</svg>
+
+    </div>
+  </section>
+  <hr class="hz-feld-horizon">
+  <p class="tz-ticker" aria-hidden="true"><span class="tz-ticker-line"></span></p>
+</main>
+<footer class="hz-feld-foot">
+  <a class="hz-lockup" href="https://www.regetskcob.de/"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="24" height="24" viewBox="0 0 100 100" role="img" aria-label="regetskcob" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H96M50 66.7V48"/>
+  <path d="M50 48c-12 0-19-6-19-15s8-17 19-17 19 8 19 17-7 15-19 15z"/>
+</svg>
+<span>a project by regetskcob</span></a>
+  <span class="hz-feld-links"><a href="https://www.regetskcob.de/legal/">Legal notice</a><a href="https://www.regetskcob.de/knx/en/privacy/">Privacy</a><a href="https://github.com/regetskcob/KNX-Monitor">GitHub</a></span>
+</footer>
+<p class="tz-mark t-caption">KNX is a registered trademark of the KNX Association. KNX Monitor is not a product of the KNX Association.</p>
+</div>
+<script id="tz-telegrams" type="application/json">[{"channel":2,"device":2,"from":"1.1.30","on":true,"text":"Kitchen light","to":"1/1/3","value":"On"},{"device":2,"from":"1.1.10","out":true,"text":"Kitchen light status","to":"1/4/3","value":"On"},{"channel":0,"device":3,"from":"1.1.31","on":true,"text":"Living room blinds","to":"2/1/1","value":"Down"},{"channel":0,"device":4,"from":"1.1.35","on":true,"text":"Dining dimmer","to":"3/2/0","value":"62 %"},{"channel":4,"device":2,"from":"1.1.30","on":true,"text":"Hall light","to":"1/1/5","value":"On"},{"device":3,"from":"1.1.12","out":true,"text":"Living room position","to":"2/4/1","value":"100 %"},{"channel":2,"device":2,"from":"1.1.30","on":false,"text":"Kitchen light","to":"1/1/3","value":"Off"},{"channel":0,"device":2,"from":"1.1.34","on":true,"text":"Bathroom light","to":"1/1/0","value":"On"},{"channel":0,"device":3,"from":"1.1.31","on":false,"text":"Living room blinds","to":"2/1/1","value":"Stop"},{"channel":0,"device":4,"from":"1.1.35","on":false,"text":"Dining dimmer","to":"3/2/0","value":"0 %"},{"channel":4,"device":2,"from":"1.1.30","on":false,"text":"Hall light","to":"1/1/5","value":"Off"},{"channel":0,"device":2,"from":"1.1.34","on":false,"text":"Bathroom light","to":"1/1/0","value":"Off"}]</script>
+<script src="/js/teaser.min.559373b24f239e655af257dd762a451519cc59e45ab19c4afc0d108ce8c6939e.js" integrity="sha256-VZNzsk8jnmVa8lfddipFFRnMWeRasZxK/A0QjOjGk54=" defer></script>
+<script src="/js/horizont/horizon.min.f92ded2ce54990bd7e56891e36d7f8b6943d75d8fcb91cc17114377f0ee81a71.js" integrity="sha256-&#43;S3tLOVJkL1&#43;VokeNtf4tpQ9ddj8uRzBcRQ3fw7oGnE=" defer></script>
+</body>
+</html>
