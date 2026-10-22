@@ -27,7 +27,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/css/teaser.min.2a6c82f785b525b9be74491fed5bc43bff395bc61dc2b77724c72de321b2d31d.css" integrity="sha256-KmyC94W1Jbm&#43;dEkf7VvEO/85W8Ydwrd3JMct4yGy0x0=">
+<link rel="stylesheet" href="/css/teaser.min.ca8609ee7dfbc7ca903bd76e305985653fbc3ea28e5aba453051322d48ba8b6a.css" integrity="sha256-yoYJ7n37x8qQO9duMFmFZT&#43;8PqKOWrpFMFEyLUi6i2o=">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"UtilitiesApplication","description":"KNX Monitor: a modern KNX bus monitor and diagnostics tool as a Home Assistant add-on, soon for iPhone, iPad, Android and desktop too. Reads ETS projects, checks your installation, your data stays local.","name":"KNX Monitor","operatingSystem":"iOS, iPadOS, Android, macOS, Windows, Linux, Home Assistant","url":"https://knx-monitor.de/en/"}</script>
 </head>
 <body class="hz tz">
@@ -35,6 +35,18 @@
   <span class="hz-horizon-line" aria-hidden="true"></span>
   <span class="hz-horizon-done" aria-hidden="true"></span>
   <a class="hz-horizon-back" href="#" data-hz-back hidden aria-label="Zurück zur vorigen Seite"><span aria-hidden="true">←</span> Zurück</a>
+  <ol class="hz-ticks">
+    <li><a class="hz-tick" href="#add-on" data-full="Add-on" data-short="02" style="--h:10px" title="02 — Add-on"><span>Add-on</span></a></li>
+    <li><a class="hz-tick" href="#apps" data-full="Apps" data-short="03" style="--h:10px" title="03 — Apps"><span>Apps</span></a></li>
+    <li><a class="hz-tick" href="#roadmap" data-full="Roadmap" data-short="04" style="--h:10px" title="04 — Roadmap"><span>Roadmap</span></a></li>
+    <li><a class="hz-tick" href="#features" data-full="Features" data-short="05" style="--h:10px" title="05 — Features"><span>Features</span></a></li>
+    <li><a class="hz-tick" href="#expert" data-full="Expert" data-short="06" style="--h:10px" title="06 — Expert"><span>Expert</span></a></li>
+    <li><a class="hz-tick" href="#ets" data-full="ETS project" data-short="07" style="--h:10px" title="07 — ETS project"><span>ETS project</span></a></li>
+    <li><a class="hz-tick" href="#connection" data-full="Connection" data-short="08" style="--h:10px" title="08 — Connection"><span>Connection</span></a></li>
+    <li><a class="hz-tick" href="#box" data-full="KNX box" data-short="09" style="--h:10px" title="09 — KNX box"><span>KNX box</span></a></li>
+    <li><a class="hz-tick" href="#privacy" data-full="Privacy" data-short="10" style="--h:10px" title="10 — Privacy"><span>Privacy</span></a></li>
+    <li><a class="hz-tick" href="#faq" data-full="FAQ" data-short="11" style="--h:10px" title="11 — FAQ"><span>FAQ</span></a></li>
+  </ol>
   <a class="hz-walker" href="https://www.regetskcob.de/karte/" data-hz-open-karte data-hint="Karte" data-place="KNX Monitor" aria-label="Flurkarte, du bist in KNX Monitor"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="28" height="28" viewBox="0 0 100 100" role="img" aria-label="KNX Monitor" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
   <path d="M4 66.7H32.14M67.86 66.7H96"/>
   <g stroke="none">
@@ -209,12 +221,12 @@ Panzergefecht</span>
         <span class="tz-name">KNX Monitor</span>
       </div>
       <span class="t-kennung hz-kennung">Bus monitor &amp; diagnostics for KNX</span>
-      <h1 class="t-display">See what happens on your KNX bus.</h1>
-      <p>Every telegram, made sense of with your ETS project: devices, rooms and values instead of columns of hex. Plus a check of your installation for silent sensors, wrong datapoint types and bus problems.</p>
+      <h1 class="t-display">Every telegram in view, at home and on the building site.</h1>
+      <p>Made sense of with your ETS project: devices, rooms and values instead of columns of hex. Plus a check of your installation for silent sensors, wrong datapoint types and bus problems.</p>
       <div class="hz-feld-actions">
         <a class="hz-button hz-button--primary" href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor">As a Home Assistant add-on<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a>
       </div>
-      <p class="tz-note t-caption">Coming soon for iPhone, iPad, Android, Mac, Windows and Linux. Your installation data never leaves your network.</p>
+      <p class="tz-note t-caption">Coming soon for iPhone, iPad, Android, Mac and Windows, available for Linux today. Your installation data never leaves your network.</p>
     </div>
     <div class="tz-aside">
       <div class="tz-live" aria-hidden="true">
@@ -454,10 +466,297 @@ Panzergefecht</span>
     </div>
     <dl class="hz-facts">
   <dt>Mobile</dt><dd>iPhone, iPad and Android</dd>
-  <dt>Desktop</dt><dd>Mac, Windows and Linux</dd>
+  <dt>Desktop</dt><dd>Mac and Windows, Linux today</dd>
   <dt>Connection</dt><dd>Directly to your IP interface or IP router</dd>
   <dt>On site</dt><dd>ETS project and recordings live on the device, no internet needed</dd>
 </dl>
+  </section>
+  <section class="hz-feld-section tz-section tz-section--plan" id="roadmap">
+    <span class="t-kennung hz-kennung">04 — Roadmap</span>
+    <div>
+      <h2>At home in Home Assistant first, then out on the building site too.</h2>
+      <p>The add-on is ready and stays free, and the Linux app is available today. The other apps are built and follow in the coming weeks.</p>
+    </div>
+    <dl class="hz-facts">
+  <dt>Now</dt><dd><strong>Home Assistant add-on</strong> and <strong>Linux</strong> (<a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">download</a>), both free and without limits, for good</dd>
+  <dt>Soon</dt><dd><strong>iPhone, iPad, Android, Mac and Windows</strong> in the App Store, on Google Play and as a download for Windows</dd>
+  <dt>Later</dt><dd><strong>KNX box</strong>: a Raspberry Pi as an on-site telegram recorder, recording for days on the building site, without Home Assistant and without internet</dd>
+  <dt>Apps</dt><dd>Free to use, more tools with Plus and Pro. Prices appear here at launch.</dd>
+</dl>
+  </section>
+  <section class="hz-feld-section tz-section tz-section--shots" id="features">
+    <span class="t-kennung hz-kennung">05 — Features in detail</span>
+    <div>
+      <h2>Everything you need on the bus.</h2>
+      <p>Without expert mode the app stays lean: the values, the telegrams and a check of your installation.</p>
+      
+<div class="tz-shots">
+  <div class="tz-shots-row tz-shots-row--phone">
+    <figure class="tz-shot">
+      <figure class="hz-device hz-device--iphone" style="--w:220px">
+  <div class="hz-device-screen">
+    <img src="/images/screens/overview-phone_hu_fbd326df07e33590.webp" width="220" height="477" alt="Overview on iPhone: values per group address as cards with mini history" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption">Overview on iPhone: values per group address as cards with mini history</figcaption>
+    </figure>
+    <figure class="tz-shot">
+      <figure class="hz-device hz-device--iphone" style="--w:220px">
+  <div class="hz-device-screen">
+    <img src="/images/screens/health-phone_hu_f16e4345a08cde7f.webp" width="220" height="477" alt="Health check: silent addresses, wrong data types and repeats at a glance" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption">Health check: silent addresses, wrong data types and repeats at a glance</figcaption>
+    </figure>
+  </div>
+  <div class="tz-shots-row tz-shots-row--tablet">
+    <figure class="tz-shot">
+      <figure class="hz-device hz-device--ipad" style="--w:480px">
+  <div class="hz-device-screen">
+    <img src="/images/screens/live-ipad_hu_4eab281c810ff731.webp" width="480" height="333" alt="Live telegrams on iPad with sender, destination, name and value" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption">Live telegrams on iPad with sender, destination, name and value</figcaption>
+    </figure>
+    <figure class="tz-shot">
+      <figure class="hz-device hz-device--ipad" style="--w:480px">
+  <div class="hz-device-screen">
+    <img src="/images/screens/objects-ipad_hu_47c97a7b6e73a8ac.webp" width="480" height="333" alt="Objects: group addresses by room, commands and feedbacks together" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption">Objects: group addresses by room, commands and feedbacks together</figcaption>
+    </figure>
+    <figure class="tz-shot">
+      <figure class="hz-device hz-device--ipad" style="--w:480px">
+  <div class="hz-device-screen">
+    <img src="/images/screens/details-ipad_hu_16a3681d3e65992a.webp" width="480" height="333" alt="Detail pane with history and write value" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption">Detail pane with history and write value</figcaption>
+    </figure>
+  </div>
+</div>
+
+    </div>
+    <dl class="hz-facts">
+  <dt>Overview</dt><dd><strong>Overview &amp; favourites.</strong> Every group address as a card with its current value and a mini history, sorted by the rooms and functions of your project. Charts are saved per installation and get their own section on the overview.</dd>
+  <dt>Telegrams</dt><dd><strong>Live telegrams.</strong> Every telegram with sender, destination, value and anomalies. Search in the title bar, one filter button with counts, read and write values.</dd>
+  <dt>Objects</dt><dd><strong>Rooms &amp; objects.</strong> Commands and feedbacks grouped automatically, actuators drawn as DIN-rail devices with channel LEDs.</dd>
+  <dt>Health</dt><dd><strong>Health.</strong> Reads status addresses, reports devices that went silent and checks cycles, values, datapoint types and bus quality. With a PDF report.</dd>
+  <dt>Recordings</dt><dd><strong>Recordings &amp; history.</strong> Record with a name and note; a long press keeps the last 10 seconds. Before a replay, change values, remove telegrams, save as a copy; replay with a timeline, 1–60×. Also long-term history and statistics with an activity heatmap.</dd>
+  <dt>Secure</dt><dd><strong>KNX Secure &amp; routing.</strong> Tunnel over UDP or TCP, routing via multicast, KNX IP Secure and Data Secure with the keyring from ETS.</dd>
+  <dt>Export</dt><dd>Export as PDF, CSV and for ETS</dd>
+  <dt>Bug report</dt><dd>Diagnostics bundle for bug reports, without names or values</dd>
+  <dt>Demo</dt><dd>Demo house to try it without a KNX system</dd>
+  <dt>Languages</dt><dd>German and English</dd>
+</dl>
+  </section>
+  <section class="hz-feld-section tz-section tz-section--shots" id="expert">
+    <span class="t-kennung hz-kennung">06 — Expert mode</span>
+    <div>
+      <h2>One switch, and the whole workshop is there.</h2>
+      <p>For commissioning, troubleshooting and handover. Turn expert mode on on the connect screen or at the bottom of the menu; in the Home Assistant add-on it is on from the start. Without it nothing is lost, the tools just stay out of the way. Try every tool in the demo house.</p>
+      
+<div class="tz-shots">
+  <div class="tz-shots-row tz-shots-row--phone">
+    <figure class="tz-shot">
+      <figure class="hz-device hz-device--iphone" style="--w:220px">
+  <div class="hz-device-screen">
+    <img src="/images/screens/send-phone_hu_12f250493a13bd68.webp" width="220" height="477" alt="Send like the ETS group monitor, with delay and repeat" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption">Send like the ETS group monitor, with delay and repeat</figcaption>
+    </figure>
+    <figure class="tz-shot">
+      <figure class="hz-device hz-device--iphone" style="--w:220px">
+  <div class="hz-device-screen">
+    <img src="/images/screens/commissioning-phone_hu_fe951f728352834.webp" width="220" height="477" alt="Commissioning checklist with automatically checked status addresses" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption">Commissioning checklist with automatically checked status addresses</figcaption>
+    </figure>
+    <figure class="tz-shot">
+      <figure class="hz-device hz-device--iphone" style="--w:220px">
+  <div class="hz-device-screen">
+    <img src="/images/screens/map-phone_hu_6fd1a524c682b321.webp" width="220" height="477" alt="Communication map: senders and receivers of a group address" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption">Communication map: senders and receivers of a group address</figcaption>
+    </figure>
+  </div>
+  <div class="tz-shots-row tz-shots-row--tablet">
+    <figure class="tz-shot">
+      <figure class="hz-device hz-device--ipad" style="--w:480px">
+  <div class="hz-device-screen">
+    <img src="/images/screens/topology-ipad_hu_e3a96ccc49388a1e.webp" width="480" height="333" alt="Topology with lines, coupler, tunnels and cross-line addresses" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption">Topology with lines, coupler, tunnels and cross-line addresses</figcaption>
+    </figure>
+  </div>
+</div>
+
+    </div>
+    <dl class="hz-facts">
+  <dt>Bus monitor</dt><dd><strong>Raw frames</strong> with ACK/NAK, repeats and bus load</dd>
+  <dt>Checklist</dt><dd><strong>Commissioning:</strong> a checklist of all status addresses, answers are checked off, PDF report with a signature field</dd>
+  <dt>Diagnostics</dt><dd><strong>Read status</strong>, find programming mode, check addresses, scan lines</dd>
+  <dt>Topology</dt><dd><strong>Map and topology:</strong> who talks to whom, lines, couplers and coupler traffic, tunnels</dd>
+  <dt>Compare</dt><dd><strong>Bus traffic against the ETS project:</strong> what is missing, what is unknown, what never sends; plus the object flags (T, R, C) even without bus traffic</dd>
+  <dt>Charts</dt><dd><strong>Up to eight addresses</strong>, one axis per unit, saved per installation</dd>
+  <dt>Trigger</dt><dd><strong>Trigger recording</strong> for sporadic faults: starts on a value, a fault, a repeat or an unanswered read, with pre-roll</dd>
+  <dt>Send</dt><dd><strong>Like the ETS group monitor:</strong> delayed and cyclic, more datapoint types (text, time, date, colour …), set a datapoint type per address</dd>
+  <dt>Replay</dt><dd><strong>Play a recording onto the bus:</strong> choose addresses, change values, shorten pauses, then confirm explicitly</dd>
+  <dt>Hop count</dt><dd><strong>Its own column</strong> in the live list, a hint on unusual routing counters, installation location next to the sender</dd>
+  <dt>Connection</dt><dd><strong>Port, tunnel address,</strong> connection options and keyring right on the connect screen</dd>
+  <dt>Alarms</dt><dd><strong>Alarm notifications</strong> as soon as an alarm or fault object fires</dd>
+</dl>
+  </section>
+  <section class="hz-feld-section tz-section tz-section--read" id="ets">
+    <span class="t-kennung hz-kennung">07 — ETS project</span>
+    <div>
+      <h2>Your project makes telegrams readable.</h2>
+      <p>Import your ETS project (.knxproj, password-protected too) or the group address CSV export. KNX Monitor picks up names, datapoint types, devices, rooms and links. 1/2/3 becomes “Living room ceiling light – On”.</p>
+    </div>
+    <dl class="hz-facts">
+  <dt>1/2/3</dt><dd>Living room ceiling light – On <span class="hz-mono tz-value">On</span></dd>
+  <dt>1/2/4</dt><dd>Living room ceiling light – Status <span class="hz-mono tz-value">On</span></dd>
+  <dt>3/1/10</dt><dd>Kitchen temperature actual <span class="hz-mono tz-value">21.4 °C</span></dd>
+  <dt>2/0/7</dt><dd>Bathroom blind position <span class="hz-mono tz-value">35 %</span></dd>
+  <dt>4/0/1</dt><dd>Meter active power <span class="hz-mono tz-value">1.82 kW</span></dd>
+</dl>
+  </section>
+  <section class="hz-feld-section tz-section tz-section--read" id="connection">
+    <span class="t-kennung hz-kennung">08 — Connection</span>
+    <div>
+      <h2>Straight to your IP interface.</h2>
+      <p>Connects via KNXnet/IP to your IP interface or IP router, KNX Secure included. You need no account to use it, and your installation data never leaves your network.</p>
+    </div>
+    <dl class="hz-facts">
+  <dt>KNXnet/IP</dt><dd>Tunnelling, routing and KNX Secure</dd>
+  <dt>.knxproj</dt><dd>ETS projects incl. password-protected ETS6</dd>
+  <dt>0</dt><dd>Trackers; no account needed to use it, project and telegrams stay on your network</dd>
+</dl>
+  </section>
+  <section class="hz-feld-section tz-section tz-section--read" id="box">
+    <span class="t-kennung hz-kennung">09 — KNX box</span>
+    <div>
+      <h2>A Raspberry Pi that listens in on site.</h2>
+      <p>The KNX box records for days, without Home Assistant and without internet, and opens its own Wi-Fi. You set it up with the app: scan the QR code on the label, the app does the rest. <a href="https://www.regetskcob.de/knx/en/box/">Setup, connection, recording: all about the KNX box</a></p><svg class="tz-pi" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
+  <rect class="tz-pi-board" x="20" y="20" width="300" height="196" rx="14"/>
+  <circle class="tz-pi-hole" cx="42" cy="42" r="6"/>
+  <circle class="tz-pi-hole" cx="262" cy="42" r="6"/>
+  <circle class="tz-pi-hole" cx="42" cy="194" r="6"/>
+  <circle class="tz-pi-hole" cx="262" cy="194" r="6"/>
+  <rect class="tz-pi-pin" x="66" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="66" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="75" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="75" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="84" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="84" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="93" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="93" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="102" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="102" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="111" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="111" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="120" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="120" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="129" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="129" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="138" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="138" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="147" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="147" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="156" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="156" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="165" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="165" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="174" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="174" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="183" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="183" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="192" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="192" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="201" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="201" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="210" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="210" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="219" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="219" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="228" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="228" y="40" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="237" y="30" width="6" height="6"/>
+  <rect class="tz-pi-pin" x="237" y="40" width="6" height="6"/>
+  <rect class="tz-pi-part" x="112" y="92" width="64" height="64" rx="4"/>
+  <rect class="tz-pi-part" x="192" y="100" width="44" height="48" rx="3"/>
+  <rect class="tz-pi-port" x="282" y="56" width="56" height="38" rx="3"/>
+  <rect class="tz-pi-port" x="282" y="104" width="56" height="38" rx="3"/>
+  <rect class="tz-pi-port" x="282" y="152" width="56" height="46" rx="3"/>
+  <rect class="tz-pi-port" x="60" y="206" width="24" height="14" rx="3"/>
+  <rect class="tz-pi-port" x="104" y="206" width="18" height="14" rx="3"/>
+  <rect class="tz-pi-port" x="136" y="206" width="18" height="14" rx="3"/>
+  <circle class="tz-pi-led" cx="44" cy="120" r="4"/>
+  <path class="tz-pi-cable" d="M338 175 H360 C376 175 380 186 380 200 V240"/>
+</svg>
+
+    </div>
+    <dl class="hz-facts">
+  <dt>Setup</dt><dd>Scan, and the app joins the Wi-Fi, pairs, sets the clock and finds the gateway</dd>
+  <dt>Connection</dt><dd>Today a network cable to the IP gateway; in future also straight on the line with a bus terminal (TP), no gateway</dd>
+  <dt>Clock</dt><dd>Without internet: from the iPhone or iPad, or from the KNX time master on the line</dd>
+  <dt>Recording</dt><dd>Around the clock, for days; app and box share the project and the history</dd>
+  <dt>Status</dt><dd><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Preview</span> <a href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.5.0">Image for the Raspberry Pi</a></dd>
+</dl>
+  </section>
+  <section class="hz-feld-section tz-section tz-section--read" id="privacy">
+    <span class="t-kennung hz-kennung">10 — Privacy</span>
+    <div>
+      <h2>Your installation stays local.</h2>
+      <p>KNX Monitor talks to the KNX interface on your own network. No account needed to use it, no analytics. Your project, telegrams and Secure keys stay with you; your ETS project password is never stored. <a href="https://www.regetskcob.de/knx/en/privacy/">Read the privacy policy</a></p>
+    </div>
+    <dl class="hz-facts">
+  <dt>Cloud</dt><dd>Your installation data never in the cloud</dd>
+  <dt>Tracking</dt><dd>No analytics, no tracking</dd>
+  <dt>Network</dt><dd>Network access only to your gateway and your KNX box; the exception is the QR scanner on Android (Google ML Kit)</dd>
+</dl>
+  </section>
+  <section class="hz-feld-section tz-section tz-section--read tz-section--faq" id="faq">
+    <span class="t-kennung hz-kennung">11 — FAQ</span>
+    <div>
+      <h2>Frequently asked questions</h2>
+      <p><a href="https://www.regetskcob.de/knx/en/support/">More help under Support</a></p>
+      <div class="tz-faq">
+        <details>
+          <summary>Can I try the app without a KNX system?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+          <p>Yes. “Try the demo without a KNX system” on the start screen opens a sample house with a project and live values. Your own project stays untouched.</p>
+        </details>
+        <details>
+          <summary>Which KNX interfaces are supported?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+          <p>Any KNXnet/IP interface or IP router, for example a Gira X1. Tunnelling works over UDP or TCP; with an IP router you can also use routing, which needs no tunnel (not yet on iPhone and iPad, where multicast needs approval from Apple). USB and serial interfaces are not supported.</p>
+        </details>
+        <details>
+          <summary>Why can&#39;t I connect although the interface is reachable?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+          <p>IP interfaces only offer a few tunnels, often four or fewer. If visualisation, ETS or other apps use all of them, the interface refuses. Free a tunnel, configure an additional one in ETS, or use routing.</p>
+        </details>
+        <details>
+          <summary>Is KNX Secure supported?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+          <p>Yes: KNX IP Secure for the tunnel and KNX Data Secure for encrypted group addresses. Import the keyring (.knxkeys) from ETS. The keys are kept in your device&rsquo;s keychain. If something doesn&rsquo;t work with your interface, <a href="https://github.com/regetskcob/KNX-Monitor/issues">please report it on GitHub</a>.</p>
+        </details>
+        <details>
+          <summary>Do I need an ETS project?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+          <p>No, the bus monitor works without one. With a project you get names, datapoint types, rooms and better checks. The password of a protected project is only used during import and is not stored.</p>
+        </details>
+        <details>
+          <summary>How do I get the desktop version?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+          <p>Linux does everything the iPad app does. The download is in the <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">GitHub release</a>. Windows follows in the coming weeks; on the Mac, KNX Monitor comes through the App Store.</p>
+        </details>
+        <details>
+          <summary>What do I need for the KNX box?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+          <p>A Raspberry Pi 4 or 5, ideally with a USB SSD and a real-time clock (Pi 5: battery, Pi 4: RTC module), plus the iPhone or iPad with the app, which arrives in the coming weeks. The box also sets its clock from the iPhone or the KNX time master. The ready-made image is in the <a href="https://github.com/regetskcob/KNX-Monitor/releases">GitHub releases</a>, everything else on the <a href="https://www.regetskcob.de/knx/en/box/">KNX box page</a>; it is a first preview.</p>
+        </details>
+      </div>
+    </div>
   </section>
 </main>
 <footer class="hz-feld-foot">
@@ -472,7 +771,7 @@ Panzergefecht</span>
 </div>
 <script id="tz-telegrams" type="application/json">[{"channel":2,"device":2,"from":"1.1.30","on":true,"text":"Kitchen light","to":"1/1/3","value":"On"},{"device":2,"from":"1.1.10","out":true,"text":"Kitchen light status","to":"1/4/3","value":"On"},{"channel":0,"device":3,"from":"1.1.31","on":true,"text":"Living room blinds","to":"2/1/1","value":"Down"},{"device":3,"from":"1.1.12","out":true,"text":"Living room position","to":"2/4/1","value":"40 %"},{"channel":0,"device":4,"from":"1.1.35","on":true,"text":"Dining dimmer","to":"3/2/0","value":"62 %"},{"device":4,"from":"1.1.11","out":true,"text":"Dining dimmer status","to":"3/4/0","value":"62 %"},{"channel":4,"device":2,"from":"1.1.30","on":true,"text":"Hall light","to":"1/1/5","value":"On"},{"device":2,"from":"1.1.10","out":true,"text":"Hall light status","to":"1/4/5","value":"On"},{"channel":2,"device":2,"from":"1.1.30","on":false,"text":"Kitchen light","to":"1/1/3","value":"Off"},{"device":2,"from":"1.1.10","out":true,"text":"Kitchen light status","to":"1/4/3","value":"Off"},{"channel":0,"device":3,"from":"1.1.31","on":false,"text":"Living room blinds","to":"2/1/1","value":"Stop"},{"device":3,"from":"1.1.12","out":true,"text":"Living room position","to":"2/4/1","value":"55 %"},{"channel":0,"device":4,"from":"1.1.35","on":false,"text":"Dining dimmer","to":"3/2/0","value":"0 %"},{"device":4,"from":"1.1.11","out":true,"text":"Dining dimmer status","to":"3/4/0","value":"0 %"},{"channel":4,"device":2,"from":"1.1.30","on":false,"text":"Hall light","to":"1/1/5","value":"Off"},{"device":2,"from":"1.1.10","out":true,"text":"Hall light status","to":"1/4/5","value":"Off"}]</script>
 <script id="tz-words" type="application/json">{"off":"Off","on":"On"}</script>
-<script src="/js/teaser.min.c549b4ebd8bb3254d97580a2cab5be1bf7faf2b56c0413be6378443f251e8c3d.js" integrity="sha256-xUm069i7MlTZdYCiyrW&#43;G/f68rVsBBO&#43;Y3hEPyUejD0=" defer></script>
+<script src="/js/teaser.min.9097670c709cd1bf6e5515a92582939b176605e8fdedf6d7a67f93a13d67853e.js" integrity="sha256-kJdnDHCc0b9uVRWpJYKTmxdmBej97fbXpn&#43;ToT1nhT4=" defer></script>
 <script src="/js/horizont/horizon.min.f92ded2ce54990bd7e56891e36d7f8b6943d75d8fcb91cc17114377f0ee81a71.js" integrity="sha256-&#43;S3tLOVJkL1&#43;VokeNtf4tpQ9ddj8uRzBcRQ3fw7oGnE=" defer></script>
 </body>
 </html>
