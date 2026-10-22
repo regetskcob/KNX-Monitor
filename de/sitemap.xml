@@ -13,5 +13,17 @@
                 hreflang="de-DE"
                 href="https://knx-monitor.de/"
                 />
+  </url><url>
+    <loc>https://knx-monitor.de/box/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://knx-monitor.de/en/box/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://knx-monitor.de/box/"
+                />
   </url>
 </urlset>
