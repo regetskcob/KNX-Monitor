@@ -469,7 +469,9 @@ Panzergefecht</span>
   <dt>Overview</dt><dd>Every group address with its value and a mini history, by rooms and functions</dd>
   <dt>Objects</dt><dd>Actuators as DIN rail devices with channel LEDs, like above</dd>
   <dt>Health</dt><dd>Silent devices, cycles, datapoint types and bus quality, with a PDF report</dd>
-  <dt>History</dt><dd>Continuous recording day by day, recordings with name and note</dd>
+  <dt>History</dt><dd>Continuous recording day by day, recordings with a timeline per group address</dd>
+  <dt>Comments</dt><dd>On telegrams, charts and recordings, with screenshots; &ldquo;Report a problem&rdquo; records when the fault happened</dd>
+  <dt>Exports</dt><dd>One page for PDF, CSV, ETS file, reports and a ZIP with everything</dd>
   <dt>Experts</dt><dd>Bus monitor with raw frames, topology, comparison with the ETS project, commissioning checklist</dd>
   <dt>Connection</dt><dd>Tunneling, routing and KNX IP Secure</dd>
 </dl>
@@ -559,10 +561,11 @@ Panzergefecht</span>
   <dt>Telegrams</dt><dd><strong>Live telegrams.</strong> Every telegram with sender, destination, value and anomalies. Search in the title bar, one filter button with counts, read and write values.</dd>
   <dt>Objects</dt><dd><strong>Rooms &amp; objects.</strong> Commands and feedbacks grouped automatically, actuators drawn as DIN-rail devices with channel LEDs.</dd>
   <dt>Health</dt><dd><strong>Health.</strong> Reads status addresses, reports devices that went silent and checks cycles, values, datapoint types and bus quality. With a PDF report.</dd>
-  <dt>Recordings</dt><dd><strong>Recordings &amp; history.</strong> Record with a name and note; a long press keeps the last 10 seconds. Before a replay, change values, remove telegrams, save as a copy; replay with a timeline, 1–60×. Also long-term history and statistics with an activity heatmap.</dd>
+  <dt>Recordings</dt><dd><strong>Recordings &amp; history.</strong> Record with a name and note; a long press keeps the last 10 seconds. Before a replay, change values, remove telegrams, save as a copy; replay with a timeline per group address, 1–60×. Also long-term history and statistics with an activity heatmap.</dd>
   <dt>Secure</dt><dd><strong>KNX Secure &amp; routing.</strong> Tunnel over UDP or TCP, routing via multicast, KNX IP Secure and Data Secure with the keyring from ETS.</dd>
-  <dt>Export</dt><dd>Export as PDF, CSV and for ETS</dd>
-  <dt>Bug report</dt><dd>Diagnostics bundle for bug reports, without names or values</dd>
+  <dt>Comments</dt><dd>On telegrams, charts and recordings, with up to three screenshots</dd>
+  <dt>Exports</dt><dd>One page for everything: telegrams as PDF, CSV and for ETS, reports and a ZIP with everything</dd>
+  <dt>Bug report</dt><dd><strong>Report a problem:</strong> reproduce the fault, tap each time it happens, and the diagnostic package goes to your electrician; opened, it shows findings and hints. Optionally without names or values</dd>
   <dt>Demo</dt><dd>Demo house to try it without a KNX system</dd>
   <dt>Languages</dt><dd>German and English</dd>
 </dl>
@@ -723,7 +726,7 @@ Panzergefecht</span>
   <dt>Connection</dt><dd>Today a network cable to the IP gateway; in future also straight on the line with a bus terminal (TP), no gateway</dd>
   <dt>Clock</dt><dd>Without internet: from the iPhone or iPad, or from the KNX time master on the line</dd>
   <dt>Recording</dt><dd>Around the clock, for days; app and box share the project and the history</dd>
-  <dt>Status</dt><dd><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Preview</span> <a href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.7.1">Image for the Raspberry Pi</a></dd>
+  <dt>Status</dt><dd><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Preview</span> <a href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.7.5">Image for the Raspberry Pi</a></dd>
 </dl>
   </section>
   <section class="hz-feld-section tz-section tz-section--read" id="privacy">

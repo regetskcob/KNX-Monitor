@@ -153,7 +153,7 @@ Panzergefecht</span>
     <span class="t-kennung hz-kennung">01 — KNX-Box · Raspberry Pi</span>
     <h1 class="t-display">Der Bus zeichnet sich auf, während du weg bist.</h1>
     <p><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Vorschau</span> Die KNX-Box ist ein Raspberry Pi, der rund um die Uhr jedes Telegramm mitschreibt und ein eigenes WLAN aufspannt. Eingerichtet wird sie mit der App: heute mit der Linux-App, bald per QR-Code mit iPhone, iPad und Android. Ohne Home Assistant und ohne Internet.</p>
-    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.7.1">Image laden<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">So richtest du sie ein</a>
+    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.7.5">Image laden<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">So richtest du sie ein</a>
     </div>
   </div>
   <div class="hz-feld-aside"><svg class="tz-pi" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
@@ -322,8 +322,12 @@ Panzergefecht</span>
         <p>Nein. Die Firewall trennt das WLAN der Box vom Netz am Kabel. Nur wer in <code>knx-box.txt</code> <code>INTERNET_SHARING=yes</code> setzt, gibt den Geräten im WLAN Zugang nach draußen.</p>
       </details>
       <details>
+        <summary>Kommt der Kunde über sein Netz an die Box?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+        <p>Nein. Über das Kabel antwortet die Box standardmäßig gar nicht, nur in ihrem eigenen WLAN. Für die eigene Box im eigenen Netz schaltest du den „Zugriff über das Kabel“ in der App unter Box-Einstellungen frei, oder vor dem ersten Start mit <code>LAN_ACCESS=yes</code> in <code>knx-box.txt</code>.</p>
+      </details>
+      <details>
         <summary>Was passiert, wenn jemand die Box mitnimmt?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-        <p>Wer den Aufkleber hat, kann sich koppeln. Ändere das Box-Passwort in der App unter Box-Einstellungen; danach koppelt der Aufkleber keine neuen Geräte mehr. Dort sperrst du auch Geräte, die du nicht mehr brauchst.</p>
+        <p>Wer den Aufkleber hat, kann sich koppeln. Deshalb schlägt die App direkt nach dem Koppeln vor, ein eigenes Box-Passwort zu setzen; danach koppeln Aufkleber und SD-Karte keine neuen Geräte mehr. Unter Box-Einstellungen änderst du es später und sperrst Geräte, die du nicht mehr brauchst.</p>
       </details>
       <details>
         <summary>Darf ich den Bus in einem bewohnten Haus mitschneiden?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
