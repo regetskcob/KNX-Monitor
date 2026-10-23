@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.7.6
+
+- Nothing changes in Home Assistant.
+- KNX box built from this version: after the first start the SD card holds
+  one printable sheet per language (knx-box-de.pdf, knx-box-en.pdf) with the
+  label to cut out, Wi-Fi code, passwords, the link for the Linux app and the
+  next steps.
+
 ## 1.7.5
 
 - Comments on telegrams, charts and recordings, with up to three
