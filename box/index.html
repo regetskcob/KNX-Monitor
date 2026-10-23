@@ -152,8 +152,8 @@ Panzergefecht</span>
   <div>
     <span class="t-kennung hz-kennung">01 — KNX-Box · Raspberry Pi</span>
     <h1 class="t-display">Der Bus zeichnet sich auf, während du weg bist.</h1>
-    <p><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Vorschau</span> Die KNX-Box ist ein Raspberry Pi, der rund um die Uhr jedes Telegramm mitschreibt und ein eigenes WLAN aufspannt. Eingerichtet wird sie mit der App: QR-Code scannen, fertig. Ohne Home Assistant, ohne Internet, ohne Browser.</p>
-    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.5.0">Image laden<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">So richtest du sie ein</a>
+    <p><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Vorschau</span> Die KNX-Box ist ein Raspberry Pi, der rund um die Uhr jedes Telegramm mitschreibt und ein eigenes WLAN aufspannt. Eingerichtet wird sie mit der App: heute mit der Linux-App, bald per QR-Code mit iPhone, iPad und Android. Ohne Home Assistant und ohne Internet.</p>
+    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.7.1">Image laden<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">So richtest du sie ein</a>
     </div>
   </div>
   <div class="hz-feld-aside"><svg class="tz-pi" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
@@ -217,18 +217,35 @@ Panzergefecht</span>
 </section>
 <hr class="hz-feld-horizon">
 <hr class="hz-feld-horizon">
-<section class="hz-feld-section tz-section tz-section--read" id="setup">
-  <span class="t-kennung hz-kennung">02 — Einrichten</span>
-  <div><h2>Einmal vorbereiten, dann nur noch scannen.</h2><p>Image und Aufkleber entstehen einmal am Schreibtisch. Auf der Baustelle braucht es danach nur Kabel, Strom und die App.</p></div>
+<section class="hz-feld-section tz-section tz-section--read" id="need">
+  <span class="t-kennung hz-kennung">02 — Checkliste</span>
+  <div><h2>Was du brauchst.</h2><p>Für die Vorbereitung am Schreibtisch rund eine halbe Stunde, ohne Vorkenntnisse in Linux.</p></div>
   <dl class="hz-facts">
-  <dt>Vorbereiten</dt><dd><strong>Image auf die SD-Karte schreiben</strong> (Raspberry Pi Imager, „Eigenes Image“) und die Box einmal starten. Sie legt ihren QR-Code als <code>knx-box-app.png</code> auf die SD-Karte: ausdrucken und auf die Box kleben.</dd>
-  <dt>Anschließen</dt><dd><strong>Netzwerkkabel zum Switch am Gateway, dann Strom.</strong> Nach etwa einer Minute ist die Box bereit.</dd>
-  <dt>Scannen</dt><dd><strong>In der App „KNX-Box hinzufügen“ und den Aufkleber scannen.</strong> Die App tritt dem WLAN der Box bei, koppelt sich, stellt die Uhr und sucht das Gateway. Gibt es genau eins, ist es gleich eingestellt, und die Box zeichnet auf. Ohne Kamera, etwa in der Linux-App: „Mit KNX-Box koppeln“ und den Link aus <code>knx-box-link.txt</code> von der SD-Karte einfügen.</dd>
+  <dt>Raspberry Pi</dt><dd>Pi 5 oder Pi 4 mit passendem Netzteil (Pi 5: 27 W USB-C), Details unter Hardware</dd>
+  <dt>SD-Karte</dt><dd>microSD ab 16 GB und ein Kartenleser für den Rechner</dd>
+  <dt>Rechner</dt><dd>Windows, Mac oder Linux mit dem kostenlosen <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a></dd>
+  <dt>Netzwerkkabel</dt><dd>Vom Pi zum Router oder Switch, an dem das KNX-IP-Gateway hängt</dd>
+  <dt>Gateway</dt><dd>Ein freier Tunnelplatz; Home Assistant oder die ETS belegen oft schon einen</dd>
+  <dt>App</dt><dd>Heute die <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux-App</a>, bald auch iPhone, iPad und Android</dd>
+  <dt>Drucker</dt><dd>Optional, für den Aufkleber mit dem QR-Code</dd>
+</dl>
+</section>
+<section class="hz-feld-section tz-section tz-section--read" id="setup">
+  <span class="t-kennung hz-kennung">03 — Einrichten</span>
+  <div><h2>Einmal vorbereiten, dann nur noch koppeln.</h2><p>Image und Aufkleber entstehen einmal am Schreibtisch. Auf der Baustelle braucht es danach nur Kabel, Strom und die App.</p></div>
+  <dl class="hz-facts">
+  <dt>Laden</dt><dd><strong>Image laden</strong> (Knopf oben, Datei <code>knx-box-….img.xz</code>). Nicht entpacken, der Imager liest es so.</dd>
+  <dt>Schreiben</dt><dd><strong>Im Raspberry Pi Imager:</strong> Gerät wählen (Pi 4 oder Pi 5), bei Betriebssystem ganz unten „Eigenes Image“ und die geladene Datei, dann die SD-Karte. Die Frage nach Anpassungen mit <strong>„Nein“</strong> beantworten: Name, WLAN und Passwörter legt die Box selbst an.</dd>
+  <dt>Erster Start</dt><dd><strong>SD-Karte in den Pi, Strom anschließen,</strong> ein Netzwerkkabel braucht es dafür noch nicht. Nach wenigen Minuten erscheint das WLAN „KNX-Box-…“. Dann noch eine Minute warten und den Strom ziehen.</dd>
+  <dt>Karte lesen</dt><dd><strong>SD-Karte zurück in den Rechner.</strong> Darauf liegen jetzt <code>knx-box-app.png</code> (QR-Code für die App: ausdrucken, auf die Box kleben), <code>knx-box-wlan.png</code> (QR-Code fürs WLAN), <code>knx-box-link.txt</code> (derselbe Link als Text) und <code>knx-box.txt</code> mit Name, <strong>WLAN-Passwort</strong> (<code>WLAN_PASSWORD</code>) und <strong>Box-Passwort</strong> (<code>BOX_PASSWORD</code>). Gut aufheben, dann die Karte zurück in den Pi.</dd>
+  <dt>Anschließen</dt><dd><strong>Netzwerkkabel zum Router oder Switch am Gateway, dann Strom.</strong> Nach etwa einer Minute ist die Box bereit.</dd>
+  <dt>Koppeln</dt><dd><strong>In der App „KNX-Box hinzufügen“ und den Aufkleber scannen.</strong> Die App tritt dem WLAN der Box bei, koppelt sich, stellt die Uhr und sucht das Gateway. Gibt es genau eins, ist es gleich eingestellt, und die Box zeichnet auf.</dd>
+  <dt>Mit Linux</dt><dd><strong><a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux-App laden</a>,</strong> entpacken und im Ordner <code>bundle</code> die Datei <code>knx_monitor</code> starten. Am Rechner ins WLAN „KNX-Box-…“ wechseln (WLAN-Passwort aus <code>knx-box.txt</code>). In der App „KNX-Box hinzufügen“ und den Inhalt von <code>knx-box-link.txt</code> einfügen; den Rest erledigt die App wie oben.</dd>
   <dt>Ohne App</dt><dd>Ohne App geht es auch: Der zweite QR-Code (<code>knx-box-wlan.png</code>) verbindet mit dem WLAN der Box, dann im Browser <code>knx-box.local</code> mit dem Box-Passwort öffnen.</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="data">
-  <span class="t-kennung hz-kennung">03 — Daten</span>
+  <span class="t-kennung hz-kennung">04 — Daten</span>
   <div><h2>Was die App für dich auf die Box legt.</h2><p>Alles, was die Box wissen muss, kommt aus der App. Du musst nichts kopieren.</p></div>
   <dl class="hz-facts">
   <dt>Gateway</dt><dd>Findet die Box an ihrem Kabel selbst; bei mehreren wählst du in der App.</dd>
@@ -239,7 +256,7 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="recording">
-  <span class="t-kennung hz-kennung">04 — Aufnahme</span>
+  <span class="t-kennung hz-kennung">05 — Aufnahme</span>
   <div><h2>Startet von selbst, hört nicht auf.</h2><p>Sobald ein Gateway eingestellt ist, zeichnet die Box auf. Es gibt nichts zu starten und nichts zu vergessen.</p></div>
   <dl class="hz-facts">
   <dt>Dauerbetrieb</dt><dd>Ein Tunnel bleibt offen, jedes Telegramm landet in einer Tagesdatei, auch wenn kein Gerät verbunden ist.</dd>
@@ -251,7 +268,7 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="connection">
-  <span class="t-kennung hz-kennung">05 — Anschluss</span>
+  <span class="t-kennung hz-kennung">06 — Anschluss</span>
   <div><h2>Heute über IP, künftig direkt am Bus.</h2><p>Heute hängt die Box per Netzwerkkabel am KNX-IP-Gateway oder IP-Router. Künftig soll sie auch direkt an der Linie sitzen: mit einer Busklemme, ganz ohne IP-Gateway.</p></div>
   <dl class="hz-facts">
   <dt>IP (heute)</dt><dd>KNXnet/IP-Tunnel oder Routing, auch KNX IP Secure. Die Box belegt einen Tunnelplatz am Gateway.</dd>
@@ -262,7 +279,7 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="hardware">
-  <span class="t-kennung hz-kennung">06 — Hardware</span>
+  <span class="t-kennung hz-kennung">07 — Hardware</span>
   <div><h2>Was in den Koffer gehört.</h2></div>
   <dl class="hz-facts">
   <dt>Rechner</dt><dd>Raspberry Pi 5 mit 2 oder 4 GB, ein Pi 4 geht auch</dd>
@@ -273,7 +290,7 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="status">
-  <span class="t-kennung hz-kennung">07 — Stand</span>
+  <span class="t-kennung hz-kennung">08 — Stand</span>
   <div><h2>Eine Vorschau, ehrlich gesagt.</h2><p>Das Image wird automatisch gebaut und läuft in der Testumgebung. Auf echter Hardware an einer echten Baustelle hat es noch niemand geprüft. Meldungen dazu sind sehr willkommen.</p></div>
   <dl class="hz-facts">
   <dt>App</dt><dd><strong>Ohne App ist die Box kaum zu gebrauchen:</strong> Einrichten, Projekt und Verlauf laufen über die App, der Browser ist nur ein Notbehelf (siehe Einrichten). iPhone, iPad, Android, Mac und Windows erscheinen in den nächsten Wochen; bis dahin nimm die <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux-App</a>.</dd>
@@ -284,13 +301,13 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read tz-section--faq" id="faq">
-  <span class="t-kennung hz-kennung">08 — Fragen</span>
+  <span class="t-kennung hz-kennung">09 — Fragen</span>
   <div>
     <h2>Häufige Fragen zur Box</h2>
     <div class="tz-faq">
       <details>
         <summary>Brauche ich einen PC?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-        <p>Nur einmal am Schreibtisch: zum Schreiben des Images und zum Ausdrucken des QR-Codes. Auf der Baustelle reicht die App.</p>
+        <p>Einmal am Schreibtisch: zum Schreiben des Images, zum Lesen der SD-Karte und zum Ausdrucken des QR-Codes. Bis iPhone, iPad und Android erscheinen, koppelst du die Box mit der Linux-App; danach reicht auf der Baustelle das Handy oder Tablet.</p>
       </details>
       <details>
         <summary>Brauche ich Home Assistant?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>

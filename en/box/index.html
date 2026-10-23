@@ -152,8 +152,8 @@ Panzergefecht</span>
   <div>
     <span class="t-kennung hz-kennung">01 — KNX box · Raspberry Pi</span>
     <h1 class="t-display">The bus records itself while you are away.</h1>
-    <p><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Preview</span> The KNX box is a Raspberry Pi that writes down every telegram around the clock and opens its own Wi-Fi. You set it up with the app: scan the QR code, done. No Home Assistant, no internet, no browser.</p>
-    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.5.0">Get the image<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">How to set it up</a>
+    <p><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Preview</span> The KNX box is a Raspberry Pi that writes down every telegram around the clock and opens its own Wi-Fi. You set it up with the app: today with the Linux app, soon by QR code with iPhone, iPad and Android. No Home Assistant and no internet.</p>
+    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.7.1">Get the image<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">How to set it up</a>
     </div>
   </div>
   <div class="hz-feld-aside"><svg class="tz-pi" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
@@ -217,18 +217,35 @@ Panzergefecht</span>
 </section>
 <hr class="hz-feld-horizon">
 <hr class="hz-feld-horizon">
-<section class="hz-feld-section tz-section tz-section--read" id="setup">
-  <span class="t-kennung hz-kennung">02 — Setup</span>
-  <div><h2>Prepare it once, then just scan.</h2><p>Image and label are made once at your desk. On site it then takes a cable, power and the app.</p></div>
+<section class="hz-feld-section tz-section tz-section--read" id="need">
+  <span class="t-kennung hz-kennung">02 — Checklist</span>
+  <div><h2>What you need.</h2><p>About half an hour at your desk to prepare it, no Linux knowledge needed.</p></div>
   <dl class="hz-facts">
-  <dt>Prepare</dt><dd><strong>Write the image to an SD card</strong> (Raspberry Pi Imager, &ldquo;Use custom&rdquo;) and start the box once. It puts its QR code on the SD card as <code>knx-box-app.png</code>: print it and stick it on the box.</dd>
-  <dt>Connect</dt><dd><strong>Network cable to the switch at the gateway, then power.</strong> After about a minute the box is ready.</dd>
-  <dt>Scan</dt><dd><strong>In the app, &ldquo;Add KNX box&rdquo; and scan the label.</strong> The app joins the box&rsquo;s Wi-Fi, pairs, sets the clock and looks for the gateway. If there is exactly one, it is set right away and the box records. Without a camera, as in the Linux app: &ldquo;Pair with KNX box&rdquo; and paste the link from <code>knx-box-link.txt</code> on the SD card.</dd>
+  <dt>Raspberry Pi</dt><dd>Pi 5 or Pi 4 with a matching power supply (Pi 5: 27 W USB-C), details under Hardware</dd>
+  <dt>SD card</dt><dd>microSD of 16 GB or more and a card reader for your computer</dd>
+  <dt>Computer</dt><dd>Windows, Mac or Linux with the free <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a></dd>
+  <dt>Network cable</dt><dd>From the Pi to the router or switch the KNX IP gateway is on</dd>
+  <dt>Gateway</dt><dd>One free tunnel slot; Home Assistant or ETS often take one already</dd>
+  <dt>App</dt><dd>Today the <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux app</a>, soon also iPhone, iPad and Android</dd>
+  <dt>Printer</dt><dd>Optional, for the label with the QR code</dd>
+</dl>
+</section>
+<section class="hz-feld-section tz-section tz-section--read" id="setup">
+  <span class="t-kennung hz-kennung">03 — Setup</span>
+  <div><h2>Prepare it once, then just pair.</h2><p>Image and label are made once at your desk. On site it then takes a cable, power and the app.</p></div>
+  <dl class="hz-facts">
+  <dt>Download</dt><dd><strong>Get the image</strong> (button at the top, file <code>knx-box-….img.xz</code>). Don&rsquo;t unpack it, the Imager reads it as it is.</dd>
+  <dt>Write</dt><dd><strong>In Raspberry Pi Imager:</strong> choose the device (Pi 4 or Pi 5), under operating system at the very bottom &ldquo;Use custom&rdquo; and the downloaded file, then the SD card. Answer the question about customisation with <strong>&ldquo;No&rdquo;</strong>: the box sets up its name, Wi-Fi and passwords itself.</dd>
+  <dt>First start</dt><dd><strong>SD card into the Pi, connect power;</strong> no network cable needed yet. After a few minutes the Wi-Fi &ldquo;KNX-Box-…&rdquo; appears. Wait one more minute, then unplug the power.</dd>
+  <dt>Read the card</dt><dd><strong>SD card back into the computer.</strong> It now holds <code>knx-box-app.png</code> (QR code for the app: print it and stick it on the box), <code>knx-box-wlan.png</code> (QR code for the Wi-Fi), <code>knx-box-link.txt</code> (the same link as text) and <code>knx-box.txt</code> with name, <strong>Wi-Fi password</strong> (<code>WLAN_PASSWORD</code>) and <strong>box password</strong> (<code>BOX_PASSWORD</code>). Keep them safe, then put the card back into the Pi.</dd>
+  <dt>Connect</dt><dd><strong>Network cable to the router or switch at the gateway, then power.</strong> After about a minute the box is ready.</dd>
+  <dt>Pair</dt><dd><strong>In the app, &ldquo;Add KNX box&rdquo; and scan the label.</strong> The app joins the box&rsquo;s Wi-Fi, pairs, sets the clock and looks for the gateway. If there is exactly one, it is set right away and the box records.</dd>
+  <dt>With Linux</dt><dd><strong><a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Get the Linux app</a>,</strong> unpack it and start <code>knx_monitor</code> in the <code>bundle</code> folder. On the computer, switch to the Wi-Fi &ldquo;KNX-Box-…&rdquo; (Wi-Fi password from <code>knx-box.txt</code>). In the app, &ldquo;Add KNX box&rdquo; and paste the contents of <code>knx-box-link.txt</code>; the app does the rest as above.</dd>
   <dt>Without app</dt><dd>It works without the app too: the second QR code (<code>knx-box-wlan.png</code>) joins the box&rsquo;s Wi-Fi, then open <code>knx-box.local</code> in a browser with the box password.</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="data">
-  <span class="t-kennung hz-kennung">03 — Data</span>
+  <span class="t-kennung hz-kennung">04 — Data</span>
   <div><h2>What the app puts on the box for you.</h2><p>Everything the box needs to know comes from the app. There is nothing to copy.</p></div>
   <dl class="hz-facts">
   <dt>Gateway</dt><dd>The box finds it on its cable; if there are several, you pick one in the app.</dd>
@@ -239,7 +256,7 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="recording">
-  <span class="t-kennung hz-kennung">04 — Recording</span>
+  <span class="t-kennung hz-kennung">05 — Recording</span>
   <div><h2>Starts by itself, never stops.</h2><p>As soon as a gateway is set, the box records. There is nothing to start and nothing to forget.</p></div>
   <dl class="hz-facts">
   <dt>Always on</dt><dd>One tunnel stays open, every telegram goes into a daily file, even with no device connected.</dd>
@@ -251,7 +268,7 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="connection">
-  <span class="t-kennung hz-kennung">05 — Connection</span>
+  <span class="t-kennung hz-kennung">06 — Connection</span>
   <div><h2>IP today, straight on the bus tomorrow.</h2><p>Today the box sits on a network cable to the KNX IP interface or IP router. In future it is meant to sit right on the line too: with a bus terminal, no IP gateway at all.</p></div>
   <dl class="hz-facts">
   <dt>IP (today)</dt><dd>KNXnet/IP tunnelling or routing, KNX IP Secure included. The box takes one tunnel slot on the gateway.</dd>
@@ -262,7 +279,7 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="hardware">
-  <span class="t-kennung hz-kennung">06 — Hardware</span>
+  <span class="t-kennung hz-kennung">07 — Hardware</span>
   <div><h2>What goes into the case.</h2></div>
   <dl class="hz-facts">
   <dt>Computer</dt><dd>Raspberry Pi 5 with 2 or 4 GB; a Pi 4 works too</dd>
@@ -273,7 +290,7 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="status">
-  <span class="t-kennung hz-kennung">07 — Status</span>
+  <span class="t-kennung hz-kennung">08 — Status</span>
   <div><h2>A preview, to be honest.</h2><p>The image is built automatically and runs in the test setup. Nobody has tried it on real hardware on a real site yet. Reports are very welcome.</p></div>
   <dl class="hz-facts">
   <dt>App</dt><dd><strong>The box is of little use without the app:</strong> setup, project and history go through the app, the browser is only a stopgap (see Setup). iPhone, iPad, Android, Mac and Windows arrive in the coming weeks; until then use the <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux app</a>.</dd>
@@ -284,13 +301,13 @@ Panzergefecht</span>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read tz-section--faq" id="faq">
-  <span class="t-kennung hz-kennung">08 — Questions</span>
+  <span class="t-kennung hz-kennung">09 — Questions</span>
   <div>
     <h2>Common questions about the box</h2>
     <div class="tz-faq">
       <details>
         <summary>Do I need a PC?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-        <p>Only once at your desk: to write the image and print the QR code. On site the app is enough.</p>
+        <p>Once at your desk: to write the image, read the SD card and print the QR code. Until iPhone, iPad and Android arrive, you pair the box with the Linux app; after that a phone or tablet is enough on site.</p>
       </details>
       <details>
         <summary>Do I need Home Assistant?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
