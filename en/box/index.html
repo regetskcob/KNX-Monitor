@@ -153,7 +153,7 @@ Panzergefecht</span>
     <span class="t-kennung hz-kennung">01 — KNX box · Raspberry Pi</span>
     <h1 class="t-display">The bus records itself while you are away.</h1>
     <p><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Preview</span> The KNX box is a Raspberry Pi that writes down every telegram around the clock and opens its own Wi-Fi. You set it up with the app: today with the Linux app, soon by QR code with iPhone, iPad and Android. No Home Assistant and no internet.</p>
-    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.7.5">Get the image<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">How to set it up</a>
+    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.7.7">Get the image<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">How to set it up</a>
     </div>
   </div>
   <div class="hz-feld-aside"><svg class="tz-pi" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
@@ -227,7 +227,7 @@ Panzergefecht</span>
   <dt>Network cable</dt><dd>From the Pi to the router or switch the KNX IP gateway is on</dd>
   <dt>Gateway</dt><dd>One free tunnel slot; Home Assistant or ETS often take one already</dd>
   <dt>App</dt><dd>Today the <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux app</a>, soon also iPhone, iPad and Android</dd>
-  <dt>Printer</dt><dd>Optional, for the label with the QR code</dd>
+  <dt>Printer</dt><dd>Optional, for the sheet with the two labels and access details</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="setup">
@@ -237,10 +237,10 @@ Panzergefecht</span>
   <dt>Download</dt><dd><strong>Get the image</strong> (button at the top, file <code>knx-box-….img.xz</code>). Don&rsquo;t unpack it, the Imager reads it as it is.</dd>
   <dt>Write</dt><dd><strong>In Raspberry Pi Imager:</strong> choose the device (Pi 4 or Pi 5), under operating system at the very bottom &ldquo;Use custom&rdquo; and the downloaded file, then the SD card. Answer the question about customisation with <strong>&ldquo;No&rdquo;</strong>: the box sets up its name, Wi-Fi and passwords itself.</dd>
   <dt>First start</dt><dd><strong>SD card into the Pi, connect power;</strong> no network cable needed yet. After a few minutes the Wi-Fi &ldquo;KNX-Box-…&rdquo; appears. Wait one more minute, then unplug the power.</dd>
-  <dt>Read the card</dt><dd><strong>SD card back into the computer.</strong> It now holds <code>knx-box-app.png</code> (QR code for the app: print it and stick it on the box), <code>knx-box-wlan.png</code> (QR code for the Wi-Fi), <code>knx-box-link.txt</code> (the same link as text) and <code>knx-box.txt</code> with name, <strong>Wi-Fi password</strong> (<code>WLAN_PASSWORD</code>) and <strong>box password</strong> (<code>BOX_PASSWORD</code>). Keep them safe, then put the card back into the Pi.</dd>
+  <dt>Read the card</dt><dd><strong>SD card back into the computer, print <code>knx-box-en.pdf</code></strong> (German: <code>knx-box-de.pdf</code>). The sheet has everything: <strong>two labels</strong> to cut out (1 for the app on top of the box, 2 with the Wi-Fi on the bottom), <strong>Wi-Fi and box password</strong>, the link for the Linux app and the next steps. Keep it safe, then put the card back into the Pi. Next to it are the QR codes as images (<code>knx-box-app.png</code>, <code>knx-box-wlan.png</code>), the link as <code>knx-box-link.txt</code> and the values in <code>knx-box.txt</code>.</dd>
   <dt>Connect</dt><dd><strong>Network cable to the router or switch at the gateway, then power.</strong> After about a minute the box is ready.</dd>
   <dt>Pair</dt><dd><strong>In the app, &ldquo;Add KNX box&rdquo; and scan the label.</strong> The app joins the box&rsquo;s Wi-Fi, pairs, sets the clock and looks for the gateway. If there is exactly one, it is set right away and the box records.</dd>
-  <dt>With Linux</dt><dd><strong><a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Get the Linux app</a>,</strong> unpack it and start <code>knx_monitor</code> in the <code>bundle</code> folder. On the computer, switch to the Wi-Fi &ldquo;KNX-Box-…&rdquo; (Wi-Fi password from <code>knx-box.txt</code>). In the app, &ldquo;Add KNX box&rdquo; and paste the contents of <code>knx-box-link.txt</code>; the app does the rest as above.</dd>
+  <dt>With Linux</dt><dd><strong><a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Get the Linux app</a>,</strong> unpack it and run <code>./install.sh</code> in the <code>bundle</code> folder: it installs KNX Monitor to the app menu, then the download can go. On the computer, switch to the Wi-Fi &ldquo;KNX-Box-…&rdquo; (Wi-Fi password from <code>knx-box.txt</code>). In the app, &ldquo;Add KNX box&rdquo; and paste the contents of <code>knx-box-link.txt</code>; the app does the rest as above.</dd>
   <dt>Without app</dt><dd>It works without the app too: the second QR code (<code>knx-box-wlan.png</code>) joins the box&rsquo;s Wi-Fi, then open <code>knx-box.local</code> in a browser with the box password.</dd>
 </dl>
 </section>
@@ -286,7 +286,7 @@ Panzergefecht</span>
   <dt>Clock</dt><dd>Recommended: the RTC battery for the Pi 5 or a DS3231 module for the Pi 4. Then the time is right even before the first iPhone.</dd>
   <dt>Power</dt><dd>27 W power supply (USB-C); weaker ones crash under load</dd>
   <dt>Storage</dt><dd>USB SSD or NVMe, 128 GB last for years</dd>
-  <dt>The rest</dt><dd>A case with a fan, a network cable, a label for the QR code; in future a bus terminal with a TP-UART module</dd>
+  <dt>The rest</dt><dd>A case with a fan, a network cable, the two labels from the sheet; in future a bus terminal with a TP-UART module</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="status">
