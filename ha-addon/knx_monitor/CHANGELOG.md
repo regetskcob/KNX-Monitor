@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.7.8
+
+- Fixed: the add-on page stayed blank since 1.7.1. It starts again.
+- Statistics: load peaks and heatmap cells filter the monitor by time (new
+  filter term `time:`, e.g. `time:14:05-14:10`); in English, sender filters
+  use `from:`.
+- Health check shows its progress while reading and the expected duration
+  next to "Check now".
+- Overview without an ETS project: guessed date and time values are shown
+  large, the raw bytes small below.
+- Long values in the history wrap instead of running out of the details.
+- KNX box built from this version: the same fixes, its web page starts again.
+
 ## 1.7.7
 
 - Nothing changes in Home Assistant.
