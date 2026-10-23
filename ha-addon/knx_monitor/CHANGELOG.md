@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.7.7
+
+- Nothing changes in Home Assistant.
+- KNX box built from this version: the printable sheet has two labels of the
+  same size, label 1 for the app on top of the box and label 2 with the
+  Wi-Fi on the bottom.
+
 ## 1.7.6
 
 - Nothing changes in Home Assistant.
