@@ -1,5 +1,25 @@
 # Changelog
 
+## 1.7.5
+
+- Comments on telegrams, charts and recordings, with up to three
+  screenshots each. Telegram lists flag commented addresses; all comments are
+  listed under Tools › Comments.
+- Timeline for recordings: one lane per group address, drag and zoom, tap a
+  telegram to comment on it.
+- "Report a problem": start, reproduce the fault, tap "It happened now" each
+  time, then send the diagnostic package to your electrician.
+- Opening a diagnostic package shows findings: the problem with screenshots,
+  automatic hints (connection, Secure, repeats, unanswered reads, outages),
+  comments and the busiest addresses.
+- One page for all exports: telegrams as PDF, CSV or ETS file, reports (bus
+  statistics, health check, commissioning log), a combined ZIP and the last
+  exports to share again.
+- PDFs are built in the background and break long tables across pages;
+  large health reports no longer freeze the app.
+- KNX box built from this version: reachable only in its own Wi-Fi by
+  default; access over the network cable can be turned on in the app.
+
 ## 1.7.3
 
 - The add-on links to its website knx-monitor.de, with support, privacy

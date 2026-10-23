@@ -46,6 +46,18 @@ history are explained in the day list ("bus disconnected for 3 min",
 The history, settings and an imported keyring are part of Home Assistant
 backups.
 
+## Comments, reporting a problem, exports
+
+- **Comments** can be added to telegrams, charts and recordings, with up to
+  three screenshots. They are stored per installation in the add-on's data
+  folder and listed under Tools › Comments.
+- **Report a problem** (Tools): start it, reproduce the fault and tap "It
+  happened now" each time, then create the diagnostic package and send it to
+  your electrician. Opening a package shows its findings. Names can be left
+  out of the package.
+- **Exports** collects everything in one page: telegrams as PDF, CSV or ETS
+  file, reports, a combined ZIP and the last exports.
+
 ## Connection types
 
 - **UDP / TCP tunnel** – TCP copes better with lossy links (KNXnet/IP 2.0).
