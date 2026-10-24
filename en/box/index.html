@@ -320,7 +320,8 @@ Panzergefecht</span>
   </div>
   <dl class="hz-facts">
   <dt>IP (today)</dt><dd>KNXnet/IP tunnelling or routing, KNX IP Secure included. The box takes one tunnel slot on the gateway.</dd>
-  <dt>TP (planned)</dt><dd>A bus terminal on the line and a TP-UART module over USB (such as busware TUL). No gateway needed, no tunnel slot taken.</dd>
+  <dt>TP (planned)</dt><dd>The bus cable goes straight to the box: through the Weinzierl KNX BAOS 838 kBerry, a module that plugs onto the Pi&rsquo;s pin header. No gateway needed, no tunnel slot taken.</dd>
+  <dt>Guide</dt><dd><strong>Preview:</strong> how the kBerry goes onto the Pi, how to prepare the Pi and how to assemble the matching case: <a href="/box/knx-box-kberry.pdf">guide for tinkerers (PDF, German, preview)</a>. Not yet tested on real hardware.</dd>
   <dt>Bus monitor</dt><dd>Over TP the box also sees what a tunnel never shows: acknowledgements (ACK, NAK, BUSY) and repeats.</dd>
   <dt>Address</dt><dd>To listen, the box needs no individual address and no ETS programming.</dd>
   <dt>Status</dt><dd>In progress, see the <a href="https://github.com/regetskcob/KNX-Monitor/issues/1">issue on GitHub</a>.</dd>
@@ -336,7 +337,8 @@ Panzergefecht</span>
   <dt>Clock</dt><dd>Recommended: the RTC battery for the Pi 5 or a DS3231 module for the Pi 4. Then the time is right even before the first iPhone.</dd>
   <dt>Power</dt><dd>27 W power supply (USB-C); weaker ones crash under load</dd>
   <dt>Storage</dt><dd>USB SSD or NVMe, 128 GB last for years</dd>
-  <dt>The rest</dt><dd>A case with a fan, a network cable, the two labels from the sheet; in future a bus terminal with a TP-UART module</dd>
+  <dt>Case</dt><dd><strong>Preview:</strong> <a href="/box/knx-box-case-vorschau.zip">printable case (STL, zip)</a> for Pi 3B to 5, also as a variant for the kBerry with a module bridge, plus a USB cover. Description (German) in the README.md inside. The fit has only been checked on the model so far.</dd>
+  <dt>The rest</dt><dd>A network cable, the two labels from the sheet; in future the kBerry plug-on module with its bus terminal</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="status">
@@ -367,7 +369,7 @@ Panzergefecht</span>
       </details>
       <details>
         <summary>Does the box take up a tunnel on the gateway?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-        <p>Over IP yes, exactly one, around the clock. Every iPhone and iPad in the box&rsquo;s Wi-Fi shares that tunnel. If ETS needs the only free slot, pause the box. With the bus terminal (planned) this goes away.</p>
+        <p>Over IP yes, exactly one, around the clock. Every iPhone and iPad in the box&rsquo;s Wi-Fi shares that tunnel. If ETS needs the only free slot, pause the box. Straight on the line with the kBerry (planned) this goes away.</p>
       </details>
       <details>
         <summary>Do devices in the box&#39;s Wi-Fi reach the customer&#39;s network?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>

@@ -320,7 +320,8 @@ Panzergefecht</span>
   </div>
   <dl class="hz-facts">
   <dt>IP (heute)</dt><dd>KNXnet/IP-Tunnel oder Routing, auch KNX IP Secure. Die Box belegt einen Tunnelplatz am Gateway.</dd>
-  <dt>TP (geplant)</dt><dd>Busklemme an der Linie, ein TP-UART-Modul per USB (etwa busware TUL). Kein Gateway nötig, kein Tunnelplatz belegt.</dd>
+  <dt>TP (geplant)</dt><dd>Busleitung direkt an die Box: über das Aufsteckmodul KNX BAOS 838 kBerry von Weinzierl auf der Stiftleiste des Pi. Kein Gateway nötig, kein Tunnelplatz belegt.</dd>
+  <dt>Anleitung</dt><dd><strong>Vorschau:</strong> Wie der kBerry auf den Pi kommt, wie der Pi vorbereitet wird und wie das passende Gehäuse zusammengebaut wird: <a href="/box/knx-box-kberry.pdf">Anleitung für Bastler (PDF, Vorschau)</a>. Noch nicht an echter Hardware geprüft.</dd>
   <dt>Busmonitor</dt><dd>Über TP sieht die Box auch, was ein Tunnel nie zeigt: Quittungen (ACK, NAK, BUSY) und Wiederholungen.</dd>
   <dt>Adresse</dt><dd>Zum Mithören braucht die Box keine physikalische Adresse und keine ETS-Programmierung.</dd>
   <dt>Stand</dt><dd>In Arbeit, siehe <a href="https://github.com/regetskcob/KNX-Monitor/issues/1">Issue auf GitHub</a>.</dd>
@@ -336,7 +337,8 @@ Panzergefecht</span>
   <dt>Uhr</dt><dd>Empfohlen: der RTC-Akku für den Pi 5 bzw. ein DS3231-Modul für den Pi 4. Dann stimmt die Zeit schon vor dem ersten iPhone.</dd>
   <dt>Strom</dt><dd>Netzteil mit 27 W (USB-C); schwächere führen unter Last zu Abstürzen</dd>
   <dt>Speicher</dt><dd>USB-SSD oder NVMe, 128 GB reichen für Jahre</dd>
-  <dt>Rest</dt><dd>Gehäuse mit Lüfter, Netzwerkkabel, die zwei Aufkleber vom Blatt; künftig eine Busklemme mit TP-UART-Modul</dd>
+  <dt>Gehäuse</dt><dd><strong>Vorschau:</strong> <a href="/box/knx-box-case-vorschau.zip">Gehäuse zum Drucken (STL, Zip)</a> für Pi 3B bis 5, auch als Variante für den kBerry mit Modulbrücke, dazu eine USB-Abdeckung. Beschreibung im README.md darin. Die Passform ist erst am Modell geprüft.</dd>
+  <dt>Rest</dt><dd>Netzwerkkabel, die zwei Aufkleber vom Blatt; künftig das Aufsteckmodul kBerry mit Busklemme</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="status">
@@ -367,7 +369,7 @@ Panzergefecht</span>
       </details>
       <details>
         <summary>Belegt die Box einen Tunnel am Gateway?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-        <p>Über IP ja, genau einen, rund um die Uhr. Alle iPhones und iPads im WLAN der Box teilen sich diesen Tunnel. Braucht die ETS den einzigen freien Platz, pausierst du die Box. Mit der Busklemme (geplant) entfällt das.</p>
+        <p>Über IP ja, genau einen, rund um die Uhr. Alle iPhones und iPads im WLAN der Box teilen sich diesen Tunnel. Braucht die ETS den einzigen freien Platz, pausierst du die Box. Direkt an der Linie mit dem kBerry (geplant) entfällt das.</p>
       </details>
       <details>
         <summary>Kommen Geräte im WLAN der Box ins Kundennetz?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
