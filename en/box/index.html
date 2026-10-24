@@ -34,7 +34,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/css/teaser.min.466894de33466d3f40fa88fa20e132035964b99447d291614250f8844a508667.css" integrity="sha256-RmiU3jNGbT9A&#43;oj6IOEyA1lkuZRH0pFhQlD4hEpQhmc="><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://knx-monitor.de/#website","@type":"WebSite","inLanguage":"en-US","name":"KNX Monitor","publisher":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"url":"https://knx-monitor.de/"},{"@id":"https://knx-monitor.de/#app","@type":"SoftwareApplication","applicationCategory":"UtilitiesApplication","author":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"description":"KNX bus monitor and diagnostics for Home Assistant and Linux, soon on iPhone, iPad, Android, Mac and Windows. Reads ETS projects, data stays local.","downloadUrl":"https://github.com/regetskcob/KNX-Monitor/releases","image":"https://knx-monitor.de/images/og-box-en.png","isAccessibleForFree":true,"name":"KNX Monitor","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"operatingSystem":"Home Assistant, Linux","sameAs":["https://github.com/regetskcob/KNX-Monitor"],"url":"https://knx-monitor.de/en/"},{"@id":"https://knx-monitor.de/en/box/#page","@type":"WebPage","about":{"@id":"https://knx-monitor.de/#app"},"description":"KNX box: a Raspberry Pi at the KNX IP gateway that records around the clock and opens its own Wi-Fi. Setup, data, recording, hardware.","inLanguage":"en-US","isPartOf":{"@id":"https://knx-monitor.de/#website"},"name":"KNX box · KNX Monitor","primaryImageOfPage":"https://knx-monitor.de/images/og-box-en.png","url":"https://knx-monitor.de/en/box/"}]}</script>
+<link rel="stylesheet" href="/css/teaser.min.4659cdc40e558b4ba10f2dc0aeba99f714101bf0b06ec00b679eaa66ac1b1555.css" integrity="sha256-RlnNxA5Vi0uhDy3ArrqZ9xQQG/CwbsALZ56qZqwbFVU="><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://knx-monitor.de/#website","@type":"WebSite","inLanguage":"en-US","name":"KNX Monitor","publisher":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"url":"https://knx-monitor.de/"},{"@id":"https://knx-monitor.de/#app","@type":"SoftwareApplication","applicationCategory":"UtilitiesApplication","author":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"description":"KNX bus monitor and diagnostics for Home Assistant and Linux, soon on iPhone, iPad, Android, Mac and Windows. Reads ETS projects, data stays local.","downloadUrl":"https://github.com/regetskcob/KNX-Monitor/releases","image":"https://knx-monitor.de/images/og-box-en.png","isAccessibleForFree":true,"name":"KNX Monitor","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"operatingSystem":"Home Assistant, Linux","sameAs":["https://github.com/regetskcob/KNX-Monitor"],"url":"https://knx-monitor.de/en/"},{"@id":"https://knx-monitor.de/en/box/#page","@type":"WebPage","about":{"@id":"https://knx-monitor.de/#app"},"description":"KNX box: a Raspberry Pi at the KNX IP gateway that records around the clock and opens its own Wi-Fi. Setup, data, recording, hardware.","inLanguage":"en-US","isPartOf":{"@id":"https://knx-monitor.de/#website"},"name":"KNX box · KNX Monitor","primaryImageOfPage":"https://knx-monitor.de/images/og-box-en.png","url":"https://knx-monitor.de/en/box/"}]}</script>
 </head>
 
 <body class="hz tz">
@@ -147,6 +147,20 @@ Panzergefecht</span>
 </nav>
 </dialog>
 <div class="hz-feld tz-feld">
+<svg class="tz-thread" aria-hidden="true" focusable="false">
+  <path class="tz-thread-line"/>
+  <circle class="tz-thread-pulse" r="4" cx="-10" cy="-10"/>
+</svg>
+<div class="tz-sensors">
+  <div class="tz-sensor tz-sensor--glass" data-addr="1.1.30" hidden>
+    <span class="tz-sensor-addr">1.1.30 · Glass push button</span>
+    <div class="tz-sensor-body"><span class="tz-sensor-display">21.5 °C</span>
+      <button class="tz-key" type="button" aria-label="Kitchen light" title="Kitchen light" data-key="{&#34;channel&#34;:2,&#34;device&#34;:2,&#34;hint&#34;:&#34;Kitchen light&#34;,&#34;label&#34;:&#34;T1&#34;,&#34;status&#34;:&#34;1/4/3&#34;,&#34;status_text&#34;:&#34;Kitchen light status&#34;,&#34;text&#34;:&#34;Kitchen light&#34;,&#34;to&#34;:&#34;1/1/3&#34;}"><i class="tz-key-led"></i><b>T1</b><small>Kitchen light</small></button>
+      <button class="tz-key" type="button" aria-label="Hall light" title="Hall light" data-key="{&#34;channel&#34;:4,&#34;device&#34;:2,&#34;hint&#34;:&#34;Hall light&#34;,&#34;label&#34;:&#34;T2&#34;,&#34;status&#34;:&#34;1/4/5&#34;,&#34;status_text&#34;:&#34;Hall light status&#34;,&#34;text&#34;:&#34;Hall light&#34;,&#34;to&#34;:&#34;1/1/5&#34;}"><i class="tz-key-led"></i><b>T2</b><small>Hall light</small></button>
+    </div>
+    <p class="tz-sensor-note">Go ahead and press it: the box records every telegram, yours too.</p>
+  </div>
+</div>
 <main id="main" class="tz-main">
 <section class="hz-feld-hero">
   <div>
@@ -216,7 +230,6 @@ Panzergefecht</span>
 </div>
 </section>
 <hr class="hz-feld-horizon">
-<hr class="hz-feld-horizon">
 <section class="hz-feld-section tz-section tz-section--read" id="need">
   <span class="t-kennung hz-kennung">02 — Checklist</span>
   <div><h2>What you need.</h2><p>About half an hour at your desk to prepare it, no Linux knowledge needed.</p></div>
@@ -232,7 +245,17 @@ Panzergefecht</span>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="setup">
   <span class="t-kennung hz-kennung">03 — Setup</span>
-  <div><h2>Prepare it once, then just pair.</h2><p>Image and label are made once at your desk. On site it then takes a cable, power and the app.</p></div>
+  <div>
+    <h2>Prepare it once, then just pair.</h2><p>Image and label are made once at your desk. On site it then takes a cable, power and the app.</p>
+    <figure class="tz-box-setup">
+      <figure class="hz-device hz-device--iphone hz-device--cropped" style="--w:240px;--h:300px">
+  <div class="hz-device-screen">
+    <img src="/images/box-setup-en_hu_a3d927447675f1c6.webp" width="240" height="520" alt="The app sets up the KNX box: join the Wi-Fi, reach the box, pair, set the clock, find the gateway, all checked" loading="lazy" style="display:block;width:100%;height:auto">
+  </div>
+</figure>
+      <figcaption class="t-caption"><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true">&#xe88e;</span>Preview</span> Scan the label, the app does the rest: Wi-Fi, pairing, clock and gateway. This is how it will look on iPhone, iPad and Android; today it works with the Linux app.</figcaption>
+    </figure>
+  </div>
   <dl class="hz-facts">
   <dt>Download</dt><dd><strong>Get the image</strong> (button at the top, file <code>knx-box-….img.xz</code>). Don&rsquo;t unpack it, the Imager reads it as it is.</dd>
   <dt>Write</dt><dd><strong>In Raspberry Pi Imager:</strong> choose the device (Pi 4 or Pi 5), under operating system at the very bottom &ldquo;Use custom&rdquo; and the downloaded file, then the SD card. Answer the question about customisation with <strong>&ldquo;No&rdquo;</strong>: the box sets up its name, Wi-Fi and passwords itself.</dd>
@@ -246,7 +269,9 @@ Panzergefecht</span>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="data">
   <span class="t-kennung hz-kennung">04 — Data</span>
-  <div><h2>What the app puts on the box for you.</h2><p>Everything the box needs to know comes from the app. There is nothing to copy.</p></div>
+  <div>
+    <h2>What the app puts on the box for you.</h2><p>Everything the box needs to know comes from the app. There is nothing to copy.</p>
+  </div>
   <dl class="hz-facts">
   <dt>Gateway</dt><dd>The box finds it on its cable; if there are several, you pick one in the app.</dd>
   <dt>ETS project</dt><dd>Import it in the app and it goes onto the box too. Then the box knows names, datapoint types and the time master.</dd>
@@ -257,7 +282,28 @@ Panzergefecht</span>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="recording">
   <span class="t-kennung hz-kennung">05 — Recording</span>
-  <div><h2>Starts by itself, never stops.</h2><p>As soon as a gateway is set, the box records. There is nothing to start and nothing to forget.</p></div>
+  <div>
+    <h2>Starts by itself, never stops.</h2><p>As soon as a gateway is set, the box records. There is nothing to start and nothing to forget.</p>
+    <figure class="tz-boxlog-figure">
+      <figure class="hz-device hz-device--laptop" style="--w:460px">
+  <div class="hz-device-screen">
+    <div class="tz-boxlog" role="img" aria-label="Laptop with the app, coupled with the KNX box: a list of the telegrams the box records">
+  <div class="tz-boxlog-bar">
+    <span class="tz-boxlog-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+    <b>KNX-Box-4F2A</b>
+    <span class="tz-boxlog-meta">Box Wi-Fi</span>
+    <span class="hz-badge hz-badge--positive"><span class="hz-symbol" aria-hidden="true">&#xf0be;</span>Recording</span>
+  </div>
+  <div class="tz-boxlog-count" aria-hidden="true"><span class="tz-boxlog-n">12 408</span> telegrams today</div>
+  <div class="tz-boxlog-head" aria-hidden="true"><span>Time</span><span>Source</span><span>Target</span><span>Name</span><span>Value</span></div>
+  <ol class="tz-boxlog-rows" aria-hidden="true"></ol>
+</div>
+
+  </div>
+</figure>
+      <figcaption class="t-caption">On the coupled laptop: what the box is recording right now. <span class="tz-boxlog-taster">The glass push button on the cable sends your own telegrams.</span></figcaption>
+    </figure>
+  </div>
   <dl class="hz-facts">
   <dt>Always on</dt><dd>One tunnel stays open, every telegram goes into a daily file, even with no device connected.</dd>
   <dt>Clock</dt><dd><strong>Without internet:</strong> the box sets its clock from the iPhone or iPad that connects, or from the KNX time master on the line (DPT 19.001, 10.001 + 11.001).</dd>
@@ -269,7 +315,9 @@ Panzergefecht</span>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="connection">
   <span class="t-kennung hz-kennung">06 — Connection</span>
-  <div><h2>IP today, straight on the bus tomorrow.</h2><p>Today the box sits on a network cable to the KNX IP interface or IP router. In future it is meant to sit right on the line too: with a bus terminal, no IP gateway at all.</p></div>
+  <div>
+    <h2>IP today, straight on the bus tomorrow.</h2><p>Today the box sits on a network cable to the KNX IP interface or IP router. In future it is meant to sit right on the line too: with a bus terminal, no IP gateway at all.</p>
+  </div>
   <dl class="hz-facts">
   <dt>IP (today)</dt><dd>KNXnet/IP tunnelling or routing, KNX IP Secure included. The box takes one tunnel slot on the gateway.</dd>
   <dt>TP (planned)</dt><dd>A bus terminal on the line and a TP-UART module over USB (such as busware TUL). No gateway needed, no tunnel slot taken.</dd>
@@ -280,7 +328,9 @@ Panzergefecht</span>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="hardware">
   <span class="t-kennung hz-kennung">07 — Hardware</span>
-  <div><h2>What goes into the case.</h2></div>
+  <div>
+    <h2>What goes into the case.</h2>
+  </div>
   <dl class="hz-facts">
   <dt>Computer</dt><dd>Raspberry Pi 5 with 2 or 4 GB; a Pi 4 works too</dd>
   <dt>Clock</dt><dd>Recommended: the RTC battery for the Pi 5 or a DS3231 module for the Pi 4. Then the time is right even before the first iPhone.</dd>
@@ -291,7 +341,9 @@ Panzergefecht</span>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="status">
   <span class="t-kennung hz-kennung">08 — Status</span>
-  <div><h2>A preview, to be honest.</h2><p>The image is built automatically and runs in the test setup. Nobody has tried it on real hardware on a real site yet. Reports are very welcome.</p></div>
+  <div>
+    <h2>A preview, to be honest.</h2><p>The image is built automatically and runs in the test setup. Nobody has tried it on real hardware on a real site yet. Reports are very welcome.</p>
+  </div>
   <dl class="hz-facts">
   <dt>App</dt><dd><strong>The box is of little use without the app:</strong> setup, project and history go through the app, the browser is only a stopgap (see Setup). iPhone, iPad, Android, Mac and Windows arrive in the coming weeks; until then use the <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux app</a>.</dd>
   <dt>Gateway</dt><dd>A gateway with a fixed address straight on the box&rsquo;s cable does not work yet; that needs the switch.</dd>
@@ -347,6 +399,9 @@ Panzergefecht</span>
 </footer>
 <p class="tz-mark t-caption">KNX is a registered trademark of the KNX Association. KNX Monitor is not a product of the KNX Association.</p>
 </div>
+<script id="tz-telegrams" type="application/json">[{"channel":2,"device":2,"from":"1.1.30","on":true,"text":"Kitchen light","to":"1/1/3","value":"On"},{"device":2,"from":"1.1.10","out":true,"text":"Kitchen light status","to":"1/4/3","value":"On"},{"channel":0,"device":3,"from":"1.1.31","on":true,"text":"Living room blinds","to":"2/1/1","value":"Down"},{"device":3,"from":"1.1.12","out":true,"text":"Living room position","to":"2/4/1","value":"40 %"},{"channel":0,"device":4,"from":"1.1.35","on":true,"text":"Dining dimmer","to":"3/2/0","value":"62 %"},{"device":4,"from":"1.1.11","out":true,"text":"Dining dimmer status","to":"3/4/0","value":"62 %"},{"channel":4,"device":2,"from":"1.1.30","on":true,"text":"Hall light","to":"1/1/5","value":"On"},{"device":2,"from":"1.1.10","out":true,"text":"Hall light status","to":"1/4/5","value":"On"},{"channel":2,"device":2,"from":"1.1.30","on":false,"text":"Kitchen light","to":"1/1/3","value":"Off"},{"device":2,"from":"1.1.10","out":true,"text":"Kitchen light status","to":"1/4/3","value":"Off"},{"channel":0,"device":3,"from":"1.1.31","on":false,"text":"Living room blinds","to":"2/1/1","value":"Stop"},{"device":3,"from":"1.1.12","out":true,"text":"Living room position","to":"2/4/1","value":"55 %"},{"channel":0,"device":4,"from":"1.1.35","on":false,"text":"Dining dimmer","to":"3/2/0","value":"0 %"},{"device":4,"from":"1.1.11","out":true,"text":"Dining dimmer status","to":"3/4/0","value":"0 %"},{"channel":4,"device":2,"from":"1.1.30","on":false,"text":"Hall light","to":"1/1/5","value":"Off"},{"device":2,"from":"1.1.10","out":true,"text":"Hall light status","to":"1/4/5","value":"Off"}]</script>
+<script id="tz-words" type="application/json">{"off":"Off","on":"On"}</script>
+<script src="/js/box.min.ba85ae101917c5c40923ad8d78ea050265075c114a36750103a37b2824f4249b.js" integrity="sha256-uoWuEBkXxcQJI62NeOoFAmUHXBFKNnUBA6N7KCT0JJs=" defer></script>
 <script src="/js/horizont/horizon.min.351c0b01bf837df906603120dda6db1968da693dfa7f531870d1c4ae0cd95bb0.js" integrity="sha256-NRwLAb&#43;DffkGYDEg3abbGWjaaT36f1MYcNHErgzZW7A=" defer></script>
 </body>
 </html>
