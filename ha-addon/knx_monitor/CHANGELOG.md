@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.7.9
+
+- After a dropped connection, for example while the Home Assistant app was in
+  the background, the view fetches the missed telegrams from the recording
+  instead of continuing right after the old ones.
+- Activity bar "today": the rest of the day is a plain line instead of
+  looking like a gap in the recording.
+- Details: the history shows the latest 40 values; full screen shows all of
+  them and scrolls.
+- KNX box built from this version: the same fixes.
+
 ## 1.7.8
 
 - Fixed: the add-on page stayed blank since 1.7.1. It starts again.
