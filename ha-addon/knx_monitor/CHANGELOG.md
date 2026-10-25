@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.8.1
+
+- Nothing changes for Home Assistant users.
+- KNX Monitor also runs as a Docker container without Home Assistant (for
+  example next to ioBroker, on a NAS or Proxmox): one image for amd64 and
+  arm64, `ghcr.io/regetskcob/knx-monitor`, with a password and optionally
+  MQTT. Instructions in the repository under `docker/`.
+- MQTT: every value is also published as its own topic, and the broker can be
+  set through environment variables outside Home Assistant.
+
 ## 1.8.0
 
 - Automations: the add-on fires the events `knx_monitor_watcher`,

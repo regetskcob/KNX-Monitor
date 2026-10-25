@@ -1,0 +1,27 @@
+# KNX Monitor as a Docker container, without Home Assistant (ioBroker, NAS,
+# Proxmox, any Linux host). Put your own password into a file .env next to
+# this one (BOX_PASSWORD=...), then: docker compose up -d
+# Open http://<host>:8765 and sign in with any user name and that password.
+services:
+  knx-monitor:
+    image: ghcr.io/regetskcob/knx-monitor:latest
+    container_name: knx-monitor
+    restart: unless-stopped
+    # Host network: KNXnet/IP over UDP, gateway search and routing need it.
+    network_mode: host
+    environment:
+      BOX: "1"                       # standalone mode with password
+      # No default on purpose: the container is reachable from your network.
+      BOX_PASSWORD: "${BOX_PASSWORD:?Set BOX_PASSWORD in .env (at least 8 characters)}"
+      BOX_NAME: "KNX Monitor"
+      LAN_ACCESS: "yes"              # reachable from your network
+      PORT: "8765"
+      TZ: "Europe/Berlin"
+      # Optional: MQTT, for example the ioBroker MQTT adapter as broker.
+      # MQTT_HOST: "192.168.1.10"
+      # MQTT_PORT: "1883"
+      # MQTT_USER: "knx-monitor"
+      # MQTT_PASSWORD: "secret"
+      # MQTT_DISCOVERY: "false"      # no Home Assistant discovery topics
+    volumes:
+      - ./data:/data                 # history, project, settings

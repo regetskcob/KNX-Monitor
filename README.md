@@ -20,6 +20,7 @@ public.
 - **Android:** Google Play, coming in the next weeks
 - **Windows:** coming in the next weeks
 - **KNX Box (Raspberry Pi image, preview):** releases tagged `box-v…`
+- **Docker (ioBroker, NAS, Proxmox):** `ghcr.io/regetskcob/knx-monitor`, see [docker/README.md](docker/README.md)
 
 ## Home Assistant add-on
 
