@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en-US" data-product="knx">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home Assistant add-on · KNX Monitor</title>
+<meta name="description" content="KNX Monitor as a Home Assistant add-on: bus monitor in the sidebar, no own tunnel via the KNX integration, events and blueprints for automations, a device with entities over MQTT.">
+<link rel="canonical" href="https://knx-monitor.de/en/addon/">
+<link rel="alternate" hreflang="de-DE" href="https://knx-monitor.de/addon/">
+<link rel="alternate" hreflang="en-US" href="https://knx-monitor.de/en/addon/">
+<link rel="alternate" hreflang="x-default" href="https://knx-monitor.de/addon/">
+<meta name="theme-color" content="#437F18" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121311" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KNX Monitor">
+<meta property="og:title" content="Home Assistant add-on · KNX Monitor">
+<meta property="og:description" content="KNX Monitor as a Home Assistant add-on: bus monitor in the sidebar, no own tunnel via the KNX integration, events and blueprints for automations, a device with entities over MQTT.">
+<meta property="og:url" content="https://knx-monitor.de/en/addon/">
+<meta property="og:image" content="https://knx-monitor.de/images/og-en.png">
+<meta property="og:image:secure_url" content="https://knx-monitor.de/images/og-en.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Home Assistant add-on · KNX Monitor">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Home Assistant add-on · KNX Monitor">
+<meta name="twitter:description" content="KNX Monitor as a Home Assistant add-on: bus monitor in the sidebar, no own tunnel via the KNX integration, events and blueprints for automations, a device with entities over MQTT.">
+<meta name="twitter:image" content="https://knx-monitor.de/images/og-en.png">
+<meta name="twitter:image:alt" content="Home Assistant add-on · KNX Monitor">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/css/teaser.min.da9f673c487f28343fa64f546a5ac19441a0d34b7b8ccf24f5175eb391b1b84e.css" integrity="sha256-2p9nPEh/KDQ/pk9UalrBlEGg00t7jM8k9Rdes5GxuE4="><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://knx-monitor.de/#website","@type":"WebSite","inLanguage":"en-US","name":"KNX Monitor","publisher":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"url":"https://knx-monitor.de/"},{"@id":"https://knx-monitor.de/#app","@type":"SoftwareApplication","applicationCategory":"UtilitiesApplication","author":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"description":"KNX bus monitor and diagnostics for Home Assistant and Linux, soon on iPhone, iPad, Android, Mac and Windows. Reads ETS projects, data stays local.","downloadUrl":"https://github.com/regetskcob/KNX-Monitor/releases","image":"https://knx-monitor.de/images/og-en.png","isAccessibleForFree":true,"name":"KNX Monitor","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"operatingSystem":"Home Assistant, Linux","sameAs":["https://github.com/regetskcob/KNX-Monitor"],"url":"https://knx-monitor.de/en/"},{"@id":"https://knx-monitor.de/en/addon/#page","@type":"WebPage","about":{"@id":"https://knx-monitor.de/#app"},"description":"KNX Monitor as a Home Assistant add-on: bus monitor in the sidebar, no own tunnel via the KNX integration, events and blueprints for automations, a device with entities over MQTT.","inLanguage":"en-US","isPartOf":{"@id":"https://knx-monitor.de/#website"},"name":"Home Assistant add-on · KNX Monitor","primaryImageOfPage":"https://knx-monitor.de/images/og-en.png","url":"https://knx-monitor.de/en/addon/"}]}</script>
+</head>
+
+<body class="hz tz">
+<nav class="hz-horizon" data-hz-horizon data-product="knx" aria-label="Horizont">
+  <span class="hz-horizon-line" aria-hidden="true"></span>
+  <span class="hz-horizon-done" aria-hidden="true"></span>
+  <a class="hz-horizon-back" href="#" data-hz-back hidden aria-label="Zurück zur vorigen Seite"><span aria-hidden="true">←</span> Zurück</a>
+  <ol class="hz-ticks" data-hz-auto=".hz-feld-section[id]"></ol>
+  <a class="hz-walker" href="https://www.regetskcob.de/karte/" data-hz-open-karte data-hint="Karte" data-place="KNX Monitor / Home Assistant add-on" aria-label="Flurkarte, du bist in KNX Monitor / Home Assistant add-on"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="28" height="28" viewBox="0 0 100 100" role="img" aria-label="KNX Monitor" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H32.14M67.86 66.7H96"/>
+  <g stroke="none">
+    <rect x="32.14" y="35.71" width="17.86" height="39.29" rx="2.5" style="fill:#D23C2E"/>
+    <rect x="50" y="35.71" width="17.86" height="39.29" rx="2.5" style="fill:light-dark(#3A3D38, #5C6058)"/>
+    <path d="M35.71 39.29h10.72v10.71H35.71z" style="fill:#A82C21"/>
+    <path d="M53.57 39.29h10.72v10.71H53.57z" style="fill:light-dark(#262824, #44473F)"/>
+  </g>
+</svg>
+</a>
+  <span class="hz-horizon-lang"><span class="hz-horizon-lang-here" aria-current="true">EN</span><a href="/addon/" hreflang="de" lang="de">DE</a>
+  </span>
+</nav>
+<dialog class="hz-karte-dialog" data-hz-karte aria-label="Flurkarte">
+  <form method="dialog" class="hz-karte-top">
+    <span class="t-kennung hz-kennung">Flurkarte · KNX Monitor / Home Assistant add-on</span>
+    <span class="hz-karte-actions">
+      <button class="hz-button hz-button--secondary" type="button" data-hz-back hidden>Zurück</button>
+      <button class="hz-button hz-button--secondary" type="submit">Schließen</button>
+    </span>
+  </form>
+  <nav class="hz-karte" aria-label="Flurkarte" lang="de">
+<div class="hz-karte-grid">
+  <div class="hz-gem" data-product="regetskcob">
+    <p class="t-kennung hz-kennung"><a href="https://www.regetskcob.de/">Gemarkung regetskcob</a></p>
+    <ul class="hz-parzellen">
+      <li style="--cols:3;--rows:4;--ang:45deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/blog/">
+          <span class="hz-parzelle-count">151 Beiträge</span>
+          <span class="hz-parzelle-name">Blog</span>
+        </a>
+      </li>
+      <li style="--cols:2;--rows:2;--ang:0deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/galerie/">
+          <span class="hz-parzelle-count">100 Fotos</span>
+          <span class="hz-parzelle-name">Galerie</span>
+        </a>
+      </li>
+      <li style="--cols:1;--rows:2;--ang:90deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/niederrhein/">
+          <span class="hz-parzelle-count">52 Fotos · Serie</span>
+          <span class="hz-parzelle-name">Niederrhein.</span>
+        </a>
+      </li>
+      <li style="--cols:2;--rows:1;--ang:135deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/ausruestung/">
+          <span class="hz-parzelle-count">33 Teile</span>
+          <span class="hz-parzelle-name">Ausrüstung</span>
+        </a>
+      </li>
+      <li style="--cols:1;--rows:1;--ang:60deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/rezepte/">
+          <span class="hz-parzelle-count">3 Rezepte</span>
+          <span class="hz-parzelle-name">Film-Rezepte</span>
+        </a>
+      </li>
+      <li style="--cols:3;--rows:1;--ang:0deg">
+        <a class="hz-parzelle" href="https://www.regetskcob.de/about/">
+          <span class="hz-parzelle-count"></span>
+          <span class="hz-parzelle-name">Über</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <span class="hz-weg" aria-hidden="true"></span>
+  <div class="hz-gem hz-gem--prod">
+    <p class="t-kennung hz-kennung">Projekte</p>
+    <ul class="hz-parzellen">
+      <li data-product="regetskcob">
+        <a class="hz-parzelle hz-parzelle--prod" href="https://www.regetskcob.de/horizont/">
+          <span class="hz-parzelle-count">Designsystem</span>
+          <span class="hz-parzelle-name"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="20" height="20" viewBox="0 0 100 100" role="img" aria-label="Horizont" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H96"/>
+  <path d="M27 66.7a23 23 0 0 1 46 0"/>
+</svg>
+Horizont</span>
+        </a>
+      </li>
+      <li data-product="knx">
+        <a class="hz-parzelle hz-parzelle--prod" href="https://www.regetskcob.de/knx/" aria-current="page">
+          <span class="hz-parzelle-count">Vorschau · Busmonitor &amp; Diagnose</span>
+          <span class="hz-parzelle-name"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="20" height="20" viewBox="0 0 100 100" role="img" aria-label="KNX Monitor" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H35M65 66.7H96"/>
+  <path d="M35 40h30v34H35zM50 40v34"/>
+</svg>
+KNX Monitor</span>
+        </a>
+      </li>
+      <li data-product="panzergefecht">
+        <a class="hz-parzelle hz-parzelle--prod" href="https://www.regetskcob.de/wargame/">
+          <span class="hz-parzelle-count">Vorschau · Panzerduelle und Verteidigung</span>
+          <span class="hz-parzelle-name"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="20" height="20" viewBox="0 0 100 100" role="img" aria-label="Panzergefecht" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H96"/>
+  <path d="M24 66.7l4-12h44l4 12M40 54.7V44h18v10.7M58 49h24"/>
+</svg>
+Panzergefecht</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
+</dialog>
+<div class="hz-feld tz-feld">
+<main id="main" class="tz-main">
+<section class="hz-feld-hero">
+  <div>
+    <span class="t-kennung hz-kennung">01 — Home Assistant add-on · free</span>
+    <h1 class="t-display">KNX Monitor as part of Home Assistant.</h1>
+    <p>The bus monitor in the sidebar, on every device with Home Assistant. If you like, it shares the connection of your KNX integration instead of an own tunnel, brings triggers for automations and, with MQTT, shows up as a device with entities. Free and without limits.</p>
+    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor">Install the add-on<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#automations">Automations</a>
+    </div>
+  </div>
+  <div class="hz-feld-aside hz-feld-aside--center"><figure class="hz-device hz-device--ipad" style="--w:440px">
+  <div class="hz-device-screen">
+    <div class="tz-ha">
+  <nav class="tz-ha-bar" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7v9h-5v-6h-6v6H4z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M13 3L5 14h6l-1 7 8-11h-6z"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M4 18l5-6 4 3 7-9"/></svg>
+    <svg viewBox="0 0 24 24"><path d="M5 5h14v14H5zM9 9h6M9 13h6"/></svg>
+    <span class="tz-ha-here"><svg class="tz-ha-glyph" viewBox="0 0 100 100"><path d="M4 66.7H35M65 66.7H96M35 40h30v34H35zM50 40v34"/></svg></span>
+    <span class="tz-ha-gap"></span>
+    <svg viewBox="0 0 24 24"><path d="M12 8a4 4 0 100 8 4 4 0 000-8zM12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></svg>
+    <span class="tz-ha-user"></span>
+  </nav>
+  <img src="/images/ipad-overview-en_hu_25eebeb0b6fcb163.webp" alt="KNX Monitor as an add-on in Home Assistant on the iPad: the menu on the left with health, commissioning, bus monitor, topology and more, the overview with values per group address in the middle, the details of one address with history and telegram on the right" loading="lazy">
+</div>
+
+  </div>
+</figure></div>
+</section>
+<hr class="hz-feld-horizon">
+<section class="hz-feld-section tz-section tz-section--read" id="install">
+  <span class="t-kennung hz-kennung">02 — Install</span>
+  <div><h2>In the sidebar in two minutes.</h2></div>
+  <dl class="hz-facts">
+  <dt>Repository</dt><dd><strong>Tap &ldquo;Install the add-on&rdquo; above</strong> or in Home Assistant under Settings › Add-ons › Add-on store › ⋮ › Repositories add <code>https://github.com/regetskcob/KNX-Monitor</code>.</dd>
+  <dt>Start</dt><dd><strong>Install KNX Monitor, start it and turn on &ldquo;Show in sidebar&rdquo;.</strong> The add-on runs on amd64 and aarch64, so also on Home Assistant Green, Yellow and the Raspberry Pi.</dd>
+  <dt>Connect</dt><dd><strong>Pick the gateway or share the KNX integration</strong> (see Connection). The add-on then stays connected, also without an open browser.</dd>
+  <dt>Project</dt><dd><strong>Import the ETS project</strong> (<code>.knxproj</code> up to ETS6, also password protected) for names, datapoint types, devices and rooms. The password is not stored.</dd>
+</dl>
+</section>
+<section class="hz-feld-section tz-section tz-section--read" id="connection">
+  <span class="t-kennung hz-kennung">03 — Connection</span>
+  <div><h2>An own tunnel or none at all.</h2><p>If the KNX integration is set up, the add-on suggests sharing its connection. That saves a tunnel slot on the gateway.</p></div>
+  <dl class="hz-facts">
+  <dt>Home Assistant</dt><dd><strong>No own tunnel:</strong> the add-on reads what the KNX integration receives and sends via <code>knx.send</code> and <code>knx.read</code>. The integration decrypts KNX Secure.</dd>
+  <dt>Tunnel</dt><dd><strong>UDP or TCP</strong>, optionally with a fixed tunnel address. Needed for programming mode, address check and the bus monitor with acknowledgements.</dd>
+  <dt>Routing</dt><dd><strong>Multicast through an IP router</strong>, uses no tunnel slot.</dd>
+  <dt>IP Secure</dt><dd><strong>Secured tunnel</strong> with user and password or the keyring from ETS.</dd>
+</dl>
+</section>
+<section class="hz-feld-section tz-section tz-section--read" id="automations">
+  <span class="t-kennung hz-kennung">04 — Automations</span>
+  <div><h2>Watchers, alarms and the bus as triggers.</h2><p>The add-on fires events in Home Assistant, also without an open browser. In the automation editor use them as an &ldquo;Event&rdquo; trigger, with MQTT also as device triggers.</p></div>
+  <dl class="hz-facts">
+  <dt>Watcher</dt><dd><strong>A watcher fires</strong> (<code>knx_monitor_watcher</code>). With name, group address, source and value. Watchers are set up in KNX Monitor under Tools › Watchers.</dd>
+  <dt>Alarm</dt><dd><strong>An alarm or fault object switches on or off</strong> (<code>knx_monitor_alarm</code>), for example a smoke detector or a device fault. KNX Monitor recognises them from the ETS project.</dd>
+  <dt>Bus</dt><dd><strong>The bus connection is lost or back</strong> (<code>knx_monitor_bus</code>). Only real changes are reported, not every connection attempt.</dd>
+  <dt>Blueprints</dt><dd>Import with one click: <a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor%2Fblob%2Fmain%2Fblueprints%2Fautomation%2Fknx_monitor_watcher.yaml">Watcher</a>, <a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor%2Fblob%2Fmain%2Fblueprints%2Fautomation%2Fknx_monitor_alarm.yaml">Alarm or fault</a>, <a href="https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor%2Fblob%2Fmain%2Fblueprints%2Fautomation%2Fknx_monitor_bus.yaml">Bus connection</a>.</dd>
+  <dt>Notifications</dt><dd>Without your own automation the add-on reports alarms and watchers as a Home Assistant notification. If you notify yourself, turn that off in the configuration and you get nothing twice.</dd>
+</dl><figure class="tz-demo" data-demo='{&#34;caption&#34;:&#34;Try it: there is a watcher for both keys. With notifications on, a notification comes on top; if you notify through an automation, turn them off.&#34;,&#34;empty&#34;:&#34;Press a key: the watcher fires and the event shows here.&#34;,&#34;fired&#34;:&#34;Event received&#34;,&#34;installation&#34;:&#34;Home&#34;,&#34;keys&#34;:[{&#34;address&#34;:&#34;1/1/3&#34;,&#34;id&#34;:&#34;kitchen_light&#34;,&#34;label&#34;:&#34;T1&#34;,&#34;name&#34;:&#34;Kitchen light&#34;},{&#34;address&#34;:&#34;1/1/5&#34;,&#34;id&#34;:&#34;hall_light&#34;,&#34;label&#34;:&#34;T2&#34;,&#34;name&#34;:&#34;Hall light&#34;}],&#34;notify&#34;:&#34;Watcher notifications&#34;,&#34;off&#34;:&#34;Off&#34;,&#34;on&#34;:&#34;On&#34;,&#34;sensor&#34;:&#34;Glass push button hall&#34;,&#34;title&#34;:&#34;Developer tools › Events&#34;,&#34;watcher&#34;:&#34;Watcher&#34;}'>
+  <div class="tz-demo-sensor">
+    <span class="tz-sensor-addr">1.1.30 · Glass push button hall</span>
+    <div class="tz-sensor tz-sensor--glass tz-sensor--static">
+      <div class="tz-sensor-body">
+        <span class="tz-sensor-display">21,5 °C</span>
+        <button class="tz-key" type="button" data-key="{&#34;address&#34;:&#34;1/1/3&#34;,&#34;id&#34;:&#34;kitchen_light&#34;,&#34;label&#34;:&#34;T1&#34;,&#34;name&#34;:&#34;Kitchen light&#34;}"><i class="tz-key-led"></i><b>T1</b><small>Kitchen light</small></button>
+        <button class="tz-key" type="button" data-key="{&#34;address&#34;:&#34;1/1/5&#34;,&#34;id&#34;:&#34;hall_light&#34;,&#34;label&#34;:&#34;T2&#34;,&#34;name&#34;:&#34;Hall light&#34;}"><i class="tz-key-led"></i><b>T2</b><small>Hall light</small></button>
+      </div>
+    </div>
+    <label class="tz-demo-toggle"><input type="checkbox" checked> Watcher notifications</label>
+  </div>
+  <div class="tz-demo-ha" aria-live="polite">
+    <div class="tz-demo-ha-head"><span>Developer tools › Events</span><code>knx_monitor_watcher</code></div>
+    <div class="tz-demo-note" hidden></div>
+    <ol class="tz-demo-events">
+      <li class="tz-demo-empty">Press a key: the watcher fires and the event shows here.</li>
+    </ol>
+  </div>
+  <figcaption>Try it: there is a watcher for both keys. With notifications on, a notification comes on top; if you notify through an automation, turn them off.</figcaption>
+</figure>
+
+</section>
+<section class="hz-feld-section tz-section tz-section--read" id="device">
+  <span class="t-kennung hz-kennung">05 — Device</span>
+  <div><h2>KNX Monitor as a device with entities.</h2><p>If an MQTT broker is set up (usually the Mosquitto add-on), the add-on registers itself as a device. No credentials to enter.</p></div>
+  <dl class="hz-facts">
+  <dt>Bus connected</dt><dd>Connectivity, handy for automations with &ldquo;for 5 minutes&rdquo; or on the dashboard.</dd>
+  <dt>Recording</dt><dd>Switch to pause and resume continuous recording, for example when ETS needs the only tunnel slot.</dd>
+  <dt>Bus activity</dt><dd>Telegrams per minute and today, repeats per minute, last telegram, with history and statistics in Home Assistant.</dd>
+  <dt>Device triggers</dt><dd>One per watcher, plus alarm and fault on and off. They are in the normal list, no event names to type.</dd>
+  <dt>Availability</dt><dd>If the add-on stops, Home Assistant shows the device as unavailable.</dd>
+</dl>
+</section>
+<section class="hz-feld-section tz-section tz-section--read" id="recording">
+  <span class="t-kennung hz-kennung">06 — Continuous</span>
+  <div><h2>Records even when nobody is watching.</h2></div>
+  <dl class="hz-facts">
+  <dt>History</dt><dd>Every telegram goes into a daily file, finished days are compressed. Retention and size are set in the app.</dd>
+  <dt>Gaps</dt><dd>Once a minute the add-on notes whether the bus was connected. The day list explains gaps, for example &ldquo;bus disconnected for 3 min&rdquo;.</dd>
+  <dt>Backups</dt><dd>History, settings and an imported keyring are part of Home Assistant backups.</dd>
+  <dt>Access</dt><dd>Only through Home Assistant (Ingress). Requests from elsewhere in the network are rejected.</dd>
+</dl>
+</section>
+<section class="hz-feld-section tz-section tz-section--read" id="options">
+  <span class="t-kennung hz-kennung">07 — Options</span>
+  <div><h2>What you can set in the configuration.</h2><p>Under Settings › Add-ons › KNX Monitor › Configuration.</p></div>
+  <dl class="hz-facts">
+  <dt>Alarms</dt><dd><code>alarm_notifications</code>: notification for alarms and faults, on by default.</dd>
+  <dt>Watchers</dt><dd><code>watcher_notifications</code>: notification for watchers, on by default.</dd>
+  <dt>Push</dt><dd><code>notify_service</code>: additionally as push through a notify service, e.g. <code>notify.mobile_app_iphone</code>.</dd>
+</dl>
+</section>
+<section class="hz-feld-section tz-section tz-section--read tz-section--faq" id="faq">
+  <span class="t-kennung hz-kennung">08 — Questions</span>
+  <div>
+    <h2>Common questions about the add-on</h2>
+    <div class="tz-faq">
+      <details>
+        <summary>Does the add-on cost anything?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+        <p>No. The add-on stays free and without limits, with all tools and long-term history.</p>
+      </details>
+      <details>
+        <summary>Does the add-on take a tunnel slot on the gateway?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+        <p>With an own tunnel yes, exactly one, shared by all open views. With the connection mode &ldquo;Home Assistant&rdquo; none: it then uses the connection of the KNX integration. For the bus monitor with acknowledgements it releases the tunnel for a while and takes it back afterwards.</p>
+      </details>
+      <details>
+        <summary>Do I need MQTT?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+        <p>No. Events, blueprints and notifications work without. MQTT adds the device with entities and device triggers.</p>
+      </details>
+      <details>
+        <summary>Where is my data?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+        <p>In the add-on&rsquo;s data folder on your Home Assistant, nowhere else. The add-on sends nothing to the internet.</p>
+      </details>
+      <details>
+        <summary>Is there an own integration?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+        <p>Planned if enough users want it: discovery at start-up, services for scripts, diagnostics and repair hints. Vote with 👍 in the <a href="https://github.com/regetskcob/KNX-Monitor/issues/2">issue on GitHub</a>.</p>
+      </details>
+      <details>
+        <summary>Something does not work. How do I report it?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+        <p>Best with a diagnostic package, see <a href="/en/feedback/">Feedback</a>. Then you do not have to upload your ETS project anywhere.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="hz-feld-foot">
+  <a class="hz-lockup" href="https://www.regetskcob.de/"><svg xmlns="http://www.w3.org/2000/svg" class="hz-mark" width="24" height="24" viewBox="0 0 100 100" role="img" aria-label="regetskcob" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="square" stroke-linejoin="miter">
+  <path d="M4 66.7H96M50 66.7V48"/>
+  <path d="M50 48c-12 0-19-6-19-15s8-17 19-17 19 8 19 17-7 15-19 15z"/>
+</svg>
+<span>a project by regetskcob</span></a>
+  <span class="hz-feld-links"><a href="/en/">KNX Monitor</a><a href="/en/feedback/">Feedback</a><a href="https://www.regetskcob.de/legal/">Legal notice</a><a href="/en/privacy/">Privacy</a><a href="https://github.com/regetskcob/KNX-Monitor">GitHub</a></span>
+</footer>
+<p class="tz-mark t-caption">KNX is a registered trademark of the KNX Association. KNX Monitor is not a product of the KNX Association.</p>
+</div>
+<script src="/js/addon.min.55125f85040d96c9cdc7940f519717b467e31723b2cbfc438af5f870edbf1786.js" integrity="sha256-VRJfhQQNlsnNx5QPUZcXtGfjFyOyy/xDivX4cO2/F4Y=" defer></script>
+<script src="/js/horizont/horizon.min.351c0b01bf837df906603120dda6db1968da693dfa7f531870d1c4ae0cd95bb0.js" integrity="sha256-NRwLAb&#43;DffkGYDEg3abbGWjaaT36f1MYcNHErgzZW7A=" defer></script>
+</body>
+</html>
