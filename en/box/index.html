@@ -34,7 +34,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" href="/css/teaser.min.da9f673c487f28343fa64f546a5ac19441a0d34b7b8ccf24f5175eb391b1b84e.css" integrity="sha256-2p9nPEh/KDQ/pk9UalrBlEGg00t7jM8k9Rdes5GxuE4="><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://knx-monitor.de/#website","@type":"WebSite","inLanguage":"en-US","name":"KNX Monitor","publisher":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"url":"https://knx-monitor.de/"},{"@id":"https://knx-monitor.de/#app","@type":"SoftwareApplication","applicationCategory":"UtilitiesApplication","author":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"description":"KNX bus monitor and diagnostics for Home Assistant and Linux, soon on iPhone, iPad, Android, Mac and Windows. Reads ETS projects, data stays local.","downloadUrl":"https://github.com/regetskcob/KNX-Monitor/releases","image":"https://knx-monitor.de/images/og-box-en.png","isAccessibleForFree":true,"name":"KNX Monitor","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"operatingSystem":"Home Assistant, Linux","sameAs":["https://github.com/regetskcob/KNX-Monitor"],"url":"https://knx-monitor.de/en/"},{"@id":"https://knx-monitor.de/en/box/#page","@type":"WebPage","about":{"@id":"https://knx-monitor.de/#app"},"description":"KNX box: a Raspberry Pi at the KNX IP gateway that records around the clock and opens its own Wi-Fi. Setup, data, recording, hardware.","inLanguage":"en-US","isPartOf":{"@id":"https://knx-monitor.de/#website"},"name":"KNX box · KNX Monitor","primaryImageOfPage":"https://knx-monitor.de/images/og-box-en.png","url":"https://knx-monitor.de/en/box/"}]}</script>
+<link rel="stylesheet" href="/css/teaser.min.959afe3c668390716bc22d93ee0e0e89380e51267aaeb4abb54b201ead389a7d.css" integrity="sha256-lZr&#43;PGaDkHFrwi2T7g4OiTgOUSZ6rrSrtUsgHq04mn0="><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@id":"https://knx-monitor.de/#website","@type":"WebSite","inLanguage":"en-US","name":"KNX Monitor","publisher":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"url":"https://knx-monitor.de/"},{"@id":"https://knx-monitor.de/#app","@type":"SoftwareApplication","applicationCategory":"UtilitiesApplication","author":{"@type":"Person","name":"regetskcob","url":"https://www.regetskcob.de/"},"description":"KNX bus monitor and diagnostics for Home Assistant and Linux, soon on iPhone, iPad, Android, Mac and Windows. Reads ETS projects, data stays local.","downloadUrl":"https://github.com/regetskcob/KNX-Monitor/releases","image":"https://knx-monitor.de/images/og-box-en.png","isAccessibleForFree":true,"name":"KNX Monitor","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"operatingSystem":"Home Assistant, Linux","sameAs":["https://github.com/regetskcob/KNX-Monitor"],"url":"https://knx-monitor.de/en/"},{"@id":"https://knx-monitor.de/en/box/#page","@type":"WebPage","about":{"@id":"https://knx-monitor.de/#app"},"description":"KNX box: a Raspberry Pi at the KNX IP gateway that records around the clock and opens its own Wi-Fi. Setup, data, recording, hardware.","inLanguage":"en-US","isPartOf":{"@id":"https://knx-monitor.de/#website"},"name":"KNX box · KNX Monitor","primaryImageOfPage":"https://knx-monitor.de/images/og-box-en.png","url":"https://knx-monitor.de/en/box/"}]}</script>
 </head>
 
 <body class="hz tz">
@@ -167,7 +167,7 @@ Panzergefecht</span>
     <span class="t-kennung hz-kennung">01 — KNX box · Raspberry Pi</span>
     <h1 class="t-display">The bus records itself while you are away.</h1>
     <p><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Preview</span> The KNX box is a Raspberry Pi that writes down every telegram around the clock and opens its own Wi-Fi. You set it up with the app: today with the Linux app, soon by QR code with iPhone, iPad and Android. No Home Assistant and no internet.</p>
-    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.8.1">Get the image<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">How to set it up</a>
+    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.7.9">Get the image<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">How to set it up</a>
     </div>
   </div>
   <div class="hz-feld-aside"><svg class="tz-pi" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
@@ -320,7 +320,8 @@ Panzergefecht</span>
   </div>
   <dl class="hz-facts">
   <dt>IP (today)</dt><dd>KNXnet/IP tunnelling or routing, KNX IP Secure included. The box takes one tunnel slot on the gateway.</dd>
-  <dt>TP (planned)</dt><dd>A bus terminal on the line and a TP-UART module over USB (such as busware TUL). No gateway needed, no tunnel slot taken.</dd>
+  <dt>TP (planned)</dt><dd>The bus cable goes straight to the box: through the Weinzierl KNX BAOS 838 kBerry, a module that plugs onto the Pi&rsquo;s pin header. No gateway needed, no tunnel slot taken.</dd>
+  <dt>Guide</dt><dd><strong>Preview:</strong> how the kBerry goes onto the Pi, how to prepare the Pi and how to assemble the matching case: <a href="/box/knx-box-kberry.pdf">guide for tinkerers (PDF, German, preview)</a>. Not yet tested on real hardware.</dd>
   <dt>Bus monitor</dt><dd>Over TP the box also sees what a tunnel never shows: acknowledgements (ACK, NAK, BUSY) and repeats.</dd>
   <dt>Address</dt><dd>To listen, the box needs no individual address and no ETS programming.</dd>
   <dt>Status</dt><dd>In progress, see the <a href="https://github.com/regetskcob/KNX-Monitor/issues/1">issue on GitHub</a>.</dd>
@@ -336,7 +337,8 @@ Panzergefecht</span>
   <dt>Clock</dt><dd>Recommended: the RTC battery for the Pi 5 or a DS3231 module for the Pi 4. Then the time is right even before the first iPhone.</dd>
   <dt>Power</dt><dd>27 W power supply (USB-C); weaker ones crash under load</dd>
   <dt>Storage</dt><dd>USB SSD or NVMe, 128 GB last for years</dd>
-  <dt>The rest</dt><dd>A case with a fan, a network cable, the two labels from the sheet; in future a bus terminal with a TP-UART module</dd>
+  <dt>Case</dt><dd><strong>Preview:</strong> <a href="/box/knx-box-case-vorschau.zip">printable case (STL, zip)</a> for Pi 3B to 5, also as a slim variant for the kBerry with a module bridge, plus a USB cover and fit tests for the inserts and the lid. Description (German) in the README.md inside. The fit has only been checked on the model so far.</dd>
+  <dt>The rest</dt><dd>A network cable, the two labels from the sheet; in future the kBerry plug-on module with its bus terminal</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="status">
@@ -367,7 +369,7 @@ Panzergefecht</span>
       </details>
       <details>
         <summary>Does the box take up a tunnel on the gateway?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-        <p>Over IP yes, exactly one, around the clock. Every iPhone and iPad in the box&rsquo;s Wi-Fi shares that tunnel. If ETS needs the only free slot, pause the box. With the bus terminal (planned) this goes away.</p>
+        <p>Over IP yes, exactly one, around the clock. Every iPhone and iPad in the box&rsquo;s Wi-Fi shares that tunnel. If ETS needs the only free slot, pause the box. Straight on the line with the kBerry (planned) this goes away.</p>
       </details>
       <details>
         <summary>Do devices in the box&#39;s Wi-Fi reach the customer&#39;s network?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
@@ -395,7 +397,7 @@ Panzergefecht</span>
   <path d="M50 48c-12 0-19-6-19-15s8-17 19-17 19 8 19 17-7 15-19 15z"/>
 </svg>
 <span>a project by regetskcob</span></a>
-  <span class="hz-feld-links"><a href="/en/">KNX Monitor</a><a href="https://www.regetskcob.de/legal/">Legal notice</a><a href="/en/privacy/">Privacy</a><a href="/en/feedback/">Feedback</a><a href="https://github.com/regetskcob/KNX-Monitor">GitHub</a></span>
+  <span class="hz-feld-links"><a href="/en/">KNX Monitor</a><a href="https://www.regetskcob.de/legal/">Legal notice</a><a href="/en/privacy/">Privacy</a><a href="https://github.com/regetskcob/KNX-Monitor">GitHub</a></span>
 </footer>
 <p class="tz-mark t-caption">KNX is a registered trademark of the KNX Association. KNX Monitor is not a product of the KNX Association.</p>
 </div>
