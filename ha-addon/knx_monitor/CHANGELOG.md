@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.8.3
+
+- New introduction on the connect screen: three chapters (basics,
+  analysis, expert mode) with real views in the demo house. In the add-on and
+  on the KNX box all three run in one go, and the last card opens the demo
+  house. The button stands out as long as a chapter is unseen.
+- Device sheet: the action buttons no longer wrap on narrow phones; they sit
+  side by side while they fit, otherwise one below the other.
+- KNX box (preview): the printable case is now a single slim variant for
+  Pi 3B to 5 with the kBerry, with a module bridge, a USB cover, an
+  optional base for DIN rails and test prints for the heat-set inserts and
+  the lid. Print it at 0.2 mm layer height.
+
 ## 1.8.2
 
 - Nothing changes for Home Assistant users.
