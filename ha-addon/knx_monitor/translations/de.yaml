@@ -1,4 +1,16 @@
 configuration:
+  alarm_notifications:
+    name: Mitteilungen bei Alarmen
+    description: >-
+      Benachrichtigung, wenn ein Alarm- oder Störungsobjekt auslöst.
+      Ausschalten, wenn du stattdessen mit dem Ereignis knx_monitor_alarm
+      eigene Automationen nutzt.
+  watcher_notifications:
+    name: Mitteilungen bei Wächtern
+    description: >-
+      Benachrichtigung, wenn ein Wächter anschlägt. Ausschalten, wenn du
+      stattdessen mit dem Ereignis knx_monitor_watcher eigene Automationen
+      nutzt.
   notify_service:
     name: Benachrichtigungsdienst
     description: >-

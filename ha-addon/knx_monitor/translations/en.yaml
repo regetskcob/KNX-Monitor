@@ -1,4 +1,14 @@
 configuration:
+  alarm_notifications:
+    name: Alarm notifications
+    description: >-
+      Notify when an alarm or fault object triggers. Turn off if you use your
+      own automations with the knx_monitor_alarm event instead.
+  watcher_notifications:
+    name: Watcher notifications
+    description: >-
+      Notify when a watcher fires. Turn off if you use your own automations
+      with the knx_monitor_watcher event instead.
   notify_service:
     name: Notification service
     description: >-

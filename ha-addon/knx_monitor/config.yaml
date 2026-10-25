@@ -1,5 +1,5 @@
 name: KNX Monitor
-version: "1.7.9"
+version: "1.8.0"
 slug: knx_monitor
 description: KNX bus monitor, continuous recording, health check and commissioning in the sidebar
 url: https://knx-monitor.de
@@ -16,9 +16,16 @@ boot: auto
 host_network: true
 # Alarm notifications as HA notification or push (Supervisor API)
 homeassistant_api: true
+# MQTT-Gerät „KNX Monitor“, wenn ein Broker (z. B. Mosquitto) da ist.
+services:
+  - mqtt:want
 options:
+  alarm_notifications: true
+  watcher_notifications: true
   notify_service: ""
 schema:
+  alarm_notifications: bool
+  watcher_notifications: bool
   notify_service: str?
 ingress: true
 ingress_port: 8765

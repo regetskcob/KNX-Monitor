@@ -79,8 +79,8 @@ the recording; writing to secured addresses is encrypted.
 
 When a group address switches to an alarm or fault state, the add-on creates a
 Home Assistant notification (at most one per address every 5 minutes; can be
-turned off in the app menu under "Alarm notifications"). With continuous
-recording this also works without an open browser.
+turned off with `alarm_notifications` in the add-on configuration). With
+continuous recording this also works without an open browser.
 
 ## Watchers
 
@@ -88,15 +88,85 @@ Watchers (Tools → Watchers) report a group address as soon as it is sent,
 optionally only for a certain value. In the add-on they run on the server:
 they keep working without an open browser and send a Home Assistant
 notification (at most one per watcher and minute; also as push if
-`notify_service` is set). An open KNX Monitor additionally plays the sound
+`notify_service` is set; can be turned off with `watcher_notifications`). An open KNX Monitor additionally plays the sound
 and shows the hit. Watchers are stored in the add-on and shared by all
 browsers.
+
+## Automations
+
+The add-on fires Home Assistant events you can use as triggers ("Event" in
+the automation editor), also without an open browser. They fire whether or
+not notifications are on:
+
+| Event | When | Data |
+| --- | --- | --- |
+| `knx_monitor_watcher` | a watcher fires | `watcher_id`, `name`, `label`, `address`, `source`, `value` (number rules), `raw`, `installation` |
+| `knx_monitor_alarm` | an alarm or fault object switches on or off | `address`, `name`, `kind` (`alarm`/`fault`), `active`, `installation` |
+| `knx_monitor_bus` | the bus connection is lost or back | `connected`, `state`, `reason`, `installation` |
+
+Blueprints to import with one click:
+
+- [Watcher fired](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor%2Fblob%2Fmain%2Fblueprints%2Fautomation%2Fknx_monitor_watcher.yaml)
+- [Alarm or fault](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor%2Fblob%2Fmain%2Fblueprints%2Fautomation%2Fknx_monitor_alarm.yaml)
+- [Bus connection lost or back](https://my.home-assistant.io/redirect/blueprint_import/?blueprint_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor%2Fblob%2Fmain%2Fblueprints%2Fautomation%2Fknx_monitor_bus.yaml)
+
+Example without a blueprint:
+
+```yaml
+triggers:
+  - trigger: event
+    event_type: knx_monitor_alarm
+    event_data:
+      active: true
+actions:
+  - action: notify.mobile_app_my_iphone
+    data:
+      title: "KNX alarm"
+      message: "{{ trigger.event.data.name }} ({{ trigger.event.data.address }})"
+```
+
+If you notify yourself through automations, turn off `alarm_notifications`
+and `watcher_notifications` below, so you do not get two messages.
+
+## Device and entities (MQTT)
+
+If an MQTT broker is set up in Home Assistant (usually the Mosquitto add-on
+with the MQTT integration), the add-on appears as the device **KNX Monitor**
+by itself; no credentials to enter. It brings:
+
+| Entity | What |
+| --- | --- |
+| Bus connected | connectivity of the add-on's bus connection |
+| Recording | switch to pause and resume continuous recording |
+| Telegrams per minute, Telegrams today | bus activity |
+| Repeats per minute, Last telegram | diagnostics |
+| Watcher, Alarm | event entities with the same data as the events above |
+
+On the device page under Automations you find **device triggers** for each
+watcher and for alarms and faults switching on or off, so you do not need to
+type event names. If the add-on stops, the device shows as unavailable.
+
+Without a broker everything else keeps working; the device appears as soon as
+one is set up (the add-on checks every 5 minutes).
+
+## Without an own tunnel
+
+If Home Assistant already has the KNX integration set up, the add-on suggests
+sharing its connection: connection mode "Home Assistant" instead of an own
+tunnel slot on the gateway (see Connection types).
 
 ## Configuration
 
 ```yaml
+alarm_notifications: true
+watcher_notifications: true
 notify_service: notify.mobile_app_my_iphone
 ```
+
+- `alarm_notifications`: Home Assistant notification when an alarm or fault
+  object triggers (default on).
+- `watcher_notifications`: Home Assistant notification when a watcher fires
+  (default on).
 
 - `notify_service` (optional): additionally send a push notification via a
   notify service, e.g. `notify.mobile_app_my_iphone`. Leave empty for a

@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.8.0
+
+- Automations: the add-on fires the events `knx_monitor_watcher`,
+  `knx_monitor_alarm` and `knx_monitor_bus`, also without an open browser.
+  Three blueprints to import with one click are linked in the documentation.
+- With an MQTT broker (Mosquitto) the add-on appears as the device
+  "KNX Monitor": bus connected, recording switch, telegrams per minute and
+  today, repeats, last telegram, event entities and device triggers for each
+  watcher and for alarms and faults.
+- New options `alarm_notifications` and `watcher_notifications`: turn the
+  notifications off if you notify through your own automations.
+- If the KNX integration is set up, the add-on suggests sharing its
+  connection instead of taking an own tunnel slot.
+- The menu shows the version of the app and the add-on; diagnostics packages
+  include the add-on version, screen size and time zone.
+
 ## 1.7.9
 
 - After a dropped connection, for example while the Home Assistant app was in
