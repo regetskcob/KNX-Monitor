@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.8.2
+
+- Nothing changes for Home Assistant users.
+- KNX box (preview): prepared for a direct connection to the KNX line with the
+  Weinzierl KNX BAOS 838 kBerry plug-on module for the Raspberry Pi. The
+  image frees the serial port for the module, and the box settings in the app
+  can test it: response, supported modes, telegrams and a bus monitor with
+  acknowledgements. Recording keeps running over IP for now.
+- The box page has a guide for tinkerers and a printable case with a variant
+  for the kBerry (both previews, not yet tested on real hardware).
+
 ## 1.8.1
 
 - Nothing changes for Home Assistant users.
