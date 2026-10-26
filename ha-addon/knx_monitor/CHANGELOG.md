@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.8.4
+
+- Nothing changes for Home Assistant users.
+- KNX box (preview): the box can now connect to the KNX line directly through
+  the Weinzierl kBerry plug-on module, without a KNX/IP gateway. Choose
+  "KNX-HAT (kBerry)" as the connection mode (expert mode); a bus monitor mode
+  with acknowledgements is available too.
+- KNX box: the browser no longer asks for the password again on every
+  "Connect", and the monitor now opens in Safari and on iPad/iPhone. Any user
+  name works when signing in, only the box password counts.
+- KNX box: the box now starts without a USB SSD (data then stays on the SD
+  card), and with an SSH key set, the maintenance account can use sudo.
+- KNX box: connection texts on the box say "Box" instead of "Add-on".
+
 ## 1.8.3
 
 - New introduction on the connect screen: three chapters (basics,
