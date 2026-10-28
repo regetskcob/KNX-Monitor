@@ -7,6 +7,13 @@ with Reserved Font Name "Monaspace", including subfamilies: "Argon", "Neon",
 Mona Sans: Copyright 2022 The Mona Sans Project Authors
 (https://github.com/github/mona-sans), with Reserved Font Name "Mona"
 
+Horizont ships cut versions (Latin only, no hinting, tool/subset_fonts.py).
+They are Modified Versions under the licence below. Because "Mona" and
+"Monaspace" are Reserved Font Names, the cut files carry other names inside:
+"Horizont Sans" and "Horizont Sans Display" are cut from Mona Sans and Mona
+Sans Display Expanded, "Horizont Mono" is cut from Monaspace Argon. Literata
+reserves no name and keeps it.
+
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
 https://openfontlicense.org

@@ -1,3 +1,12 @@
+Material Symbols Sharp
+Copyright Google LLC, https://github.com/google/material-design-icons
+Licensed under the Apache License, Version 2.0 (below).
+
+Modified by Horizont (tool/build_symbols.py): the variable font is pinned to
+FILL 0, GRAD 0, opsz 24, wght 300, cut down to the icons Horizont uses,
+filled forms are added at U+F0000 + codepoint, and symbols drawn by Horizont
+(Daniel Bocksteger) are added from U+100000.
+
 
                                  Apache License
                            Version 2.0, January 2004
