@@ -149,6 +149,40 @@ type event names. If the add-on stops, the device shows as unavailable.
 Without a broker everything else keeps working; the device appears as soon as
 one is set up (the add-on checks every 5 minutes).
 
+## Dashboard card
+
+Charts you save in KNX Monitor (Tools → Charts) can go straight onto your
+dashboards: add the card **KNX Monitor chart** ("Add card", search for
+"KNX"), pick the chart and the time range. The card reads the values from
+the continuous recording, so it shows the whole range even for addresses
+Home Assistant does not know, and updates every minute. Tap or hover to read
+the values at a point in time; 1 h, 6 h, 24 h and 7 days can be switched on
+the card itself.
+
+Besides group addresses, charts can show the bus itself: telegrams per
+minute, repeats per minute and the load per line. In KNX Monitor they are
+in the chart library under "Bus"; on the card the add-on computes them from
+the continuous recording.
+
+The add-on puts the card into `/config/www/knx-monitor/` and registers it as
+a dashboard resource on every start; nothing to install. If `www` did not
+exist before, Home Assistant needs one restart (a notification says so).
+Dashboards in YAML mode have no resource list; add it there yourself:
+
+```yaml
+lovelace:
+  resources:
+    - url: /local/knx-monitor/knx-monitor-chart-card.js
+      type: module
+```
+
+```yaml
+type: custom:knx-monitor-chart-card
+chart: Living room
+hours: 24
+title: Climate # optional
+```
+
 ## Without an own tunnel
 
 If Home Assistant already has the KNX integration set up, the add-on suggests
@@ -161,6 +195,7 @@ tunnel slot on the gateway (see Connection types).
 alarm_notifications: true
 watcher_notifications: true
 notify_service: notify.mobile_app_my_iphone
+dashboard_card: true
 ```
 
 - `alarm_notifications`: Home Assistant notification when an alarm or fault
@@ -171,7 +206,22 @@ notify_service: notify.mobile_app_my_iphone
 - `notify_service` (optional): additionally send a push notification via a
   notify service, e.g. `notify.mobile_app_my_iphone`. Leave empty for a
   Home Assistant notification only.
+- `dashboard_card`: install and register the dashboard card (default on,
+  see Dashboard card). Turn off if you do not use it.
+
+## Updates and going back
+
+Home Assistant offers a backup before each add-on update – keep it switched on.
+If a new version misbehaves, restore that backup (Settings → System → Backups):
+it brings back the previous version together with its data. Recordings and
+settings live in the add-on's data folder and survive normal updates.
 
 ## Support
 
 Bugs and feature requests: <https://github.com/regetskcob/KNX-Monitor/issues>
+
+**Vote on what comes next:** planned features are open issues on GitHub –
+for example DALI lighting diagnostics, a native Home Assistant integration or
+listening on the TP line directly. Give the ones you would use a 👍 and add a
+comment with your setup; the votes decide what gets built first:
+<https://github.com/regetskcob/KNX-Monitor/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement+sort%3Areactions-%2B1-desc>

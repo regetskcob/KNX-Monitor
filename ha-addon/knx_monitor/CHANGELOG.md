@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.9.0
+
+- Beginners: teach in your installation without an ETS project; without
+  expert mode the live list shows every telegram as a sentence.
+- New: connection help, a status light with weekly report and "Learn KNX".
+- Cause chain and reaction times, in plain sentences without expert mode.
+- Home Assistant: the generated KNX configuration can now suggest devices.
+  Plus a security check, a device inventory and a forum package.
+- Project check with new rules (multiple read responses, addresses without
+  sender or receiver, crowded lines, unfiltered main groups 14/15, missing
+  names or types, central off/on) and "Tasks for ETS" as list, PDF and ETS
+  import (preview).
+- Electricians: ring-through with sound acknowledgement, signed acceptance
+  report, and a fault hunt that catches sporadic faults over days.
+- Dashboard chart cards with templates and bus figures.
+- Neutral front view for actuators without a manufacturer graphic.
+- Resilience: settings and installation files are restored from backups if
+  damaged; the KNX box rolls back an update that does not start.
+- Connecting to another gateway switches the continuous recording and fault
+  hunt only once the new connection works; a failed attempt keeps the old one.
+  The connection help now appears in the add-on too.
+
 ## 1.8.4
 
 - Nothing changes for Home Assistant users.

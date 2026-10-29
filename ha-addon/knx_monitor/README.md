@@ -41,5 +41,11 @@ configuration options are in the **Documentation** tab of this add-on.
 
 Bugs and feature requests: <https://github.com/regetskcob/KNX-Monitor/issues>
 
+**Vote on what comes next:** planned features are open issues on GitHub –
+for example DALI lighting diagnostics, a native Home Assistant integration or
+listening on the TP line directly. Give the ones you would use a 👍 and add a
+comment with your setup; the votes decide what gets built first:
+<https://github.com/regetskcob/KNX-Monitor/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement+sort%3Areactions-%2B1-desc>
+
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg

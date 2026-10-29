@@ -16,3 +16,10 @@ configuration:
     description: >-
       Optional: Dienst für Alarm-Mitteilungen, z. B. „notify.mobile_app_iphone“.
       Leer lassen für eine Benachrichtigung in Home Assistant.
+  dashboard_card:
+    name: Dashboard-Karte
+    description: >-
+      Legt die Karte „KNX Monitor Diagramm“ nach /config/www/knx-monitor/
+      und meldet sie als Dashboard-Ressource an. Sie zeigt die in der App
+      gespeicherten Diagramme. Ausschalten, wenn du die Karte nicht
+      brauchst oder Ressourcen selbst pflegst.

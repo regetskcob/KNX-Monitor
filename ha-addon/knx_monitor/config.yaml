@@ -1,5 +1,5 @@
 name: KNX Monitor
-version: "1.8.4"
+version: "1.9.0"
 slug: knx_monitor
 description: KNX bus monitor, continuous recording, health check and commissioning in the sidebar
 url: https://knx-monitor.de
@@ -19,14 +19,20 @@ homeassistant_api: true
 # MQTT-Gerät „KNX Monitor“, wenn ein Broker (z. B. Mosquitto) da ist.
 services:
   - mqtt:want
+# Dashboard-Karte nach /config/www/knx-monitor/ legen (Option dashboard_card).
+map:
+  - type: homeassistant_config
+    read_only: false
 options:
   alarm_notifications: true
   watcher_notifications: true
   notify_service: ""
+  dashboard_card: true
 schema:
   alarm_notifications: bool
   watcher_notifications: bool
   notify_service: str?
+  dashboard_card: bool
 ingress: true
 ingress_port: 8765
 panel_icon: mdi:lan-connect
