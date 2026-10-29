@@ -33,8 +33,13 @@ Configuration: [DOCS.md](ha-addon/knx_monitor/DOCS.md).
 ## Support
 
 Bugs, questions and requests: [issues](https://github.com/regetskcob/KNX-Monitor/issues).
+
 Please do not upload your ETS project (`.knxproj`) or recordings publicly, they
 can contain addresses, room names and passwords.
+
+Planned features are open issues too. [Vote with 👍](https://github.com/regetskcob/KNX-Monitor/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement+sort%3Areactions-%2B1-desc) on the ones you
+would use and tell us about your setup in a comment – the votes decide what
+comes first.
 
 Security issues: see [SECURITY.md](SECURITY.md).
 
