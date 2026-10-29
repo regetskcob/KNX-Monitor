@@ -108,6 +108,20 @@
   </header>
   <hr class="hz-feld-horizon">
   <div class="knx-prose t-reading"><p>What the latest versions of KNX Monitor brought, newest first. App, Home Assistant add-on and KNX box share one version number. Every version is on <a href="https://github.com/regetskcob/KNX-Monitor/releases">GitHub</a>; in Home Assistant the add-on shows the same notes before an update.</p>
+<h2 id="190--in-preparation">1.9.0 – in preparation</h2>
+<ul>
+<li>For beginners: you can now teach in your installation without any ETS project – press a button, name it, done; the app builds a project of its own from it. Without expert mode the live list shows every telegram as a sentence (&ldquo;Hallway button switched on kitchen light&rdquo;).</li>
+<li>New: connection help that explains step by step why the gateway does not answer; a status light on the home screen with a weekly report; &ldquo;Learn KNX&rdquo; with short lessons.</li>
+<li>Cause chain and reaction times: what a telegram triggered and how fast the feedback came, without expert mode in the same sentences as the live list.</li>
+<li>Home Assistant: the generated KNX configuration can now suggest devices too. Plus a security check, a device inventory (manufacturer, serial number, firmware) and a forum package with everything needed for a question in a forum.</li>
+<li>Project check with new rules: multiple read responses, addresses without sender or receiver, crowded lines, unfiltered main groups 14/15, addresses without name or datapoint type, and central off/on. &ldquo;Tasks for ETS&rdquo; collects everything as a list and PDF, the group addresses also as an ETS import (preview).</li>
+<li>For electricians: ring-through with sound acknowledgement (every button confirms audibly, with a test tone first), an acceptance report signed on the device, and a fault hunt that catches sporadic faults over days with the KNX box.</li>
+<li>Dashboard: chart cards with templates and bus figures; templates can be shared.</li>
+<li>Actuators without a manufacturer graphic now get a neutral front view with channels, label fields and bus terminal.</li>
+<li>Resilience: the app starts even with damaged settings or installation files and restores them from backups. The KNX box keeps the previous version on update and rolls back if the new one does not start.</li>
+<li>Home Assistant add-on and KNX box: connecting to another gateway switches the continuous recording and fault hunt only once the new connection works. The connection help now appears there too.</li>
+<li>KNX box (preview): DIN rail base with a screw-on spring clip; variant 1 is recommended.</li>
+</ul>
 <h2 id="184--26-oct-2026">1.8.4 – 26 Oct 2026</h2>
 <ul>
 <li>KNX box (preview): the box can now connect to the KNX line directly through the Weinzierl kBerry plug-on module, without a KNX/IP gateway. Choose “KNX-HAT (kBerry)” as the connection mode (expert mode); a bus monitor mode with acknowledgements is available too.</li>

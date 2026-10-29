@@ -108,6 +108,20 @@
   </header>
   <hr class="hz-feld-horizon">
   <div class="knx-prose t-reading"><p>Was die letzten Versionen von KNX Monitor gebracht haben, neueste zuerst. App, Home-Assistant-Add-on und KNX-Box haben eine gemeinsame Versionsnummer. Jede Version liegt auf <a href="https://github.com/regetskcob/KNX-Monitor/releases">GitHub</a>; in Home Assistant zeigt das Add-on dieselben Hinweise vor einem Update (auf Englisch).</p>
+<h2 id="190--in-vorbereitung">1.9.0 – in Vorbereitung</h2>
+<ul>
+<li>Für Einsteiger: Die Anlage lässt sich jetzt ganz ohne ETS-Projekt anlernen – Taster drücken, benennen, fertig; daraus entsteht ein eigenes Projekt. Ohne Expertenmodus zeigt die Live-Liste jedes Telegramm als Satz („Taster Flur hat Küchenlicht eingeschaltet“).</li>
+<li>Neu: Verbindungshilfe, die Schritt für Schritt erklärt, warum das Gateway nicht antwortet; eine Ampel auf der Startseite mit Wochenbericht; „KNX lernen“ mit kurzen Lektionen.</li>
+<li>Ursachenkette und Reaktionszeiten: was ein Telegramm ausgelöst hat und wie schnell die Rückmeldung kam, ohne Expertenmodus in denselben Sätzen wie die Live-Liste.</li>
+<li>Home Assistant: Die erzeugte KNX-Konfiguration schlägt auf Wunsch auch Geräte vor. Dazu Sicherheits-Check, Geräteinventar (Hersteller, Seriennummer, Firmware) und ein Forenpaket mit allen Angaben für eine Frage im Forum.</li>
+<li>Projekt-Abgleich mit neuen Prüfregeln: mehrere Leseantworten, Adressen ohne Sender oder Empfänger, volle Linien, ungefilterte Hauptgruppen 14/15, Adressen ohne Namen oder Datentyp und Zentral-Aus/Ein. „Aufgaben für die ETS“ sammelt alles als Liste und PDF, die Gruppenadressen auch als ETS-Import (Vorschau).</li>
+<li>Für Elektriker: Durchklingeln mit Klangquittung (jeder Taster quittiert hörbar, vorher ein Testton: „Gehört? Dann kann’s losgehen.“), Abnahmeprotokoll mit Unterschrift auf dem Gerät und Fehlerjagd, die mit der KNX-Box sporadische Fehler über Tage fängt.</li>
+<li>Dashboard: Diagramm-Karten mit Vorlagen und Bus-Kennzahlen, Vorlagen lassen sich teilen.</li>
+<li>Aktoren ohne Herstellergrafik haben jetzt eine neutrale Frontansicht mit Kanälen, Beschriftungsfeldern und Busklemme.</li>
+<li>Ausfallsicherheit: Die App startet auch mit beschädigten Einstellungen oder Anlagendateien und stellt sie aus Sicherungen wieder her. Die KNX-Box behält beim Update die alte Version und springt zurück, wenn die neue nicht startet.</li>
+<li>Home-Assistant-Add-on und KNX-Box: Ein Verbindungsversuch mit einem anderen Gateway stellt Daueraufzeichnung und Fehlerjagd erst um, wenn die neue Verbindung steht. Die Verbindungshilfe erscheint jetzt auch dort.</li>
+<li>KNX-Box (Vorschau): Boden für die Hutschiene mit angeschraubtem Federclip; empfohlen ist Variante 1.</li>
+</ul>
 <h2 id="184--26102026">1.8.4 – 26.10.2026</h2>
 <ul>
 <li>KNX-Box (Vorschau): Die Box kann sich jetzt über das Aufsteckmodul kBerry von Weinzierl direkt mit der KNX-Linie verbinden, ohne KNX/IP-Gateway. Als Verbindungsart „KNX-HAT (kBerry)“ wählen (Expertenmodus); ein Busmonitor-Modus mit Quittungen ist auch dabei.</li>
