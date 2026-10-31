@@ -54,6 +54,19 @@
                 href="https://knx-monitor.de/en/addon/"
                 />
   </url><url>
+    <loc>https://knx-monitor.de/en/bauherren/</loc>
+    <lastmod>2026-10-31T13:07:05+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de-DE"
+                href="https://knx-monitor.de/bauherren/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-US"
+                href="https://knx-monitor.de/en/bauherren/"
+                />
+  </url><url>
     <loc>https://knx-monitor.de/en/box/</loc>
     <lastmod>2026-10-22T17:56:38+02:00</lastmod>
     <xhtml:link
