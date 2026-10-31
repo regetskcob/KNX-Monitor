@@ -125,7 +125,7 @@
     <span class="t-kennung hz-kennung">01 — KNX box · Raspberry Pi</span>
     <h1 class="t-display">The bus records itself while you are away.</h1>
     <p><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Preview</span> The KNX box is a Raspberry Pi that writes down every telegram around the clock and opens its own Wi-Fi. You set it up with the app: today with the Linux app, soon by QR code with iPhone, iPad and Android. No Home Assistant and no internet.</p>
-    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.8.3">Get the image<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">How to set it up</a>
+    <div class="hz-feld-actions"><a class="hz-button hz-button--primary" href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.9.1">Get the image<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a><a class="hz-button hz-button--secondary" href="#setup">How to set it up</a>
     </div>
   </div>
   <div class="hz-feld-aside"><svg class="tz-pi" viewBox="0 0 400 240" aria-hidden="true" focusable="false">
@@ -195,8 +195,8 @@
   <dt>Raspberry Pi</dt><dd>Pi 5 or Pi 4 with a matching power supply (Pi 5: 27 W USB-C), details under Hardware</dd>
   <dt>SD card</dt><dd>microSD of 16 GB or more and a card reader for your computer</dd>
   <dt>Computer</dt><dd>Windows, Mac or Linux with the free <a href="https://www.raspberrypi.com/software/">Raspberry Pi Imager</a></dd>
-  <dt>Network cable</dt><dd>From the Pi to the router or switch the KNX IP gateway is on</dd>
-  <dt>Gateway</dt><dd>One free tunnel slot; Home Assistant or ETS often take one already</dd>
+  <dt>Network cable</dt><dd>From the Pi to the router or switch the KNX IP gateway is on; not needed for the bus with the kBerry</dd>
+  <dt>Gateway</dt><dd>One free tunnel slot, Home Assistant or ETS often take one already. Or the kBerry plug-on module instead of a gateway</dd>
   <dt>App</dt><dd>Today the <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux app</a>, soon also iPhone, iPad and Android</dd>
   <dt>Printer</dt><dd>Optional, for the sheet with the two labels and access details</dd>
 </dl>
@@ -235,7 +235,7 @@
   <dt>ETS project</dt><dd>Import it in the app and it goes onto the box too. Then the box knows names, datapoint types and the time master.</dd>
   <dt>Keyring</dt><dd>For KNX Secure the same: the box records secured telegrams readably.</dd>
   <dt>History</dt><dd>The app shows it straight from the box, day by day, with replay and export.</dd>
-  <dt>Storage</dt><dd>On a USB SSD named <code>KNXBOXDATA</code>, otherwise on the SD card. At five telegrams a second about 43 MB a day, raw.</dd>
+  <dt>Storage</dt><dd>On a USB SSD named <code>KNXBOXDATA</code>, otherwise on the SD card, unencrypted either way. At five telegrams a second about 43 MB a day, raw.</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="recording">
@@ -274,15 +274,15 @@
 <section class="hz-feld-section tz-section tz-section--read" id="connection">
   <span class="t-kennung hz-kennung">06 — Connection</span>
   <div>
-    <h2>IP today, straight on the bus tomorrow.</h2><p>Today the box sits on a network cable to the KNX IP interface or IP router. In future it is meant to sit right on the line too: with a bus terminal, no IP gateway at all.</p>
+    <h2>Over IP or straight on the bus.</h2><p>The box sits on a network cable to the KNX IP interface or IP router. Since 1.8.4 it can also sit right on the line: with the kBerry plug-on module, no IP gateway at all.</p>
   </div>
   <dl class="hz-facts">
-  <dt>IP (today)</dt><dd>KNXnet/IP tunnelling or routing, KNX IP Secure included. The box takes one tunnel slot on the gateway.</dd>
-  <dt>TP (planned)</dt><dd>The bus cable goes straight to the box: through the Weinzierl KNX BAOS 838 kBerry, a module that plugs onto the Pi&rsquo;s pin header. No gateway needed, no tunnel slot taken.</dd>
-  <dt>Guide</dt><dd><strong>Preview:</strong> how the kBerry goes onto the Pi, how to prepare the Pi and how to assemble the matching case: <a href="/box/knx-box-kberry.pdf">guide for tinkerers (PDF, German, preview)</a>. Not yet tested on real hardware.</dd>
-  <dt>Bus monitor</dt><dd>Over TP the box also sees what a tunnel never shows: acknowledgements (ACK, NAK, BUSY) and repeats.</dd>
+  <dt>IP</dt><dd>KNXnet/IP tunnelling or routing, KNX IP Secure included. The box takes one tunnel slot on the gateway.</dd>
+  <dt>TP with kBerry</dt><dd>The bus cable goes straight to the box: through the Weinzierl KNX BAOS 838 kBerry, a module that plugs onto the Pi&rsquo;s pin header. Connection mode &ldquo;KNX-HAT (kBerry)&rdquo; in expert mode. No gateway needed, no tunnel slot taken.</dd>
+  <dt>Guide</dt><dd><strong>Preview:</strong> how the kBerry goes onto the Pi, how to prepare the Pi and how to assemble the matching case: <a href="/box/knx-box-kberry.pdf">guide for tinkerers (PDF, German, preview)</a>.</dd>
+  <dt>Bus monitor</dt><dd>Over TP the box also sees what a tunnel never shows: acknowledgements (ACK, NAK, BUSY) and repeats. It cannot send in this mode.</dd>
   <dt>Address</dt><dd>To listen, the box needs no individual address and no ETS programming.</dd>
-  <dt>Status</dt><dd>In progress, see the <a href="https://github.com/regetskcob/KNX-Monitor/issues/1">issue on GitHub</a>.</dd>
+  <dt>Status</dt><dd>Preview: tested on a Pi 4 on a real bus, not yet on the Pi 5 or in continuous use. More in the <a href="https://github.com/regetskcob/KNX-Monitor/issues/1">issue on GitHub</a>.</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="hardware">
@@ -296,13 +296,13 @@
   <dt>Power</dt><dd>27 W power supply (USB-C); weaker ones crash under load</dd>
   <dt>Storage</dt><dd>USB SSD or NVMe, 128 GB last for years</dd>
   <dt>Case</dt><dd><strong>Preview:</strong> <a href="/box/knx-box-case-vorschau.zip">printable case (STL, zip)</a> for Pi 3B to 5 with the kBerry: slim lid, module bridge, USB cover, a DIN rail base with a screw-on spring clip (recommended: variant 1, still being refined) and test prints for the heat-set inserts and the lid. Print at 0.2 mm layer height. Description (German) in the README.md inside. The fit has only been checked on the model so far.</dd>
-  <dt>The rest</dt><dd>A network cable, the two labels from the sheet; in future the kBerry plug-on module with its bus terminal</dd>
+  <dt>The rest</dt><dd>A network cable, the two labels from the sheet; for the direct bus connection the kBerry plug-on module</dd>
 </dl>
 </section>
 <section class="hz-feld-section tz-section tz-section--read" id="status">
   <span class="t-kennung hz-kennung">08 — Status</span>
   <div>
-    <h2>A preview, to be honest.</h2><p>The image is built automatically and runs in the test setup. Nobody has tried it on real hardware on a real site yet. Reports are very welcome.</p>
+    <h2>A preview, to be honest.</h2><p>The image is built automatically and runs in the test setup and on a Raspberry Pi 4 on a real bus. Nobody has tried it in continuous use on a real site yet. Reports are very welcome.</p>
   </div>
   <dl class="hz-facts">
   <dt>App</dt><dd><strong>The box works with the app:</strong> setup, project and history go through it, the browser is only a stopgap (see Setup). iPhone, iPad, Android, Mac and Windows arrive in the coming weeks; until then use the <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux app</a>.</dd>
@@ -327,7 +327,7 @@
       </details>
       <details>
         <summary>Does the box take up a tunnel on the gateway?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-        <p>Over IP yes, exactly one, around the clock. Every iPhone and iPad in the box&rsquo;s Wi-Fi shares that tunnel. If ETS needs the only free slot, pause the box. Straight on the line with the kBerry (planned) this goes away.</p>
+        <p>Over IP yes, exactly one, around the clock. Every iPhone and iPad in the box&rsquo;s Wi-Fi shares that tunnel. If ETS needs the only free slot, pause the box. Straight on the line with the kBerry this goes away.</p>
       </details>
       <details>
         <summary>Do devices in the box&#39;s Wi-Fi reach the customer&#39;s network?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
@@ -340,6 +340,10 @@
       <details>
         <summary>What if someone walks off with the box?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
         <p>Whoever has the label can pair. That is why the app suggests setting your own box password right after pairing; after that neither the label nor the SD card pairs new devices. Under Box settings you change it later and revoke devices you no longer need.</p>
+      </details>
+      <details>
+        <summary>How well is the data on the box protected?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+        <p>Without the box password or a paired device nobody gets at the data or the bus; the password is stored only as a hash on the box. Two limits: project and history are unencrypted on the SD card or SSD, so whoever has the medium can read them. And inside the box&rsquo;s Wi-Fi the connection has no TLS, so the Wi-Fi password is the real protection there. So don&rsquo;t leave the box openly accessible. On its own it sends nothing to us; if it has internet, it sets its clock that way.</p>
       </details>
       <details>
         <summary>May I record the bus in a lived-in house?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>

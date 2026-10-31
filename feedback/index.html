@@ -114,8 +114,10 @@
   <div class="knx-prose t-reading"><p>Für Fehler und Fragen zu deiner Anlage brauchen wir oft deine Gruppenadressen und Details aus dem ETS-Projekt. Bitte lade dafür nicht dein Projekt hoch und schick uns kein Passwort: Eine <code>.knxproj</code>-Datei enthält mehr, als wir brauchen, und Foren und GitHub-Issues sind öffentlich. Dafür gibt es das <strong>Diagnosepaket</strong>.</p>
 <h2 id="das-diagnosepaket">Das Diagnosepaket</h2>
 <p>Eine ZIP-Datei, die KNX Monitor für dich zusammenstellt. Du siehst vor dem Senden genau, was drin ist („Dateiinhalt ansehen“).</p>
-<p><strong>Enthalten:</strong> die Busaufzeichnung um den Fehler, aus dem Projekt die Gruppenadressen, Datenpunkttypen, Geräte und Verknüpfungen, deine Beschreibung, Kommentare mit Bildschirmfotos und technische Eckdaten: App- und Add-on-Version, Plattform, Betriebssystem bzw. Browser, Verbindungsart, Typ und Name des Gateways.</p>
-<p><strong>Nicht enthalten:</strong> die ETS-Projektdatei und ihr Passwort, Keyring und Schlüssel, Passwörter, IP-Adressen, Hostnamen, MAC- und Seriennummern, Benutzernamen und E-Mail. Projekt- und Installationsname werden durch Platzhalter ersetzt. Data-Secure-Telegramme stehen nur mit Zeit und Adressen drin, ohne Inhalt.</p>
+<p><strong>Enthalten:</strong> die Busaufzeichnung um den Fehler, aus dem Projekt die Gruppenadressen, Datenpunkttypen, Geräte und Verknüpfungen, deine Beschreibung, deine Kommentare, die letzten Meldungen der App und technische Eckdaten: App- und Add-on-Version, Plattform, Betriebssystem bzw. Browser, Verbindungsart, Typ und Name des Gateways.</p>
+<p><strong>Nicht enthalten:</strong> die ETS-Projektdatei und ihr Passwort, Keyring und Schlüssel sowie Passwörter. Data-Secure-Telegramme stehen nur mit Zeit und Adressen drin, ohne Inhalt.</p>
+<p><strong>Gefiltert, soweit erkennbar:</strong> IP-Adressen, Hostnamen, MAC- und Seriennummern, E-Mail-Adressen und bekannte Namen von Projekt, Installation und Kunde; Projekt- und Installationsname werden durch Platzhalter ersetzt. <strong>Ganz sicher ist das nicht:</strong> Namen, die du selbst eintippst oder die in Gruppenadressen stehen, erkennt der Filter nicht, und Telegrammwerte können zeigen, wann jemand zu Hause ist. Lies das Paket deshalb vor dem Senden kurz durch.</p>
+<p><strong>Bildschirmfotos</strong> gehen nur mit, wenn du das einschaltest; ab Werk ist es aus. Sie werden nicht gefiltert, alles darauf Sichtbare kommt bei uns an.</p>
 <p><strong>Namen:</strong> Ob die Namen deiner Gruppenadressen und Geräte mitgehen, entscheidest du mit dem Schalter „Namen mitsenden“. Sie helfen uns sehr, ohne sie stehen dort nur Adressen und Produkte.</p>
 <div class="tz-names">
   <label><input type="checkbox" checked> Namen mitsenden</label>
@@ -130,6 +132,7 @@
   <p>Vereinfachter Ausschnitt. Adressen, Datentypen und Produkte gehen immer mit, damit wir den Fehler nachstellen können.</p>
 </div>
 
+<p><strong>Störungsmeldung an den Elektriker:</strong> Sie ist etwas anderes als das Diagnosepaket für uns. Dort gehen die Namen und die Bildschirmfotos an deinen Kommentaren mit, ohne Schalter. Hänge also nur an, was der Empfänger sehen darf.</p>
 <h2 id="so-erstellst-du-es">So erstellst du es</h2>
 <ol>
 <li>KNX Monitor öffnen (App oder Home-Assistant-Add-on), mit dem Bus verbinden, das ETS-Projekt geladen.</li>

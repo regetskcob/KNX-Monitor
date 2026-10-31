@@ -108,7 +108,17 @@
   </header>
   <hr class="hz-feld-horizon">
   <div class="knx-prose t-reading"><p>What the latest versions of KNX Monitor brought, newest first. App, Home Assistant add-on and KNX box share one version number. Every version is on <a href="https://github.com/regetskcob/KNX-Monitor/releases">GitHub</a>; in Home Assistant the add-on shows the same notes before an update.</p>
-<h2 id="190--in-preparation">1.9.0 – in preparation</h2>
+<h2 id="191--in-preparation">1.9.1 – in preparation</h2>
+<ul>
+<li>Your data: the apps now encrypt their files with AES-256-GCM, with the key in the system keychain. Without a usable keychain (Linux without libsecret) they stay unencrypted, as do settings such as the gateway.</li>
+<li>Optional app lock: Face ID, fingerprint, Windows Hello, device code or an app password plus recovery key as PDF.</li>
+<li>Backup: everything from this device in one file with its own password, in the apps, in an openly described format.</li>
+<li>Diagnostics package: screenshots only go along if you turn them on.</li>
+<li>Photos of the distribution board and labels with QR codes, per installation.</li>
+<li>Account (optional): two-factor sign-in, export of account data, a removed device loses its session on the server.</li>
+<li>KNX box and add-on: a recording without a known clock stays visible after a restart and is removed by the retention like any other day. A day is no longer overwritten when the clock jumps while it is being packed. Project and keyring are checked on reconnecting. Checking the password no longer holds up the server and the recording. Stopping no longer hangs on an unresponsive KNX HAT.</li>
+</ul>
+<h2 id="190--29-oct-2026">1.9.0 – 29 Oct 2026</h2>
 <ul>
 <li>For beginners: you can now teach in your installation without any ETS project – press a button, name it, done; the app builds a project of its own from it. Without expert mode the live list shows every telegram as a sentence (&ldquo;Hallway button switched on kitchen light&rdquo;).</li>
 <li>New: connection help that explains step by step why the gateway does not answer; a status light on the home screen with a weekly report; &ldquo;Learn KNX&rdquo; with short lessons.</li>

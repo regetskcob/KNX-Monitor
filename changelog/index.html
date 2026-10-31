@@ -108,7 +108,17 @@
   </header>
   <hr class="hz-feld-horizon">
   <div class="knx-prose t-reading"><p>Was die letzten Versionen von KNX Monitor gebracht haben, neueste zuerst. App, Home-Assistant-Add-on und KNX-Box haben eine gemeinsame Versionsnummer. Jede Version liegt auf <a href="https://github.com/regetskcob/KNX-Monitor/releases">GitHub</a>; in Home Assistant zeigt das Add-on dieselben Hinweise vor einem Update (auf Englisch).</p>
-<h2 id="190--in-vorbereitung">1.9.0 – in Vorbereitung</h2>
+<h2 id="191--in-vorbereitung">1.9.1 – in Vorbereitung</h2>
+<ul>
+<li>Deine Daten: Die Apps verschlüsseln ihre Dateien jetzt mit AES-256-GCM, der Schlüssel liegt im Schlüsselbund des Systems. Ohne nutzbaren Schlüsselbund (Linux ohne libsecret) bleiben sie unverschlüsselt, Einstellungen wie das Gateway ebenfalls.</li>
+<li>App-Sperre auf Wunsch: Face ID, Fingerabdruck, Windows Hello, Gerätecode oder App-Passwort samt Notfallschlüssel als PDF.</li>
+<li>Sicherung: alles von diesem Gerät in eine Datei mit eigenem Passwort, in den Apps, Format offen beschrieben.</li>
+<li>Diagnosepaket: Bildschirmfotos gehen nur noch mit, wenn du sie einschaltest.</li>
+<li>Fotos des Verteilers und Etiketten mit QR-Code je Anlage.</li>
+<li>Konto (freiwillig): Zwei-Faktor-Anmeldung, Export der Kontodaten, ein entferntes Gerät verliert seine Sitzung auf dem Server.</li>
+<li>KNX-Box und Add-on: Eine Aufzeichnung ohne bekannte Uhrzeit bleibt nach einem Neustart sichtbar und läuft nach der Aufbewahrung ab wie jeder andere Tag. Springt die Uhr beim Packen, wird kein Tag mehr überschrieben. Projekt und Keyring werden beim Wiederverbinden geprüft. Die Passwortprüfung hält Server und Aufzeichnung nicht mehr auf. Das Beenden hängt nicht mehr an einem KNX-HAT, der nicht antwortet.</li>
+</ul>
+<h2 id="190--29102026">1.9.0 – 29.10.2026</h2>
 <ul>
 <li>Für Einsteiger: Die Anlage lässt sich jetzt ganz ohne ETS-Projekt anlernen – Taster drücken, benennen, fertig; daraus entsteht ein eigenes Projekt. Ohne Expertenmodus zeigt die Live-Liste jedes Telegramm als Satz („Taster Flur hat Küchenlicht eingeschaltet“).</li>
 <li>Neu: Verbindungshilfe, die Schritt für Schritt erklärt, warum das Gateway nicht antwortet; eine Ampel auf der Startseite mit Wochenbericht; „KNX lernen“ mit kurzen Lektionen.</li>

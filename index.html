@@ -199,7 +199,7 @@
       <div class="hz-feld-actions">
         <a class="hz-button hz-button--primary" href="https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor">Als Home-Assistant-Add-on<span class="hz-symbol" aria-hidden="true">&#xe5c8;</span></a>
       </div>
-      <p class="tz-note t-caption">Bald auch für iPhone, iPad, Android, Mac und Windows, für Linux schon heute. Deine Anlagendaten verlassen nie dein Netzwerk.</p>
+      <p class="tz-note t-caption">Bald auch für iPhone, iPad, Android, Mac und Windows, für Linux schon heute. Deine Anlagendaten verlassen dein Netzwerk nur, wenn du sie selbst teilst.</p>
     </div>
     <div class="tz-aside">
       <div class="tz-live" aria-hidden="true">
@@ -524,7 +524,9 @@
   <dt>Secure</dt><dd><strong>KNX Secure &amp; Routing.</strong> Tunnel über UDP oder TCP, Routing per Multicast, KNX IP Secure und Data Secure mit dem Keyring aus der ETS.</dd>
   <dt>Kommentare</dt><dd>An Telegrammen, Diagrammen und Aufnahmen, mit bis zu drei Bildschirmfotos</dd>
   <dt>Exporte</dt><dd>Eine Seite für alles: Telegramme als PDF, CSV und für die ETS, Berichte und ein ZIP mit allem</dd>
-  <dt>Fehler</dt><dd><strong>Problem melden:</strong> Fehler nachstellen, jedes Auftreten antippen, das Diagnosepaket geht an den Elektriker; beim Öffnen zeigt es Befunde und Hinweise. Auf Wunsch ohne Namen und Werte</dd>
+  <dt>Fehler</dt><dd><strong>Problem melden:</strong> Fehler nachstellen, jedes Auftreten antippen, das Diagnosepaket geht an den Elektriker; beim Öffnen zeigt es Befunde und Hinweise. Für den Support auf Wunsch ohne Namen</dd>
+  <dt>Einstieg</dt><dd><strong>Ohne ETS-Projekt anlernen:</strong> Taster drücken, benennen, fertig. Ohne Expertenmodus zeigt die Live-Liste jedes Telegramm als Satz; dazu Verbindungshilfe, Ampel mit Wochenbericht und „KNX lernen“</dd>
+  <dt>Sicherung</dt><dd><strong>Alles in einer Datei</strong> mit eigenem Passwort, in den Apps ab Version 1.9.1</dd>
   <dt>Demo</dt><dd>Demo-Haus zum Ausprobieren ohne Anlage</dd>
   <dt>Sprachen</dt><dd>Deutsch und Englisch</dd>
 </dl>
@@ -588,6 +590,9 @@
   <dt>Hop-Count</dt><dd><strong>Eigene Spalte</strong> in der Live-Liste, Hinweis bei ungewöhnlichem Routing-Zähler, Einbauort beim Absender</dd>
   <dt>Verbindung</dt><dd><strong>Port, Tunneladresse,</strong> Verbindungsoptionen und Keyring direkt beim Verbinden</dd>
   <dt>Alarme</dt><dd><strong>Alarm-Mitteilungen</strong>, sobald ein Alarm- oder Störungsobjekt auslöst</dd>
+  <dt>Abnahme</dt><dd><strong>Durchklingeln mit Klangquittung</strong> und Abnahmeprotokoll mit Unterschrift auf dem Gerät</dd>
+  <dt>Fehlerjagd</dt><dd><strong>Sporadische Fehler</strong> über Tage fangen, mit der KNX-Box</dd>
+  <dt>Fotodoku</dt><dd><strong>Fotos des Verteilers</strong> und Etiketten mit QR-Code, je Anlage</dd>
 </dl>
   </section>
   <section class="hz-feld-section tz-section tz-section--read" id="ets">
@@ -608,12 +613,12 @@
     <span class="t-kennung hz-kennung">08 — Verbindung</span>
     <div>
       <h2>Direkt an deine IP-Schnittstelle.</h2>
-      <p>Verbindet sich per KNXnet/IP mit deiner IP-Schnittstelle oder deinem IP-Router, auch mit KNX Secure. Zum Benutzen brauchst du kein Konto, und deine Anlagendaten verlassen nie dein Netzwerk.</p>
+      <p>Verbindet sich per KNXnet/IP mit deiner IP-Schnittstelle oder deinem IP-Router, auch mit KNX Secure. Zum Benutzen brauchst du kein Konto, und deine Anlagendaten verlassen dein Netzwerk nur, wenn du sie selbst teilst.</p>
     </div>
     <dl class="hz-facts">
   <dt>KNXnet/IP</dt><dd>Tunneling, Routing und KNX Secure</dd>
   <dt>.knxproj</dt><dd>ETS-Projekte inkl. ETS6 mit Passwort</dd>
-  <dt>0</dt><dd>Tracker; zum Benutzen kein Konto nötig, Projekt und Telegramme bleiben in deinem Netz</dd>
+  <dt>0</dt><dd>Tracker; zum Benutzen kein Konto nötig, Projekt und Telegramme bleiben bei dir</dd>
 </dl>
   </section>
   <section class="hz-feld-section tz-section tz-section--read" id="box">
@@ -682,22 +687,26 @@
     <dl class="hz-facts">
   <dt>Einrichten</dt><dd>Scannen, und die App tritt dem WLAN bei, koppelt sich, stellt die Uhr und findet das Gateway</dd>
   <dt>App</dt><dd>Ohne App bleibt nur der Browser. Bis iPhone, iPad und Android erscheinen, koppelst du die Box mit der <a href="https://github.com/regetskcob/KNX-Monitor/releases/latest">Linux-App</a></dd>
-  <dt>Anschluss</dt><dd>Heute per Netzwerkkabel am IP-Gateway; künftig auch direkt an der Linie mit Busklemme (TP), ohne Gateway</dd>
+  <dt>Anschluss</dt><dd>Per Netzwerkkabel am IP-Gateway oder direkt an der Linie mit dem Aufsteckmodul kBerry, dann ohne Gateway</dd>
   <dt>Uhr</dt><dd>Ohne Internet: vom iPhone oder iPad oder vom KNX-Zeitgeber auf der Linie</dd>
   <dt>Aufnahme</dt><dd>Rund um die Uhr, auch über Tage; Projekt und Verlauf teilen sich App und Box</dd>
-  <dt>Stand</dt><dd><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Vorschau</span> <a href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.8.3">Image für den Raspberry Pi</a></dd>
+  <dt>Stand</dt><dd><span class="hz-badge hz-badge--info"><span class="hz-symbol" aria-hidden="true"></span>Vorschau</span> <a href="https://github.com/regetskcob/KNX-Monitor/releases/tag/box-v1.9.1">Image für den Raspberry Pi</a></dd>
 </dl>
   </section>
   <section class="hz-feld-section tz-section tz-section--read" id="privacy">
     <span class="t-kennung hz-kennung">10 — Datenschutz</span>
     <div>
-      <h2>Deine Anlage bleibt lokal.</h2>
-      <p>KNX Monitor spricht mit deiner KNX-Schnittstelle im eigenen Netzwerk. Zum Benutzen kein Konto, keine Analyse. Projekt, Telegramme und Secure-Schlüssel bleiben bei dir; das Passwort deines ETS-Projekts wird nicht gespeichert. <a href="/datenschutz/">Datenschutzerklärung lesen</a></p>
+      <h2>Deine Daten gehören dir.</h2>
+      <p>KNX Monitor arbeitet in deinem Netz und speichert auf deinen Geräten. Wir haben die Systeme deutlich gehärtet, die Kontrolle bleibt bei dir: Zum Benutzen brauchst du kein Konto, und die App schickt Projekt, Telegramme und Schlüssel von sich aus an niemanden. <a href="/datenschutz/">Datenschutzerklärung lesen</a></p>
     </div>
     <dl class="hz-facts">
-  <dt>Cloud</dt><dd>Deine Anlagendaten nie in der Cloud</dd>
-  <dt>Tracking</dt><dd>Keine Analyse, kein Tracking</dd>
-  <dt>Netzwerk</dt><dd>Netzwerkzugriff nur auf dein Gateway und deine KNX-Box; Ausnahme ist der QR-Scanner unter Android (Google ML Kit)</dd>
+  <dt>Lokal</dt><dd>Projekt, Telegramme, Aufnahmen und Schlüssel liegen auf deinem Gerät, deiner Box oder deinem Home Assistant, nicht bei uns. Das Passwort deines ETS-Projekts wird nicht gespeichert</dd>
+  <dt>Tracking</dt><dd>Keine Analyse- und Werbebibliotheken, kein Tracking</dd>
+  <dt>Verschlüsselt</dt><dd>Ab Version 1.9.1 verschlüsseln die Apps ihre Dateien mit AES-256-GCM, der Schlüssel liegt im Schlüsselbund des Systems. Ohne nutzbaren Schlüsselbund (Linux ohne libsecret) und bei Einstellungen wie dem Gateway bleibt es unverschlüsselt; Add-on und Box verschlüsseln ihre Dateien nicht selbst</dd>
+  <dt>App-Sperre</dt><dd>Auf Wunsch mit Face ID, Fingerabdruck, Windows Hello, Gerätecode oder App-Passwort samt Notfallschlüssel als PDF. Das hilft, wenn das Gerät in falsche Hände gerät, nicht gegen Schadsoftware unter deinem Benutzerkonto</dd>
+  <dt>Sicherung</dt><dd>In den Apps: alles in eine Datei mit eigenem Passwort, das Format ist offen beschrieben. Das Passwort kann niemand zurücksetzen, auch wir nicht</dd>
+  <dt>Ohne Internet</dt><dd>Add-on und Box brauchen kein Internet. Daten gehen nur an Ziele, die du selbst einrichtest</dd>
+  <dt>Netzwerk</dt><dd>Die App spricht mit deinem Gateway und deiner KNX-Box. Ausnahme: Der QR-Scanner unter Android sendet technische Daten an Google ML Kit, nie das Kamerabild</dd>
 </dl>
   </section>
   <section class="hz-feld-section tz-section tz-section--read" id="mitreden">
@@ -710,7 +719,7 @@
   <dt>Abstimmen</dt><dd><a href="https://github.com/regetskcob/KNX-Monitor/issues?q=is%3Aissue&#43;is%3Aopen&#43;label%3Aenhancement&#43;sort%3Areactions-%2B1-desc">Geplante Funktionen ansehen</a> und mit 👍 zeigen, was du brauchst. Die meistgewünschten kommen zuerst.</dd>
   <dt>Mitreden</dt><dd>Erzähl im Kommentar, wie du heute arbeitest und welche Geräte du einsetzt. Daraus wird oft der Umfang, manchmal auch ein Test mit deiner Anlage.</dd>
   <dt>Vorschlagen</dt><dd>Fehlt etwas oder hakt etwas? <a href="https://github.com/regetskcob/KNX-Monitor/issues/new/choose">Fehler melden oder Wunsch einreichen</a>.</dd>
-  <dt>Gerade offen</dt><dd>Zum Beispiel <a href="https://github.com/regetskcob/KNX-Monitor/issues/6">DALI-Beleuchtung über KNX</a>, <a href="https://github.com/regetskcob/KNX-Monitor/issues/1">direkt an der TP-Linie mithören</a> oder <a href="https://github.com/regetskcob/KNX-Monitor/issues/2">eine eigene Home-Assistant-Integration</a>.</dd>
+  <dt>Gerade offen</dt><dd>Zum Beispiel <a href="https://github.com/regetskcob/KNX-Monitor/issues/6">DALI-Beleuchtung über KNX</a>, <a href="https://github.com/regetskcob/KNX-Monitor/issues/3">ein eigener ioBroker-Adapter</a> oder <a href="https://github.com/regetskcob/KNX-Monitor/issues/2">eine eigene Home-Assistant-Integration</a>.</dd>
   <dt>Bitte nicht</dt><dd>ETS-Projekte oder komplette Aufnahmen öffentlich anhängen: Sie können Adressen, Raumnamen und Passwörter enthalten. Ein kurzer Auszug als Text reicht.</dd>
 </dl>
   </section>
@@ -737,8 +746,12 @@
           <p>Ja: KNX IP Secure für den Tunnel und KNX Data Secure für verschlüsselte Gruppenadressen. Importiere dazu den Keyring (.knxkeys) aus der ETS. Die Schlüssel liegen im Schlüsselbund deines Geräts. Klappt etwas mit deiner Schnittstelle nicht, <a href="https://github.com/regetskcob/KNX-Monitor/issues">melde es gern auf GitHub</a>.</p>
         </details>
         <details>
+          <summary>Wie sichere ich meine Daten, und wer kommt daran?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+          <p>Ab Version 1.9.1 speichert die App auf Wunsch alles von diesem Gerät in eine Datei mit eigenem Passwort (mindestens 12 Zeichen). Sie liegt, wo du sie ablegst, und niemand kann das Passwort zurücksetzen, auch wir nicht. Nicht enthalten sind die Anmeldung, die App-Sperre und der Verlauf auf einer Box. Einzelheiten stehen in der <a href="https://knx-monitor.de/datenschutz/">Datenschutzerklärung</a>.</p>
+        </details>
+        <details>
           <summary>Brauche ich ein ETS-Projekt?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-          <p>Nein, der Busmonitor funktioniert auch ohne. Mit Projekt bekommst du Namen, Datentypen, Räume und bessere Prüfungen. Das Passwort eines geschützten Projekts wird nur beim Import verwendet und nicht gespeichert.</p>
+          <p>Nein, der Busmonitor funktioniert auch ohne, und du kannst deine Anlage ohne ETS anlernen. Mit Projekt bekommst du Namen, Datentypen, Räume und bessere Prüfungen. Das Passwort eines geschützten Projekts wird nur beim Import verwendet und nicht gespeichert.</p>
         </details>
         <details>
           <summary>Wie bekomme ich die Desktop-Version?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
@@ -746,7 +759,7 @@
         </details>
         <details>
           <summary>Was brauche ich für die KNX-Box?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-          <p>Einen Raspberry Pi 4 oder 5, am besten mit USB-SSD und Echtzeituhr (Pi 5: Akku, Pi 4: RTC-Modul), dazu die App: auf iPhone, iPad und Android in den nächsten Wochen, für Linux schon heute. Die Uhr stellt die Box auch nach dem iPhone oder dem KNX-Zeitgeber. Das fertige Image findest du in den <a href="https://github.com/regetskcob/KNX-Monitor/releases">Releases auf GitHub</a>, alles Weitere auf der <a href="https://knx-monitor.de/box/">Seite zur KNX-Box</a>; es ist eine erste Vorschau.</p>
+          <p>Einen Raspberry Pi 4 oder 5, am besten mit USB-SSD und Echtzeituhr (Pi 5: Akku, Pi 4: RTC-Modul), dazu ein IP-Gateway oder das Aufsteckmodul kBerry und die App: auf iPhone, iPad und Android in den nächsten Wochen, für Linux schon heute. Die Uhr stellt die Box auch nach dem iPhone oder dem KNX-Zeitgeber. Das fertige Image findest du in den <a href="https://github.com/regetskcob/KNX-Monitor/releases">Releases auf GitHub</a>, alles Weitere auf der <a href="https://knx-monitor.de/box/">Seite zur KNX-Box</a>; es ist eine erste Vorschau.</p>
         </details>
       </div>
     </div>

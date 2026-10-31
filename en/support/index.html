@@ -116,7 +116,7 @@
     <p>Please report bugs, questions and requests as an issue on GitHub: <a href="https://github.com/regetskcob/KNX-Monitor/issues" rel="noopener">GitHub Issues</a></p>
     <p>For anything that should not be public, send us an email: <a href="mailto:support@knx-monitor.de">support@knx-monitor.de</a></p>
     <h2>Help us help you quickly</h2>
-    <ul><li>Device and version (e.g. iPhone, iOS 26, KNX Monitor 1.2 or the Home Assistant add-on)</li><li>Manufacturer and model of your KNX interface or IP router</li><li>What you did, what happened and what you expected</li><li>A screenshot if possible. Issues are public: please don't upload your ETS project or any passwords. Group addresses and project details are best sent as a diagnostics package by e-mail, see [Feedback](https://knx-monitor.de/en/feedback/).</li></ul>
+    <ul><li>Device and version (e.g. iPhone, iOS 26, KNX Monitor 1.9 or the Home Assistant add-on)</li><li>Manufacturer and model of your KNX interface or IP router</li><li>What you did, what happened and what you expected</li><li>A screenshot if possible. Issues are public: please don't upload your ETS project or any passwords. Group addresses and project details are best sent as a diagnostics package by e-mail, see [Feedback](https://knx-monitor.de/en/feedback/).</li></ul>
     <h2>Frequently asked questions</h2>
     <div class="knx-faq t-body">
   <details>
@@ -136,8 +136,12 @@
     <p>Yes: KNX IP Secure for the tunnel and KNX Data Secure for encrypted group addresses. Import the keyring (.knxkeys) from ETS. The keys are kept in your device&rsquo;s keychain. If something doesn&rsquo;t work with your interface, <a href="https://github.com/regetskcob/KNX-Monitor/issues">please report it on GitHub</a>.</p>
   </details>
   <details>
+    <summary>How do I back up my data, and who can get at it?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+    <p>From version 1.9.1 the app can save everything from this device into one file with its own password (at least 12 characters). It stays wherever you put it, and nobody can reset the password, not even us. Not included are the sign-in, the app lock and the history on a box. Details are in the <a href="https://knx-monitor.de/en/privacy/">privacy policy</a>.</p>
+  </details>
+  <details>
     <summary>Do I need an ETS project?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-    <p>No, the bus monitor works without one. With a project you get names, datapoint types, rooms and better checks. The password of a protected project is only used during import and is not stored.</p>
+    <p>No, the bus monitor works without one, and you can teach in your installation without ETS. With a project you get names, datapoint types, rooms and better checks. The password of a protected project is only used during import and is not stored.</p>
   </details>
   <details>
     <summary>How do I get the desktop version?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
@@ -145,7 +149,7 @@
   </details>
   <details>
     <summary>What do I need for the KNX box?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-    <p>A Raspberry Pi 4 or 5, ideally with a USB SSD and a real-time clock (Pi 5: battery, Pi 4: RTC module), plus the app: on iPhone, iPad and Android in the coming weeks, on Linux today. The box also sets its clock from the iPhone or the KNX time master. The ready-made image is in the <a href="https://github.com/regetskcob/KNX-Monitor/releases">GitHub releases</a>, everything else on the <a href="https://knx-monitor.de/en/box/">KNX box page</a>; it is a first preview.</p>
+    <p>A Raspberry Pi 4 or 5, ideally with a USB SSD and a real-time clock (Pi 5: battery, Pi 4: RTC module), an IP gateway or the kBerry plug-on module, plus the app: on iPhone, iPad and Android in the coming weeks, on Linux today. The box also sets its clock from the iPhone or the KNX time master. The ready-made image is in the <a href="https://github.com/regetskcob/KNX-Monitor/releases">GitHub releases</a>, everything else on the <a href="https://knx-monitor.de/en/box/">KNX box page</a>; it is a first preview.</p>
   </details>
   <details>
     <summary>The app doesn&#39;t find my interface automatically.<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>

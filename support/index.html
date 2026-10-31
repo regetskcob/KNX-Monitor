@@ -116,7 +116,7 @@
     <p>Fehler, Fragen und Wünsche meldest du am besten als Issue auf GitHub: <a href="https://github.com/regetskcob/KNX-Monitor/issues" rel="noopener">GitHub Issues</a></p>
     <p>Für alles, was nicht öffentlich sein soll, schreib uns eine E-Mail: <a href="mailto:support@knx-monitor.de">support@knx-monitor.de</a></p>
     <h2>Damit wir schnell helfen können</h2>
-    <ul><li>Gerät und Version (z. B. iPhone, iOS 26, KNX Monitor 1.2 oder Home-Assistant-Add-on)</li><li>Hersteller und Modell deiner KNX-Schnittstelle bzw. deines IP-Routers</li><li>Was du gemacht hast, was passiert ist und was du erwartet hättest</li><li>Wenn möglich ein Screenshot. Issues sind öffentlich: bitte kein ETS-Projekt und keine Passwörter hochladen. Gruppenadressen und Projektdetails schickst du am besten als Diagnosepaket per E-Mail, siehe [Feedback](https://knx-monitor.de/feedback/).</li></ul>
+    <ul><li>Gerät und Version (z. B. iPhone, iOS 26, KNX Monitor 1.9 oder Home-Assistant-Add-on)</li><li>Hersteller und Modell deiner KNX-Schnittstelle bzw. deines IP-Routers</li><li>Was du gemacht hast, was passiert ist und was du erwartet hättest</li><li>Wenn möglich ein Screenshot. Issues sind öffentlich: bitte kein ETS-Projekt und keine Passwörter hochladen. Gruppenadressen und Projektdetails schickst du am besten als Diagnosepaket per E-Mail, siehe [Feedback](https://knx-monitor.de/feedback/).</li></ul>
     <h2>Häufige Fragen</h2>
     <div class="knx-faq t-body">
   <details>
@@ -136,8 +136,12 @@
     <p>Ja: KNX IP Secure für den Tunnel und KNX Data Secure für verschlüsselte Gruppenadressen. Importiere dazu den Keyring (.knxkeys) aus der ETS. Die Schlüssel liegen im Schlüsselbund deines Geräts. Klappt etwas mit deiner Schnittstelle nicht, <a href="https://github.com/regetskcob/KNX-Monitor/issues">melde es gern auf GitHub</a>.</p>
   </details>
   <details>
+    <summary>Wie sichere ich meine Daten, und wer kommt daran?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
+    <p>Ab Version 1.9.1 speichert die App auf Wunsch alles von diesem Gerät in eine Datei mit eigenem Passwort (mindestens 12 Zeichen). Sie liegt, wo du sie ablegst, und niemand kann das Passwort zurücksetzen, auch wir nicht. Nicht enthalten sind die Anmeldung, die App-Sperre und der Verlauf auf einer Box. Einzelheiten stehen in der <a href="https://knx-monitor.de/datenschutz/">Datenschutzerklärung</a>.</p>
+  </details>
+  <details>
     <summary>Brauche ich ein ETS-Projekt?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-    <p>Nein, der Busmonitor funktioniert auch ohne. Mit Projekt bekommst du Namen, Datentypen, Räume und bessere Prüfungen. Das Passwort eines geschützten Projekts wird nur beim Import verwendet und nicht gespeichert.</p>
+    <p>Nein, der Busmonitor funktioniert auch ohne, und du kannst deine Anlage ohne ETS anlernen. Mit Projekt bekommst du Namen, Datentypen, Räume und bessere Prüfungen. Das Passwort eines geschützten Projekts wird nur beim Import verwendet und nicht gespeichert.</p>
   </details>
   <details>
     <summary>Wie bekomme ich die Desktop-Version?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
@@ -145,7 +149,7 @@
   </details>
   <details>
     <summary>Was brauche ich für die KNX-Box?<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
-    <p>Einen Raspberry Pi 4 oder 5, am besten mit USB-SSD und Echtzeituhr (Pi 5: Akku, Pi 4: RTC-Modul), dazu die App: auf iPhone, iPad und Android in den nächsten Wochen, für Linux schon heute. Die Uhr stellt die Box auch nach dem iPhone oder dem KNX-Zeitgeber. Das fertige Image findest du in den <a href="https://github.com/regetskcob/KNX-Monitor/releases">Releases auf GitHub</a>, alles Weitere auf der <a href="https://knx-monitor.de/box/">Seite zur KNX-Box</a>; es ist eine erste Vorschau.</p>
+    <p>Einen Raspberry Pi 4 oder 5, am besten mit USB-SSD und Echtzeituhr (Pi 5: Akku, Pi 4: RTC-Modul), dazu ein IP-Gateway oder das Aufsteckmodul kBerry und die App: auf iPhone, iPad und Android in den nächsten Wochen, für Linux schon heute. Die Uhr stellt die Box auch nach dem iPhone oder dem KNX-Zeitgeber. Das fertige Image findest du in den <a href="https://github.com/regetskcob/KNX-Monitor/releases">Releases auf GitHub</a>, alles Weitere auf der <a href="https://knx-monitor.de/box/">Seite zur KNX-Box</a>; es ist eine erste Vorschau.</p>
   </details>
   <details>
     <summary>Die App findet meine Schnittstelle nicht automatisch.<span class="hz-symbol" aria-hidden="true">&#xe5cf;</span></summary>
