@@ -1,5 +1,5 @@
 name: KNX Monitor
-version: "1.9.0"
+version: "1.9.1"
 slug: knx_monitor
 description: KNX bus monitor, continuous recording, health check and commissioning in the sidebar
 url: https://knx-monitor.de
@@ -35,6 +35,10 @@ schema:
   dashboard_card: bool
 ingress: true
 ingress_port: 8765
+# Der Nutzer schaltet den Watchdog im Add-on ein (Standard aus). Dann startet
+# der Supervisor neu, wenn der Server nicht mehr antwortet. Nur der Prozess:
+# Ein getrennter Bus ist kein Grund für einen Neustart.
+watchdog: http://[HOST]:[PORT:8765]/healthz
 panel_icon: mdi:lan-connect
 panel_title: KNX Monitor
 backup: hot

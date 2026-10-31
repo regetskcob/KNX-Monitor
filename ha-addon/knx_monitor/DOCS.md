@@ -183,6 +183,28 @@ hours: 24
 title: Climate # optional
 ```
 
+## Installation report
+
+Tools › Installation report. Off by default. Once enabled, the add-on condenses every
+day and creates a monthly or quarterly report: availability, traffic, bus load, repeats,
+devices that went silent, smoke detectors and batteries, compared with the previous
+report. In the app it is available as a PDF.
+
+Notifications are off by default too. You can choose ntfy, a webhook or Home Assistant
+as the destination; only a summary line is sent, never addresses, names or values. This
+is not an alarm system: urgent findings are checked once a day.
+
+## Data export
+
+Tools › Data export, off by default, for your own Grafana:
+
+- **Prometheus:** a separate port (default 9464) serves `/metrics`, only to the local
+  network and only with the bearer token the app shows once. The add-on uses the host
+  network, so the port needs no further setting.
+- **InfluxDB 1 or 2:** the add-on sends to the address you enter.
+- Without "Include addresses, names and values" only bus counters are exported.
+- The Grafana templates for both can be saved from the same page.
+
 ## Without an own tunnel
 
 If Home Assistant already has the KNX integration set up, the add-on suggests
@@ -215,6 +237,10 @@ Home Assistant offers a backup before each add-on update – keep it switched on
 If a new version misbehaves, restore that backup (Settings → System → Backups):
 it brings back the previous version together with its data. Recordings and
 settings live in the add-on's data folder and survive normal updates.
+
+The **Watchdog** switch on the add-on's Info page is off by default. Turned on, Home
+Assistant restarts the add-on when its server stops responding. A missing gateway does
+not count: the bus reconnects by itself.
 
 ## Support
 

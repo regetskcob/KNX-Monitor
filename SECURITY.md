@@ -2,8 +2,9 @@
 
 ## Supported versions
 
-Only the latest release of the app and of the Home Assistant add-on receives
-security fixes.
+Only the latest release of the app, of the Home Assistant add-on and of the KNX
+Box receives security fixes. The operating system of a Box does not update
+itself.
 
 ## Reporting a vulnerability
 
@@ -22,8 +23,20 @@ Relevant reports include, for example:
   authentication
 - leaking ETS project data, passwords or recordings
 - sending telegrams to the bus without user action
+- reaching the KNX Box without its password, or changing it without user action
+- reading the apps' encrypted files without the key from the system keychain, or
+  a backup file without its password
+- getting past the app lock on a device, or keeping an account session alive
+  after the device was removed from the account
 - using the add-on's UDP relay to reach hosts outside the local network
   (it only forwards KNXnet/IP packets to private, VPN and multicast addresses)
+
+Known limits, not vulnerabilities: the app lock and the file encryption do not
+protect against malware under the same user account. Without a usable keychain
+(Linux without libsecret) the app's files stay unencrypted, and settings such as
+the gateway are not encrypted. Add-on and KNX Box store their data unencrypted,
+and the Box's Wi-Fi connection has no TLS, so the Wi-Fi password is the protection
+there.
 
 Plain KNXnet/IP tunneling is unencrypted; use KNX IP Secure and Data Secure
 where the installation supports them. Weaknesses of the KNX protocol itself are

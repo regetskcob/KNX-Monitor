@@ -77,4 +77,7 @@ enough users want it: vote with 👍 in
 - 32-bit operating systems (armv7) are not supported; use a 64-bit OS.
 - No Home Assistant events or notifications here; use MQTT and your system's
   automations instead.
-- The container sends nothing to the internet.
+- On its own the container sends nothing to the internet; data only goes to
+  destinations you set up yourself (MQTT, ntfy, webhook, InfluxDB).
+- Data in `./data` is not encrypted by the container; protect the folder and its
+  backups yourself.

@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.9.1
+
+- Recording without a known clock stays visible as "without time" after a
+  restart and is removed by the retention like any other day.
+- A day is no longer overwritten when the clock jumped while it was being
+  packed.
+- Project and keyring are checked when the app reconnects to a box.
+- Checking the box password no longer blocks the server and the recording.
+- Stopping no longer hangs on an unresponsive KNX HAT and is no longer counted as
+  an unexpected restart.
+
 ## 1.9.0
 
 - Beginners: teach in your installation without an ETS project; without

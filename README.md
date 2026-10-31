@@ -3,7 +3,7 @@
 Bus monitor and diagnostic tool for KNX. Available today as a Home Assistant
 add-on and for Linux; the apps for iPhone, iPad, Android, Mac and Windows
 follow in the coming weeks. The KNX Box, a Raspberry Pi that records on site,
-is a first preview, set up with the app; its image is listed under Downloads.
+is a preview, set up with the app, on an IP gateway or directly on the bus with the kBerry module; its image is listed under Downloads.
 
 **Website:** <https://knx-monitor.de>
 
@@ -12,6 +12,21 @@ KNX Box downloads, and the issue tracker. The source code of KNX Monitor is not
 public.
 
 [![Add repository to my Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor)
+
+## Your data stays yours
+
+KNX Monitor works on your network and stores on your devices. You need no
+account to use it, and it contains no analytics or advertising libraries.
+Project, telegrams, recordings and keys stay on your device, your KNX Box or
+your Home Assistant, and only leave when you share them.
+
+From version 1.9.1 the apps encrypt their files with AES-256-GCM (key in the
+system keychain; unencrypted on Linux without libsecret, and for settings such
+as the gateway), offer an optional app lock, and back up everything to a file
+with its own password in an [open format](BACKUP-FORMAT.md). The add-on and the
+Box do not encrypt their files themselves; they rely on your backups and on
+physical access to the host. Details and limits:
+[privacy policy](https://knx-monitor.de/en/privacy/).
 
 ## Downloads
 
