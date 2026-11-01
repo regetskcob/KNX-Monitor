@@ -1,5 +1,43 @@
 # Changelog
 
+## 1.9.2
+
+Add-on, KNX box and Docker:
+
+- A malformed frame from a client or a forged gateway packet can no longer stop the
+  server.
+- Reports and data export no longer send to link-local or cloud metadata addresses.
+- Recording checks the free disk space. When it gets tight the oldest days go first
+  (today stays); if that is not enough, recording pauses and the app says so. It
+  resumes by itself. History is now forced to disk every 30 seconds instead of every
+  5, which is easier on SD cards: a power cut can cost up to 30 seconds.
+
+KNX box and Docker:
+
+- Devices paired through the QR code on `/pair` can read and send group values, but
+  no longer read the keyring, change the bus connection, project or history, restart
+  or program devices. Devices paired with the box password keep all rights.
+- Revoking a device or changing the password closes its open connections at once.
+- A device token no longer resets failed password attempts, and non-admin devices can
+  no longer test a guessed Secure password.
+- The health check `/healthz` answers without a login and without any data.
+- Password checks are limited per address, so many parallel attempts cannot slow down
+  the box.
+- HTTPS with your own certificate (`TLS_CERT`, `TLS_KEY`, `TLS_PORT`).
+- Docker: the template now uses a fixed version and answers only on the host by
+  default; set `LAN_ACCESS=yes` for your network.
+- Images and box files are signed (cosign), box releases carry checksums.
+
+KNX box:
+
+- A new box asks for your own password first; the one on the sticker only pairs and
+  changes the password. Afterwards it disappears from the SD card, as does the Wi-Fi
+  password once you change it in the app (new). Updated boxes are asked, not locked.
+- Forgot a password: put `knx-box-reset.txt` on the SD card and restart.
+- HTTPS with the box's own certificate; newly paired apps verify exactly this
+  certificate. Apps paired earlier keep working over HTTP until you pair them again.
+- The system log is limited to 64 MB.
+
 ## 1.9.1
 
 - Recording without a known clock stays visible as "without time" after a

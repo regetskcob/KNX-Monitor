@@ -16,16 +16,46 @@ it is set up with one click and needs no password.
    `BOX_PASSWORD=your-own-password`. Without it Compose refuses to start, as
    the container is reachable from your network.
 2. `docker compose up -d`
-3. Open `http://<host>:8765`, sign in with any user name and the password.
+3. Open `http://localhost:8765` on the host itself, sign in with any user name and
+   the password. To reach it from other devices, see
+   [Access from your network](#access-from-your-network).
 4. Pick your KNX IP gateway (or enter its address), import your ETS project.
 
 The container uses the host network, because KNXnet/IP over UDP, the gateway
 search and routing need it. History, project and settings live in `./data`.
 
 The Linux app and, later, the other apps can connect to the container too:
-in the app "Add KNX box", enter `<host>:8765` and the password.
+in the app "Add KNX box", enter `<host>:8765` and the password (needs
+[access from your network](#access-from-your-network)).
 
-Update: `docker compose pull && docker compose up -d`.
+Update: `compose.yaml` names a fixed version. Set `KNX_MONITOR_VERSION=x.y.z` in
+`.env` (or download the file again), then `docker compose pull && docker compose
+up -d`. The image is signed, see [Verify the image](#verify-the-image).
+
+## Access from your network
+
+The default `LAN_ACCESS=no` answers only on the host itself. With `LAN_ACCESS=yes`
+in `.env`, every device in your network can reach the login.
+
+**Without HTTPS this is plain HTTP:** your password, device access and all
+telegrams cross your network unencrypted, and anyone in the network can read them
+or replace the app you load. So use it only in a network you trust, or:
+
+- put a reverse proxy with TLS in front of it, or
+- give the container your own certificate: `TLS_CERT` and `TLS_KEY` (PEM files, for
+  example under `./data/tls`) and `TLS_PORT`. Pairing links from `/pair` then carry
+  the certificate's fingerprint and the apps trust exactly this certificate. HTTP
+  stays available on `PORT`; do not expose it beyond the host if you can avoid it.
+
+## Verify the image
+
+Images are signed with [cosign](https://docs.sigstore.dev/) (keyless):
+
+```sh
+cosign verify ghcr.io/regetskcob/knx-monitor:<version> \
+  --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+  --certificate-identity-regexp '^https://github.com/regetskcob/KNX-Monitor-Source/\.github/workflows/addon\.yml@refs/tags/addon-v'
+```
 
 ## Settings
 
@@ -34,7 +64,9 @@ Update: `docker compose pull && docker compose up -d`.
 | `BOX=1` | Standalone mode with password (required outside Home Assistant). |
 | `BOX_PASSWORD` | Password for the browser and for pairing apps, at least 8 characters. Used on the first start; change it later in the app under box settings. |
 | `BOX_NAME` | Name shown in the apps. |
-| `LAN_ACCESS=yes` | Reachable from your network (required in Docker). |
+| `LAN_ACCESS=yes` | Reachable from your network, not only from the host (default `no`). Plain HTTP unless you set up TLS, see above. |
+| `TLS_CERT`, `TLS_KEY`, `TLS_PORT` | Optional HTTPS with your own certificate (PEM files), default port 443. |
+| `KNX_MONITOR_VERSION` | Image version (default: the one this file was published for). |
 | `PORT` | Web port, default 8765. |
 | `TZ` | Time zone for the daily history files, e.g. `Europe/Berlin`. |
 | `MQTT_HOST`, `MQTT_PORT`, `MQTT_USER`, `MQTT_PASSWORD`, `MQTT_SSL` | Optional MQTT broker (port 1883 by default, `MQTT_SSL=true` for TLS). |

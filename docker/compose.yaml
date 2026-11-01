@@ -1,10 +1,15 @@
 # KNX Monitor as a Docker container, without Home Assistant (ioBroker, NAS,
 # Proxmox, any Linux host). Put your own password into a file .env next to
 # this one (BOX_PASSWORD=...), then: docker compose up -d
-# Open http://<host>:8765 and sign in with any user name and that password.
+#
+# Out of the box it answers only on the host itself: http://localhost:8765, any
+# user name and that password. For access from your network add LAN_ACCESS=yes
+# to .env, and read "Access from your network" in README.md first.
 services:
   knx-monitor:
-    image: ghcr.io/regetskcob/knx-monitor:latest
+    # A fixed version, so an update only happens when you decide. Newer version:
+    # KNX_MONITOR_VERSION=x.y.z in .env, or download this file again.
+    image: ghcr.io/regetskcob/knx-monitor:${KNX_MONITOR_VERSION:-1.9.2}
     container_name: knx-monitor
     restart: unless-stopped
     # Host network: KNXnet/IP over UDP, gateway search and routing need it.
@@ -14,7 +19,12 @@ services:
       # No default on purpose: the container is reachable from your network.
       BOX_PASSWORD: "${BOX_PASSWORD:?Set BOX_PASSWORD in .env (at least 8 characters)}"
       BOX_NAME: "KNX Monitor"
-      LAN_ACCESS: "yes"              # reachable from your network
+      # no = only from the host itself. yes = from your whole network, see README.md.
+      LAN_ACCESS: "${LAN_ACCESS:-no}"
+      # Optional: HTTPS with your own certificate (mount it under ./data).
+      # TLS_CERT: "/data/tls/cert.pem"
+      # TLS_KEY: "/data/tls/key.pem"
+      # TLS_PORT: "8443"
       PORT: "8765"
       TZ: "Europe/Berlin"
       # Optional: MQTT, for example the ioBroker MQTT adapter as broker.

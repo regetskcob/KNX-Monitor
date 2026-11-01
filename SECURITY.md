@@ -34,9 +34,10 @@ Relevant reports include, for example:
 Known limits, not vulnerabilities: the app lock and the file encryption do not
 protect against malware under the same user account. Without a usable keychain
 (Linux without libsecret) the app's files stay unencrypted, and settings such as
-the gateway are not encrypted. Add-on and KNX Box store their data unencrypted,
-and the Box's Wi-Fi connection has no TLS, so the Wi-Fi password is the protection
-there.
+the gateway are not encrypted. Add-on and KNX Box store their data unencrypted.
+A browser on the Box's Wi-Fi uses plain HTTP, so the Wi-Fi password is the
+protection there; apps paired from version 1.9.2 use HTTPS with the Box's own
+certificate. Whoever holds the Box's SD card can read everything on it.
 
 Plain KNXnet/IP tunneling is unencrypted; use KNX IP Secure and Data Secure
 where the installation supports them. Weaknesses of the KNX protocol itself are
