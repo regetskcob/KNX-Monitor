@@ -16,7 +16,7 @@ public.
 ## Your data stays yours
 
 KNX Monitor works on your network and stores on your devices. You need no
-account to use it, and it contains no analytics or advertising libraries.
+account, and it contains no analytics or advertising libraries.
 Project, telegrams, recordings and keys stay on your device, your KNX Box or
 your Home Assistant, and only leave when you share them.
 

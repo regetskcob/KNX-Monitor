@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.9.3
+
+- New interface: a green status box above overview, details and live, cards in a grid,
+  a write button in the header and a live list that leads with the address and name.
+- The menu is sorted by task, with icons, and evaluations now stand on their own.
+- The communication map shows devices in layers and zoom levels. A device without
+  links is marked in the full map.
+- Topology and project check open faster, device drawings appear one by one.
+- The Home Assistant configuration now lives only here in the add-on, not in the apps.
+
 ## 1.9.2
 
 Add-on, KNX box and Docker:

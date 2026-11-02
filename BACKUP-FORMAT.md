@@ -21,14 +21,14 @@ Key: PBKDF2 over the password as UTF-8, 32 bytes. Decrypted, `data` is a ZIP:
 |---|---|
 | `manifest.json` | Format, version, number of files |
 | `files/…` | All app files in plain text: JSON and NDJSON, paths as in the app directory |
-| `prefs.json` | Settings without sign-in, lock and device ID |
+| `prefs.json` | Settings without lock and device ID |
 | `keyrings.json` | KNX Secure keyrings per installation (key `knx_keyring:<id>`) |
 
 Important files: `installations.json` (list of installations),
 `installations/<id>/catalog.json` (project), `installations/<id>/history/YYYY-MM-DD.ndjson`
 (one telegram per line).
 
-Not included: sign-in, app lock and the history on a KNX Box.
+Not included: app lock and the history on a KNX Box.
 
 The decrypted ZIP holds your keys and project in plain text, so treat it like the
 keyring itself.

@@ -26,8 +26,7 @@ Relevant reports include, for example:
 - reaching the KNX Box without its password, or changing it without user action
 - reading the apps' encrypted files without the key from the system keychain, or
   a backup file without its password
-- getting past the app lock on a device, or keeping an account session alive
-  after the device was removed from the account
+- getting past the app lock on a device
 - using the add-on's UDP relay to reach hosts outside the local network
   (it only forwards KNXnet/IP packets to private, VPN and multicast addresses)
 
