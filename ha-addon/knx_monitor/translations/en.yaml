@@ -1,4 +1,10 @@
 configuration:
+  read_only:
+    name: Read only
+    description: >-
+      The server sends nothing to the bus, not even read requests.
+      Recording, evaluations and the health check keep running. Turn off
+      if you want to write or request values from the add-on.
   alarm_notifications:
     name: Alarm notifications
     description: >-

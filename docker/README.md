@@ -68,6 +68,7 @@ cosign verify ghcr.io/regetskcob/knx-monitor:<version> \
 | `TLS_CERT`, `TLS_KEY`, `TLS_PORT` | Optional HTTPS with your own certificate (PEM files), default port 443. |
 | `KNX_MONITOR_VERSION` | Image version (default: the one this file was published for). |
 | `PORT` | Web port, default 8765. |
+| `READ_ONLY=1` | Read only: the server sends nothing to the bus, neither from the app nor through its relay, not even read requests. Recording and evaluations keep running (default off). |
 | `TZ` | Time zone for the daily history files, e.g. `Europe/Berlin`. |
 | `MQTT_HOST`, `MQTT_PORT`, `MQTT_USER`, `MQTT_PASSWORD`, `MQTT_SSL` | Optional MQTT broker (port 1883 by default, `MQTT_SSL=true` for TLS). |
 | `MQTT_DISCOVERY=false` | Leave out the Home Assistant discovery topics (recommended for ioBroker). |

@@ -9,7 +9,7 @@ services:
   knx-monitor:
     # A fixed version, so an update only happens when you decide. Newer version:
     # KNX_MONITOR_VERSION=x.y.z in .env, or download this file again.
-    image: ghcr.io/regetskcob/knx-monitor:${KNX_MONITOR_VERSION:-1.9.3}
+    image: ghcr.io/regetskcob/knx-monitor:${KNX_MONITOR_VERSION:-1.9.4}
     container_name: knx-monitor
     restart: unless-stopped
     # Host network: KNXnet/IP over UDP, gateway search and routing need it.
@@ -26,6 +26,8 @@ services:
       # TLS_KEY: "/data/tls/key.pem"
       # TLS_PORT: "8443"
       PORT: "8765"
+      # 1 = read only: the server sends nothing to the bus, not even read requests.
+      # READ_ONLY: "1"
       TZ: "Europe/Berlin"
       # Optional: MQTT, for example the ioBroker MQTT adapter as broker.
       # MQTT_HOST: "192.168.1.10"

@@ -214,12 +214,18 @@ tunnel slot on the gateway (see Connection types).
 ## Configuration
 
 ```yaml
+read_only: true
 alarm_notifications: true
 watcher_notifications: true
 notify_service: notify.mobile_app_my_iphone
 dashboard_card: true
 ```
 
+- `read_only`: the server sends nothing to the bus, neither from the app nor
+  through its relay, not even read requests (default on). Recording,
+  evaluations and the health check keep running. Turn off to write or
+  request values from the add-on. Docker and the KNX Box use the
+  environment variable `READ_ONLY=1` instead (default off there).
 - `alarm_notifications`: Home Assistant notification when an alarm or fault
   object triggers (default on).
 - `watcher_notifications`: Home Assistant notification when a watcher fires
