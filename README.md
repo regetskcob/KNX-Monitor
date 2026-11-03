@@ -8,8 +8,8 @@ is a preview, set up with the app, on an IP gateway or directly on the bus with 
 **Website:** <https://knx-monitor.de>
 
 This repository hosts the Home Assistant add-on repository, the Linux and
-KNX Box downloads, and the issue tracker. The source code of KNX Monitor is not
-public.
+KNX Box downloads, and the issue tracker. The source code is open under GPLv3
+in [regetskcob/KNX-Monitor-Code](https://github.com/regetskcob/KNX-Monitor-Code). Questions about the code also go to the issues here.
 
 [![Add repository to my Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fregetskcob%2FKNX-Monitor)
 
@@ -60,9 +60,15 @@ Security issues: see [SECURITY.md](SECURITY.md).
 
 ## License
 
-KNX Monitor is proprietary software, see [LICENSE](LICENSE). Versions released
-before 20 October 2026 were published under the MIT License and remain
-available under it.
+KNX Monitor is free software under the GNU General Public License v3.0, see
+[LICENSE](LICENSE) and the source in
+[regetskcob/KNX-Monitor-Code](https://github.com/regetskcob/KNX-Monitor-Code).
+The names KNX Monitor and KNX Box, the logo and the app icons are not covered
+by the licence, see its
+[TRADEMARKS.md](https://github.com/regetskcob/KNX-Monitor-Code/blob/main/TRADEMARKS.md).
+Builds from the App Store and Google Play are also subject to the terms of the
+store. Versions released before 20 October 2026 were published under the MIT
+License and remain available under it.
 
 ## Trademark
 
