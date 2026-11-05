@@ -1,0 +1,963 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>KNX Monitor · Socials</title>
+<link rel="icon" href="favicon.svg">
+<style>
+  @font-face { font-family: Literata; src: url(fonts/Literata/Literata-Light.woff2) format("woff2"); font-weight: 300; font-display: swap; }
+  @font-face { font-family: Mona Sans; src: url(fonts/MonaSans/MonaSans-Regular.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: Mona Sans; src: url(fonts/MonaSans/MonaSans-SemiBold.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+  @font-face { font-family: Monaspace Argon; src: url(fonts/Monaspace/MonaspaceArgon-Regular.woff2) format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: Monaspace Argon; src: url(fonts/Monaspace/MonaspaceArgon-SemiBold.woff2) format("woff2"); font-weight: 600; font-display: swap; }
+  :root { --bg: #f8f8f4; --surface: #ffffff; --text: #1d1f1a; --muted: #5f6359; --line: #e2e3dc; --accent: #437f18; color-scheme: light; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --bg: #141612; --surface: #1d201a; --text: #ecede6; --muted: #a3a79b; --line: #2f332b; --accent: #8cc65a; color-scheme: dark; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.5 "Mona Sans", system-ui, sans-serif; }
+  main { max-width: 1180px; margin: 0 auto; padding: 48px 16px 96px; }
+  h1 { margin: 12px 0 8px; font: 300 clamp(36px, 6vw, 60px)/1.05 Literata, Georgia, serif; }
+  h2 { margin: 72px 0 0; padding-bottom: 12px; border-bottom: 3px solid var(--accent); font: 300 36px/1.1 Literata, Georgia, serif; }
+  h3 { margin: 6px 0 0; font: 600 22px/1.25 "Mona Sans", system-ui, sans-serif; }
+  .kennung { font: 600 12px/1 "Monaspace Argon", ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .lead { max-width: 640px; color: var(--muted); }
+  nav { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; }
+  nav a { color: var(--accent); }
+  .post { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px 32px; padding: 40px 0; border-bottom: 1px solid var(--line); }
+  .post header { grid-column: 1 / -1; }
+  /* Nicht auf die Höhe der Caption-Spalte strecken: Bilder bleiben 4:5 bzw. 3:4. */
+  .strip { display: flex; align-items: flex-start; align-self: start; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .strip img, .single { flex: none; align-self: start; width: min(100%, 420px); height: auto; border-radius: 8px; border: 1px solid var(--line); scroll-snap-align: start; background: #fff; }
+  .strip.forum a { flex: none; width: min(100%, 420px); }
+  .strip.forum img { width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); }
+  .forum-text { grid-template-columns: minmax(0, 1fr); }
+  .reel { align-self: start; width: min(100%, 340px); aspect-ratio: 9 / 16; border-radius: 12px; background: #000; }
+  .caption { min-width: 0; }
+  .caption-head { display: flex; justify-content: space-between; align-items: center; }
+  .copy { font: 600 13px/1 "Mona Sans", system-ui, sans-serif; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--accent); background: none; color: var(--accent); cursor: pointer; }
+  .copy.done { background: var(--accent); color: var(--bg); }
+  pre { margin: 12px 0 0; padding: 16px; white-space: pre-wrap; word-break: break-word; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font: 400 15px/1.5 "Mona Sans", system-ui, sans-serif; }
+  dl { margin: 16px 0 0; font-size: 14px; }
+  dt { margin-top: 10px; font: 600 12px/1 "Monaspace Argon", ui-monospace, monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+  dd { margin: 4px 0 0; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details > summary h2::after { content: " ▸"; color: var(--muted); }
+  details[open] > summary h2::after { content: " ▾"; }
+  @media (max-width: 760px) { .post { grid-template-columns: minmax(0, 1fr); } .strip img, .single { width: 82%; } }
+</style>
+</head>
+<body>
+<main>
+  <span class="kennung">KNX Monitor · Vorschau, intern</span>
+  <h1>Instagram-Beiträge</h1>
+  <p class="lead">Alle vorbereiteten Karussells, Bilder und Reels mit Caption, Alt-Text und erstem Kommentar. Karussells seitlich wischen, Reels laufen ohne Ton. Bereits veröffentlichte Beiträge stehen eingeklappt am Ende. Die angepinnten Kacheln (Hero, Aktor/Diagnose/Add-on) sind 3:4 wie das Profilraster und werden angepinnt: rechts zuerst, links zuletzt, dann stehen sie in der richtigen Reihenfolge oben.</p>
+  <nav><a href="#pin-1-rechts">Angepinnt 2</a><a href="#start-1-rechts">Start</a><a href="#karussell-diagnose">Karussells</a><a href="#bild-box">Bild</a><a href="#reel-inbetrieb">Reels</a><a href="#foren">Foren</a><a href="#veroeffentlicht">Veröffentlicht</a></nav>
+  <section><h2>Angepinnt: Aktor, Diagnose, Add-on</h2>
+    <article class="post" id="pin-1-rechts">
+      <header><span class="kennung">Bild · pin-1-rechts</span><h3>Kachel 1 (rechts, zuerst anpinnen)</h3></header>
+      <img class="single" src="media/pin-1-rechts.webp" alt="Gezeichneter Schaltaktor 8-fach mit acht Kanal-LEDs, links und rechts je vier Karten mit Raum, Zustand Ein oder Aus und Gruppenadresse 1/1/0 bis 1/1/7, dünne Linien führen von jeder Karte zu ihrer LED. Das grüne Buskabel läuft in eine waagrechte grüne Linie." loading="lazy" width="1080" height="1440">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Jeder Kanal mit seiner Adresse.
+
+So zeigt KNX Monitor einen Schaltaktor: gezeichnet wie im Verteiler, daneben je Kanal eine Karte mit Raum, Zustand und Gruppenadresse, verbunden mit der LED auf dem Gerät. Darunter die Rückmeldung, live vom Bus. Ein Tipp auf einen Kanal zeigt alle seine Objekte.
+
+Namen und Adressen kommen aus deinem ETS-Projekt.
+
+👉 knx-monitor.de
+
+#knx #schaltaktor #busmonitor #elektriker #ets6</pre>
+        <dl><dt>Alt-Text</dt><dd>Gezeichneter Schaltaktor 8-fach mit acht Kanal-LEDs, links und rechts je vier Karten mit Raum, Zustand Ein oder Aus und Gruppenadresse 1/1/0 bis 1/1/7, dünne Linien führen von jeder Karte zu ihrer LED. Das grüne Buskabel läuft in eine waagrechte grüne Linie.</dd><dt>Erster Kommentar</dt><dd>Beschriftet ihr eure Aktoren im Verteiler, oder steht alles nur in der ETS?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="pin-2-mitte">
+      <header><span class="kennung">Bild · pin-2-mitte</span><h3>Kachel 2 (Mitte)</h3></header>
+      <img class="single" src="media/pin-2-mitte.webp" alt="Ergebnis einer Gesundheitsprüfung: 31 von 32 Adressen antworten, darunter drei Befunde: 2/3/3 OG SZ Ventil-Zustand antwortet nie, 2/4/2 OG BZ Luftfeuchte mit falschem Datentyp, 1.1.13 Heizungsaktor wiederholt 17 % seiner Telegramme." loading="lazy" width="1080" height="1440">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Findet, was still kaputt ist.
+
+Die Gesundheitsprüfung in KNX Monitor fragt alle Status-Adressen ab und schaut, was auffällt: ein Objekt, das nie auf Leseanfragen antwortet, ein Taster, der 1 Byte schickt, wo das Projekt 2 erwartet, ein Aktor, der jedes sechste Telegramm wiederholt. Neue Befunde stehen oben, mit Hinweis, wo du nachsehen kannst.
+
+👉 knx-monitor.de
+
+#knx #fehlersuche #busmonitor #elektriker #ets6</pre>
+        <dl><dt>Alt-Text</dt><dd>Ergebnis einer Gesundheitsprüfung: 31 von 32 Adressen antworten, darunter drei Befunde: 2/3/3 OG SZ Ventil-Zustand antwortet nie, 2/4/2 OG BZ Luftfeuchte mit falschem Datentyp, 1.1.13 Heizungsaktor wiederholt 17 % seiner Telegramme.</dd><dt>Erster Kommentar</dt><dd>Welcher Fehler hat euch auf dem Bus am längsten gesucht?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="pin-3-links">
+      <header><span class="kennung">Bild · pin-3-links</span><h3>Kachel 3 (links, zuletzt anpinnen)</h3></header>
+      <img class="single" src="media/pin-3-links.webp" alt="iPad mit KNX Monitor als Add-on in Home Assistant: Seitenleiste, Übersicht der Gruppenadressen mit Werten und Details einer Adresse." loading="lazy" width="1080" height="1440">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>KNX Monitor ist da: Busmonitor und Diagnose für KNX.
+
+Jedes Telegramm mit Absender, Ziel und Wert, eingeordnet mit deinem ETS-Projekt. Dazu die Prüfung der Anlage auf stille Geräte, falsche Datentypen und Busprobleme.
+
+Heute schon kostenlos als Home-Assistant-Add-on und für Linux. iPhone, iPad, Android, Mac und Windows folgen. Deine Anlagendaten bleiben in deinem Netz, und der Quellcode ist offen (GPLv3).
+
+👉 knx-monitor.de (Link in der Bio)
+
+#knx #busmonitor #homeassistant #elektriker #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>iPad mit KNX Monitor als Add-on in Home Assistant: Seitenleiste, Übersicht der Gruppenadressen mit Werten und Details einer Adresse.</dd><dt>Erster Kommentar</dt><dd>Was würdet ihr als Erstes auf eurem Bus nachsehen?</dd></dl>
+      </div>
+    </article></section><section><h2>Start</h2>
+    <article class="post" id="start-1-rechts">
+      <header><span class="kennung">Bild · start-1-rechts</span><h3>Kachel 1 (rechts, zuerst posten)</h3></header>
+      <img class="single" src="media/start-1-rechts.webp" alt="Gezeichneter Kleinverteiler mit Hutschienengeräten, das grüne Buskabel läuft nach unten in eine waagrechte grüne Linie." loading="lazy" width="1080" height="1350">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Jedes Telegramm im Blick.
+
+KNX Monitor zeigt dir, was auf deinem KNX-Bus passiert: wer sendet, an welche Gruppenadresse, mit welchem Wert. Live, mitgeschrieben und auf Wunsch tagelang aufgezeichnet.
+
+Mehr in den nächsten Tagen. 👉 knx-monitor.de
+
+#knx #busmonitor #elektriker #ets6 #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Gezeichneter Kleinverteiler mit Hutschienengeräten, das grüne Buskabel läuft nach unten in eine waagrechte grüne Linie.</dd><dt>Erster Kommentar</dt><dd>Welches Werkzeug nutzt ihr heute, um auf den Bus zu schauen?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="start-2-mitte">
+      <header><span class="kennung">Bild · start-2-mitte</span><h3>Kachel 2 (Mitte)</h3></header>
+      <img class="single" src="media/start-2-mitte.webp" alt="Liste von sechs Telegrammen mit Absender, Gruppenadresse, Name und Wert, etwa „1/1/3 Licht Küche Ein“." loading="lazy" width="1080" height="1350">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Mit deinem ETS-Projekt.
+
+Importierst du dein Projekt, wird aus „1.1.30 → 1/1/3: 01“ ein „Licht Küche: Ein“. Namen, Räume und Datentypen kommen aus der .knxproj, bis ETS6 und auch mit Passwort.
+
+👉 knx-monitor.de
+
+#knx #ets6 #elektriker #elektroinstallation #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Liste von sechs Telegrammen mit Absender, Gruppenadresse, Name und Wert, etwa „1/1/3 Licht Küche Ein“.</dd><dt>Erster Kommentar</dt><dd>ETS5 oder ETS6, womit arbeitet ihr?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="start-3-links">
+      <header><span class="kennung">Bild · start-3-links</span><h3>Kachel 3 (links, zuletzt)</h3></header>
+      <img class="single" src="media/start-3-links.webp" alt="iPad mit KNX Monitor als Add-on in Home Assistant: Seitenleiste, Übersicht der Gruppenadressen mit Werten und Details einer Adresse." loading="lazy" width="1080" height="1350">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>KNX Monitor ist da: Busmonitor und Diagnose für KNX.
+
+Jedes Telegramm mit Absender, Ziel und Wert, eingeordnet mit deinem ETS-Projekt. Dazu die Prüfung der Anlage auf stille Geräte, falsche Datentypen und Busprobleme.
+
+Heute schon kostenlos als Home-Assistant-Add-on und für Linux. iPhone, iPad, Android, Mac und Windows folgen. Deine Anlagendaten bleiben in deinem Netz.
+
+👉 knx-monitor.de (Link in der Bio)
+
+#knx #busmonitor #homeassistant #elektriker #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>iPad mit KNX Monitor als Add-on in Home Assistant: Seitenleiste, Übersicht der Gruppenadressen mit Werten und Details einer Adresse.</dd><dt>Erster Kommentar</dt><dd>Was würdet ihr als Erstes auf eurem Bus nachsehen?</dd></dl>
+      </div>
+    </article></section><section><h2>Karussells</h2>
+    <article class="post" id="karussell-diagnose">
+      <header><span class="kennung">Karussell · 7 Bilder · karussell-diagnose</span><h3>5 Dinge, die dein Bus dir verrät</h3></header>
+      <div class="strip" role="group" aria-label="Sieben Bilder: fünf typische Busprobleme mit Beispielbefund, zum Schluss die Gesundheitsprüfung auf dem iPhone."><img src="media/karussell-diagnose/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-diagnose/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-diagnose/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-diagnose/04.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-diagnose/05.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-diagnose/06.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-diagnose/07.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>5 Dinge, die dein Bus dir verrät 👉
+
+Viele Fehler kündigen sich auf dem Bus an, lange bevor jemand anruft, weil das Licht nicht geht:
+
+1. Geräte, die verstummt sind
+2. Wiederholungen, weil Quittungen fehlen
+3. Datentypen, die nicht zum Projekt passen
+4. Linien unter zu viel Last
+5. Leseanfragen, auf die niemand antwortet
+
+Die Gesundheitsprüfung in KNX Monitor sucht all das in einem Lauf und schreibt dir einen PDF-Bericht dazu.
+
+👉 knx-monitor.de
+
+#knx #fehlersuche #elektriker #ets6 #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Sieben Bilder: fünf typische Busprobleme mit Beispielbefund, zum Schluss die Gesundheitsprüfung auf dem iPhone.</dd><dt>Erster Kommentar</dt><dd>Welcher dieser fünf Fehler begegnet euch am häufigsten?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="karussell-inbetriebnahme">
+      <header><span class="kennung">Karussell · 4 Bilder · karussell-inbetriebnahme</span><h3>Inbetriebnahme</h3></header>
+      <div class="strip" role="group" aria-label="Vier Bilder: eine Liste von Status-Adressen, dieselbe Liste größtenteils abgehakt, dann die Inbetriebnahme-Ansicht auf dem iPhone."><img src="media/karussell-inbetriebnahme/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-inbetriebnahme/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-inbetriebnahme/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-inbetriebnahme/04.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Abhaken statt abschreiben 👉
+
+Bei der Inbetriebnahme fragt KNX Monitor alle Status-Adressen deines Projekts ab. Antwortet ein Gerät, ist es abgehakt. Was offen bleibt, siehst du sofort. Im Home-Assistant-Add-on schaltest du dafür „Nur lesen“ aus, das seit Version 1.9.4 ab Werk an ist.
+
+Am Ende gibt es das Protokoll für die Übergabe als PDF, mit Unterschriftsfeld.
+
+👉 knx-monitor.de
+
+#knx #inbetriebnahme #elektriker #ets6 #elektroinstallation</pre>
+        <dl><dt>Alt-Text</dt><dd>Vier Bilder: eine Liste von Status-Adressen, dieselbe Liste größtenteils abgehakt, dann die Inbetriebnahme-Ansicht auf dem iPhone.</dd><dt>Erster Kommentar</dt><dd>Wie dokumentiert ihr heute die Übergabe an den Kunden?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="karussell-addon">
+      <header><span class="kennung">Karussell · 7 Bilder · karussell-addon</span><h3>Home-Assistant-Add-on</h3></header>
+      <div class="strip" role="group" aria-label="Sieben Bilder zum Home-Assistant-Add-on: Installation in vier Schritten, Verbindung über die KNX-Integration, Ereignisse, Entitäten, Daueraufzeichnung und das Add-on auf dem iPad."><img src="media/karussell-addon/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-addon/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-addon/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-addon/04.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-addon/05.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-addon/06.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-addon/07.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Das Home-Assistant-Add-on im Detail 👉
+
+- In zwei Minuten in der Seitenleiste, für amd64 und aarch64
+- Nutzt auf Wunsch die Verbindung deiner KNX-Integration und spart so einen Tunnelplatz
+- Wächter, Alarme und die Busverbindung als Trigger für Automationen, mit fertigen Blueprints
+- Mit MQTT ein eigenes Gerät mit Entitäten und Gerätetriggern
+- Zeichnet dauerhaft auf, auch ohne offenen Browser, und steckt in deinen Backups
+- Seit Version 1.9.4 ab Werk nur lesend: Es sendet nichts auf den Bus, bis du „Nur lesen“ in der Konfiguration ausschaltest
+
+Kostenlos für eine Installation, der Quellcode ist offen (GPLv3). Alles zum Add-on: knx-monitor.de/addon
+
+#knx #homeassistant #hassio #homeautomation #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Sieben Bilder zum Home-Assistant-Add-on: Installation in vier Schritten, Verbindung über die KNX-Integration, Ereignisse, Entitäten, Daueraufzeichnung und das Add-on auf dem iPad.</dd><dt>Erster Kommentar</dt><dd>Nutzt ihr die KNX-Integration schon in Home Assistant?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="karussell-box">
+      <header><span class="kennung">Karussell · 7 Bilder · karussell-box</span><h3>KNX-Box</h3></header>
+      <div class="strip" role="group" aria-label="Sieben Bilder zur KNX-Box: was man braucht, vier Schritte der Vorbereitung, die zwei Aufkleber, Dauerbetrieb, Sicherheit beim Kunden und der Hinweis auf die Vorschau."><img src="media/karussell-box/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-box/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-box/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-box/04.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-box/05.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-box/06.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-box/07.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Die KNX-Box im Detail 👉
+
+Ein Raspberry Pi 4 oder 5, eine SD-Karte, ein Netzwerkkabel zum Switch am IP-Gateway. Einmal am Schreibtisch vorbereitet, legt die Box ihr WLAN und ihre Passwörter selbst an. Auf das Blatt zum Ausdrucken kommen zwei Aufkleber: einer für die App, einer mit dem WLAN.
+
+Beim Kunden bleibt sie zu: Über das Kabel antwortet sie standardmäßig nicht, und nach dem Koppeln setzt du ein eigenes Passwort.
+
+Ehrlich gesagt ist das noch eine Vorschau. Auf einem Pi 4 läuft die Box am echten Bus, über das IP-Gateway und direkt an der Linie mit dem kBerry-Modul. Der Pi 5 und der Dauereinsatz auf einer Baustelle stehen noch aus. Wer es ausprobiert und berichtet, hilft sehr.
+
+👉 knx-monitor.de/box
+
+#knx #elektriker #baustelle #raspberrypi #schaltschrank</pre>
+        <dl><dt>Alt-Text</dt><dd>Sieben Bilder zur KNX-Box: was man braucht, vier Schritte der Vorbereitung, die zwei Aufkleber, Dauerbetrieb, Sicherheit beim Kunden und der Hinweis auf die Vorschau.</dd><dt>Erster Kommentar</dt><dd>Pi 4 oder Pi 5, was liegt bei euch noch in der Schublade?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="karussell-ets">
+      <header><span class="kennung">Karussell · 6 Bilder · karussell-ets</span><h3>ETS-Projekt</h3></header>
+      <div class="strip" role="group" aria-label="Sechs Bilder: Telegramme ohne und mit ETS-Projekt im Vergleich, der Import, Aktoren in der Objektansicht auf dem iPad und die Exporte."><img src="media/karussell-ets/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-ets/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-ets/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-ets/04.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-ets/05.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-ets/06.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Was dein ETS-Projekt alles verrät 👉
+
+Ohne Projekt sieht der Bus aus wie eine Tabelle voller Adressen und Hex-Werte. Mit Projekt kennt KNX Monitor Namen, Räume, Datentypen und Geräte und zeigt dir „Position Wohnen: 40 %“.
+
+Importieren kannst du jede .knxproj bis ETS6, auch mit Passwort. Das Passwort wird nicht gespeichert. Für KNX Secure kommt der Keyring dazu.
+
+👉 knx-monitor.de
+
+#knx #ets6 #elektriker #elektroinstallation #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Sechs Bilder: Telegramme ohne und mit ETS-Projekt im Vergleich, der Import, Aktoren in der Objektansicht auf dem iPad und die Exporte.</dd><dt>Erster Kommentar</dt><dd>Pflegt ihr Namen und Datentypen im Projekt sauber, oder ist das eher Glückssache?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="karussell-topologie">
+      <header><span class="kennung">Karussell · 6 Bilder · karussell-topologie</span><h3>Topologie und Geräte</h3></header>
+      <div class="strip" role="group" aria-label="Sechs Bilder: die Topologie einer Linie auf dem iPhone, das Gerätefenster eines Schaltaktors mit acht Kanälen, ein nicht gesehenes Gerät und die Kommunikationskarte."><img src="media/karussell-topologie/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-topologie/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-topologie/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-topologie/04.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-topologie/05.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-topologie/06.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Topologie und Geräte im Detail 👉
+
+Linie für Linie zeigt KNX Monitor, welche Geräte da sind, welche senden und wie viele Hops dazwischen liegen. Ein Tipp aufs Gerät öffnet seine Kanäle mit Gruppenadressen und Zuständen, dazu die Zähler für gesendete und empfangene Telegramme.
+
+Geräte, die laut Projekt in der Linie sitzen, aber nie etwas gesendet haben, fallen dabei sofort auf.
+
+👉 knx-monitor.de
+
+#knx #topologie #ets6 #elektriker #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Sechs Bilder: die Topologie einer Linie auf dem iPhone, das Gerätefenster eines Schaltaktors mit acht Kanälen, ein nicht gesehenes Gerät und die Kommunikationskarte.</dd><dt>Erster Kommentar</dt><dd>Wie viele Linien hat eure größte Anlage?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="karussell-einsteiger">
+      <header><span class="kennung">Karussell · 8 Bilder · karussell-einsteiger</span><h3>Einsteiger</h3></header>
+      <div class="strip" role="group" aria-label="Acht Folien: KNX verstehen ohne ETS-Projekt. Anlernen per Tastendruck mit Bildschirmfoto der App, Klartext in der Live-Liste, Hilfe beim Verbinden, KNX lernen an der eigenen Anlage, Ampel und Wochenbericht."><img src="media/karussell-einsteiger/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-einsteiger/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-einsteiger/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-einsteiger/04.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-einsteiger/05.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-einsteiger/06.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-einsteiger/07.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-einsteiger/08.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>KNX verstehen, auch ohne ETS-Projekt 👉
+
+Neu bei KNX und keine Projektdatei vom Elektriker? Seit Version 1.9 hat KNX Monitor fünf Werkzeuge genau dafür, im Home-Assistant-Add-on schon dabei und in den Apps in der Beta:
+
+1. Anlernen: Taster drücken, die App hört mit und fragt, was das war.
+2. Klartext: Die Live-Liste spricht in Sätzen statt in Hex.
+3. Hilfe beim Verbinden: Die App sagt, woran es hängt.
+4. KNX lernen: Begriffe und Lektionen mit Beispielen aus deinem Haus.
+5. Ampel und Wochenbericht: alles gut oder bitte nachsehen.
+
+Alles läuft lokal, nichts geht in eine Cloud.
+
+👉 knx-monitor.de
+
+#knx #smarthome #hausautomation #homeassistant #hausbau</pre>
+        <dl><dt>Alt-Text</dt><dd>Acht Folien: KNX verstehen ohne ETS-Projekt. Anlernen per Tastendruck mit Bildschirmfoto der App, Klartext in der Live-Liste, Hilfe beim Verbinden, KNX lernen an der eigenen Anlage, Ampel und Wochenbericht.</dd><dt>Erster Kommentar</dt><dd>Wie seid ihr damals an euer ETS-Projekt gekommen?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="karussell-enthusiasten">
+      <header><span class="kennung">Karussell · 8 Bilder · karussell-enthusiasten</span><h3>Enthusiasten</h3></header>
+      <div class="strip" role="group" aria-label="Acht Folien zu den Werkzeugen für Enthusiasten: Home-Assistant-Konfiguration aus dem ETS-Projekt mit Bildschirmfoto auf dem iPad, Ursachenkette eines Telegramms, Geräte-Inventur, Sicherheits-Check und Forenpaket."><img src="media/karussell-enthusiasten/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-enthusiasten/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-enthusiasten/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-enthusiasten/04.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-enthusiasten/05.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-enthusiasten/06.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-enthusiasten/07.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-enthusiasten/08.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Für alle, die tiefer graben 👉
+
+Fünf Werkzeuge in KNX Monitor, seit Version 1.9 im Home-Assistant-Add-on dabei:
+
+1. Home-Assistant-Konfiguration aus dem ETS-Projekt, als fertige knx.yaml. Unklares wird markiert, nicht geraten.
+2. Ursachenkette: Wer hat das Licht eingeschaltet, wer hat zurückgemeldet, wie schnell?
+3. Geräte-Inventur über den Bus: Hersteller, Seriennummer, Firmware, abgeglichen mit dem Projekt. Nur lesend.
+4. Sicherheits-Check: Tunnel, KNX Data Secure und fremde Absender.
+5. Forenpaket: Telegramme und Adressen als BBCode oder Markdown, auf Wunsch pseudonymisiert.
+
+👉 knx-monitor.de
+
+#knx #homeassistant #hassio #smarthome #homeautomation</pre>
+        <dl><dt>Alt-Text</dt><dd>Acht Folien zu den Werkzeugen für Enthusiasten: Home-Assistant-Konfiguration aus dem ETS-Projekt mit Bildschirmfoto auf dem iPad, Ursachenkette eines Telegramms, Geräte-Inventur, Sicherheits-Check und Forenpaket.</dd><dt>Erster Kommentar</dt><dd>Welches Werkzeug probiert ihr zuerst aus?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="karussell-rohbau">
+      <header><span class="kennung">Karussell · 7 Bilder · karussell-rohbau</span><h3>KNX im Neubau</h3></header>
+      <div class="strip" role="group" aria-label="Sieben Folien: Was beim KNX-Neubau vor dem Rohbau feststehen sollte. Buszuleitung und Reservedosen, Deckendosen vor dem Betonieren, Motorleitungen und Fensterkontakte, Rohre nach außen, Reserve im Verteiler, Fotos vor dem Verputzen."><img src="media/karussell-rohbau/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-rohbau/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-rohbau/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-rohbau/04.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-rohbau/05.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-rohbau/06.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-rohbau/07.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>KNX im Neubau: Was jetzt in die Wand muss 👉
+
+Eine Leuchte ist schnell getauscht. Eine neue Leitung im bezogenen Haus eher nicht. Darum die fünf Dinge, die in den Foren immer wieder auftauchen, wenn Bauherren zurückblicken, plus ein Tipp für den letzten Moment vor dem Verputzen:
+
+1. Bus zu jedem Taster, dazu Reservedosen
+2. Deckendosen und Rohre vor dem Betonieren
+3. Motorleitung an jedes Fenster, Fensterkontakte vorbereiten
+4. Rohre aufs Dach und nach draußen
+5. Reserve im Verteiler
+6. Jede Wand fotografieren
+
+Das sind Erfahrungen aus der Praxis anderer. Was bei euch passt, klärt ihr mit eurem Fachbetrieb.
+
+👉 knx-monitor.de/bauherren
+
+#knx #neubau #hausbau #elektroinstallation #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Sieben Folien: Was beim KNX-Neubau vor dem Rohbau feststehen sollte. Buszuleitung und Reservedosen, Deckendosen vor dem Betonieren, Motorleitungen und Fensterkontakte, Rohre nach außen, Reserve im Verteiler, Fotos vor dem Verputzen.</dd><dt>Erster Kommentar</dt><dd>Was würdet ihr beim nächsten Haus anders machen?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="karussell-bauherren">
+      <header><span class="kennung">Karussell · 6 Bilder · karussell-bauherren</span><h3>Bauherren-Paket</h3></header>
+      <div class="strip" role="group" aria-label="Sechs Folien: Das Bauherren-Paket von KNX Monitor als Ausblick. Haus im Schnitt zu den Alltagsmomenten, Art von Leuchte, Steckdose und Rollladen, Grundriss mit Geräten und Hinweis, Unterlagen mit Maßen, Prüfung am fertigen Bus."><img src="media/karussell-bauherren/01.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-bauherren/02.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-bauherren/03.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-bauherren/04.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-bauherren/05.webp" alt="" loading="lazy" width="1080" height="1350"><img src="media/karussell-bauherren/06.webp" alt="" loading="lazy" width="1080" height="1350"></div>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Woran wir gerade bauen: das Bauherren-Paket 👉
+
+Wer KNX plant, soll dafür keine Aktorkanäle kennen müssen. Darum beginnt das Paket beim Alltag: aufwachen, das Haus verlassen, nachts zum Bad. Daraus entstehen Raumbuch und Grundriss, und am Ende Unterlagen, mit denen euer Elektriker weiterarbeiten kann, samt Maßen und Aufstellung.
+
+Nach dem Einzug wird der Grundriss zum technischen Blick auf den Bus, auch im Home-Assistant-Add-on.
+
+Die erste Stufe ist gebaut und kommt mit den Apps, die gerade noch im Test sind. Die Abstimmung mit dem Fachbetrieb und der Blick auf den Bus folgen danach. Ihr baut gerade oder plant KNX? Schreibt mir, was euch bei der Planung am meisten fehlt.
+
+👉 knx-monitor.de/bauherren
+
+#knx #neubau #hausbau #homeassistant #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Sechs Folien: Das Bauherren-Paket von KNX Monitor als Ausblick. Haus im Schnitt zu den Alltagsmomenten, Art von Leuchte, Steckdose und Rollladen, Grundriss mit Geräten und Hinweis, Unterlagen mit Maßen, Prüfung am fertigen Bus.</dd><dt>Erster Kommentar</dt><dd>Was war bei eurer Planung am schwierigsten? Abstimmen und mitreden: github.com/regetskcob/KNX-Monitor/issues/7</dd></dl>
+      </div>
+    </article></section><section><h2>Bild</h2>
+    <article class="post" id="bild-box">
+      <header><span class="kennung">Bild · bild-box</span><h3>KNX-Box</h3></header>
+      <img class="single" src="media/bild-box.webp" alt="Gezeichneter Raspberry Pi, sein grünes Kabel führt in die waagrechte grüne Linie." loading="lazy" width="1080" height="1350">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Der Bus zeichnet sich auf, während du weg bist.
+
+Die KNX-Box ist ein Raspberry Pi, der am IP-Gateway jedes Telegramm mitschreibt, tagelang, mit eigenem WLAN. Für die Fehler, die nur nachts oder am Wochenende kommen.
+
+Image und Anleitung gibt es kostenlos, noch als Vorschau. Rückmeldungen von echten Baustellen sind sehr willkommen.
+
+👉 knx-monitor.de/box
+
+#knx #elektriker #baustelle #raspberrypi #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Gezeichneter Raspberry Pi, sein grünes Kabel führt in die waagrechte grüne Linie.</dd><dt>Erster Kommentar</dt><dd>Wie sucht ihr heute nach Fehlern, die nur sporadisch auftreten?</dd></dl>
+      </div>
+    </article></section><section><h2>Reels</h2>
+    <article class="post" id="reel-inbetrieb">
+      <header><span class="kennung">Reel · reel-inbetrieb</span><h3>Inbetriebnahme</h3></header>
+      <video class="reel" src="media/reel-inbetrieb.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: Sechs Status-Adressen werden nacheinander abgehakt, ein Balken füllt sich, danach die Inbetriebnahme auf dem iPhone."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Inbetriebnahme mit Liste.
+
+Alle Status-Adressen abfragen, abhaken, was antwortet, und am Ende das Protokoll für die Übergabe als PDF.
+
+👉 knx-monitor.de
+
+#knx #inbetriebnahme #elektriker #ets6 #elektroinstallation</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: Sechs Status-Adressen werden nacheinander abgehakt, ein Balken füllt sich, danach die Inbetriebnahme auf dem iPhone.</dd><dt>Erster Kommentar</dt><dd>Papier, Excel oder schon digital, wie läuft eure Inbetriebnahme?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-ha">
+      <header><span class="kennung">Reel · reel-ha</span><h3>Home Assistant</h3></header>
+      <video class="reel" src="media/reel-ha.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: In Home Assistant erscheinen drei Ereignisse von KNX Monitor, dann eine Mitteilung „Rauchmelder Flur: Alarm“, danach das Add-on auf dem iPad."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Dein KNX-Bus als Trigger in Home Assistant.
+
+Das Add-on meldet Wächter, Alarme und die Busverbindung als Ereignisse. Daraus baust du Automationen, mit fertigen Blueprints oder ganz eigenen. Und in der Seitenleiste hast du den Busmonitor immer dabei.
+
+👉 knx-monitor.de/addon
+
+#knx #homeassistant #hassio #homeautomation #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: In Home Assistant erscheinen drei Ereignisse von KNX Monitor, dann eine Mitteilung „Rauchmelder Flur: Alarm“, danach das Add-on auf dem iPad.</dd><dt>Erster Kommentar</dt><dd>Welche Automation würdet ihr als Erstes bauen?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-box">
+      <header><span class="kennung">Reel · reel-box</span><h3>KNX-Box</h3></header>
+      <video class="reel" src="media/reel-box.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: Eine Uhr läuft von 22 bis 6 Uhr, darunter erscheinen nächtliche Telegramme, eines davon mit 14 Wiederholungen markiert, daneben ein gezeichneter Raspberry Pi. Danach drei Schritte zur Einrichtung."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Der Fehler kommt nur nachts?
+
+Die KNX-Box schreibt mit, während du schläfst. Am Morgen siehst du, was um 03:12 auf dem Bus los war. Ein Raspberry Pi mit eigenem WLAN, Image und Anleitung kostenlos, noch als Vorschau.
+
+👉 knx-monitor.de/box
+
+#knx #elektriker #baustelle #raspberrypi #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: Eine Uhr läuft von 22 bis 6 Uhr, darunter erscheinen nächtliche Telegramme, eines davon mit 14 Wiederholungen markiert, daneben ein gezeichneter Raspberry Pi. Danach drei Schritte zur Einrichtung.</dd><dt>Erster Kommentar</dt><dd>Was war euer hartnäckigster Fehler, der nur nachts kam?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-karte">
+      <header><span class="kennung">Reel · reel-karte</span><h3>Kommunikationskarte</h3></header>
+      <video class="reel" src="media/reel-karte.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: Von der Wetterstation führt eine Linie zur Gruppenadresse 4/0/0 Außentemperatur und von dort zu vier Tastern, danach die Kommunikationskarte auf dem iPhone."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Wer redet hier mit wem?
+
+Die Kommunikationskarte zeigt für jede Gruppenadresse, wer sendet und wer empfängt, aus dem ETS-Projekt und vom Bus. Praktisch, wenn ein Taster das Falsche schaltet.
+
+👉 knx-monitor.de
+
+#knx #busmonitor #elektriker #ets6 #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: Von der Wetterstation führt eine Linie zur Gruppenadresse 4/0/0 Außentemperatur und von dort zu vier Tastern, danach die Kommunikationskarte auf dem iPhone.</dd><dt>Erster Kommentar</dt><dd>Wie findet ihr heute heraus, wer eine Adresse alles hört?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-schreiben">
+      <header><span class="kennung">Reel · reel-schreiben</span><h3>Lesen und Schreiben</h3></header>
+      <video class="reel" src="media/reel-schreiben.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: In ein Formular wird „1/1/3 Licht Küche“ getippt, der Wert Ein gewählt und Schreiben gedrückt, darunter erscheinen das gesendete Telegramm und die Rückmeldung."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Testen, ohne die ETS zu öffnen.
+
+Gruppenadresse wählen, Wert setzen, schreiben. KNX Monitor nimmt den Datentyp aus deinem Projekt, und die Antwort des Aktors siehst du gleich im Monitor.
+
+Im Home-Assistant-Add-on ist seit Version 1.9.4 „Nur lesen“ voreingestellt, zum Schreiben schaltest du es in der Konfiguration aus.
+
+👉 knx-monitor.de
+
+#knx #ets6 #elektriker #schaltschrank #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: In ein Formular wird „1/1/3 Licht Küche“ getippt, der Wert Ein gewählt und Schreiben gedrückt, darunter erscheinen das gesendete Telegramm und die Rückmeldung.</dd><dt>Erster Kommentar</dt><dd>Womit testet ihr Aktoren bei der Inbetriebnahme?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-anlernen">
+      <header><span class="kennung">Reel · reel-anlernen</span><h3>Anlernen ohne ETS-Projekt</h3></header>
+      <video class="reel" src="media/reel-anlernen.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: Die App fängt ein Telegramm samt Rückmeldung, dann werden Raum „Küche“ und „Deckenlicht“ angetippt. Danach wird aus der Adresse 1/0/1 der Satz „Taster Küche hat Deckenlicht Küche eingeschaltet“."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Kein ETS-Projekt? Drück einen Taster.
+
+KNX Monitor hört mit, fängt Befehl und Rückmeldung und fragt dich, was das war. Raum und Art antippen, fertig: Aus 1/0/1 wird „Deckenlicht Küche“. Übersicht, Objekte und Diagramme funktionieren sofort, ein späteres ETS-Projekt hat Vorrang.
+
+Seit Version 1.9 im Home-Assistant-Add-on, in den Apps in der Beta.
+
+👉 knx-monitor.de
+
+#knx #smarthome #hausautomation #homeassistant #hausbau</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: Die App fängt ein Telegramm samt Rückmeldung, dann werden Raum „Küche“ und „Deckenlicht“ angetippt. Danach wird aus der Adresse 1/0/1 der Satz „Taster Küche hat Deckenlicht Küche eingeschaltet“.</dd><dt>Erster Kommentar</dt><dd>Wie viele Adressen in eurer Anlage habt ihr ohne Namen?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-durchklingeln">
+      <header><span class="kennung">Reel · reel-durchklingeln</span><h3>Durchklingeln</h3></header>
+      <video class="reel" src="media/reel-durchklingeln.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: Eine Liste von Status-Adressen hakt sich nacheinander ab, neben jedem Wert ein Notenzeichen. Eine Zeile meldet einen fremden Absender. Danach drei Töne: für Schreiben, Antwort und fremden Absender."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Durchklingeln, ganz allein.
+
+Taster drücken, das Handy klingelt, die Liste hakt sich selbst ab. Für Schreiben, Antwort und fremde Absender gibt es je einen eigenen Ton, so musst du nicht aufs Display schauen. Auf Android auch mit gesperrtem Bildschirm.
+
+Inbetriebnahme mit einer Person statt zwei, seit Version 1.9 im Home-Assistant-Add-on und in der Beta der Apps.
+
+👉 knx-monitor.de
+
+#knx #inbetriebnahme #elektriker #ets6 #elektroinstallation</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: Eine Liste von Status-Adressen hakt sich nacheinander ab, neben jedem Wert ein Notenzeichen. Eine Zeile meldet einen fremden Absender. Danach drei Töne: für Schreiben, Antwort und fremden Absender.</dd><dt>Erster Kommentar</dt><dd>Mit wie vielen Leuten klingelt ihr eine Anlage durch?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-bauherren">
+      <header><span class="kennung">Reel · reel-bauherren</span><h3>Bauherren-Paket</h3></header>
+      <video class="reel" src="media/reel-bauherren.mp4" controls muted loop playsinline preload="metadata" aria-label="Kurzes Video ohne Ton: Ein Haus im Schnitt wird morgens hell, die Rollläden fahren. Danach erscheinen Wünsche mit der Einstufung Rohbau oder Programmierung."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Was soll dein Haus einmal können?
+
+Daran bauen wir gerade: KNX planen, ausgehend vom Alltag. Du entscheidest an Momenten, und die App zeigt, was früh in die Wand muss und was sich später programmieren lässt. Die erste Stufe kommt mit den Apps, und die sind noch im Test.
+
+👉 knx-monitor.de/bauherren
+
+#knx #neubau #hausbau #hausautomation #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Kurzes Video ohne Ton: Ein Haus im Schnitt wird morgens hell, die Rollläden fahren. Danach erscheinen Wünsche mit der Einstufung Rohbau oder Programmierung.</dd><dt>Erster Kommentar</dt><dd>Welcher Moment im Alltag wäre euch am wichtigsten? Abstimmen und mitreden: github.com/regetskcob/KNX-Monitor/issues/7</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-grundriss">
+      <header><span class="kennung">Reel · reel-grundriss</span><h3>Grundriss</h3></header>
+      <video class="reel" src="media/reel-grundriss.mp4" controls muted loop playsinline preload="metadata" aria-label="Kurzes Video ohne Ton: Auf einem Grundriss wird ein Taster hinter einer Tür markiert und auf die Griffseite verschoben. Danach erscheint der Kanalbedarf eines Beispielhauses."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Der Taster liegt hinter der Tür. Besser, das fällt jetzt auf.
+
+Im Hausplan setzt du Geräte auf deinen Grundriss, die App fragt nach und rechnet den Bedarf mit. Die Zahlen im Video stammen aus einem Beispielhaus. Kommt mit den Apps, die gerade noch im Test sind.
+
+👉 knx-monitor.de/bauherren
+
+#knx #neubau #grundriss #elektroplanung #smarthome</pre>
+        <dl><dt>Alt-Text</dt><dd>Kurzes Video ohne Ton: Auf einem Grundriss wird ein Taster hinter einer Tür markiert und auf die Griffseite verschoben. Danach erscheint der Kanalbedarf eines Beispielhauses.</dd><dt>Erster Kommentar</dt><dd>Wo sitzt bei euch der ungünstigste Schalter im Haus?</dd></dl>
+      </div>
+    </article></section><section id="foren"><h2>Foren</h2><p class="lead">Antippen lädt das Bild herunter.</p><h3>Bilder für deutsche Foren</h3><div class="strip forum"><a href="media/forum/de/01-overview.png" download><img src="media/forum/de/01-overview.png" alt="01-overview" loading="lazy"></a><a href="media/forum/de/02-live.png" download><img src="media/forum/de/02-live.png" alt="02-live" loading="lazy"></a><a href="media/forum/de/03-objects.png" download><img src="media/forum/de/03-objects.png" alt="03-objects" loading="lazy"></a><a href="media/forum/de/04-details.png" download><img src="media/forum/de/04-details.png" alt="04-details" loading="lazy"></a></div><h3>Bilder für englische Foren</h3><div class="strip forum"><a href="media/forum/en/01-overview.png" download><img src="media/forum/en/01-overview.png" alt="01-overview" loading="lazy"></a><a href="media/forum/en/02-live.png" download><img src="media/forum/en/02-live.png" alt="02-live" loading="lazy"></a><a href="media/forum/en/03-objects.png" download><img src="media/forum/en/03-objects.png" alt="03-objects" loading="lazy"></a></div>
+    <article class="post forum-text">
+      <header><h3>1. KNX-User-Forum (Deutsch)</h3></header>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Text</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Stand: 2.11.2026 (Version 1.9.2). Regeln: § 8 Nr. 14 der Forenregeln verbietet
+reine Werbethemen und Links auf Angebots- oder Bestellseiten. Darum als
+Testaufruf, ohne Preise und ohne Link auf die Startseite (dort steht die
+Preisvorschau).
+
+Hinweis 03.11.: Die Vorstellung steht schon im Thread 2112078, Moderatoren-
+Nachricht und Termin 6.11. sind damit erledigt. Im geposteten Text stimmt
+„Der Quellcode ist nicht öffentlich.“ nicht mehr, die Korrektur steht am Ende
+von 1a. Den Text unten deshalb nicht neu posten.
+
+### Nachricht an die Moderatoren (vorab)
+
+**Betreff:** Nachfrage: Vorstellung von KNX Monitor im Forum
+
+Hallo zusammen,
+
+ich hatte wegen der Vorstellung meines Projekts KNX Monitor schon angefragt und
+möchte kurz nachhaken. Geplant ist ein einzelnes Thema mit Testaufruf, offen als
+Entwickler gekennzeichnet. Im Mittelpunkt stehen das kostenlose
+Home-Assistant-Add-on und die Linux-App, Preise nenne ich keine.
+
+Wenn nichts dagegen spricht, würde ich den Beitrag am Freitag, 6.11., im
+passenden Unterforum einstellen. Falls euch ein anderer Bereich lieber ist oder
+ich etwas anpassen soll, sagt mir bitte Bescheid, dann ändere ich das gern.
+
+Viele Grüße
+Daniel
+
+### Beitrag
+
+- **Wo:** das passende Unterforum vor dem Posten prüfen; frühere
+  Projektvorstellungen stehen im KNX-EIB-Forum.
+- **Bilder:** `store/social/forum/de/` (Mac im Geräterahmen, vier Stück, auch auf der
+  Socials-Seite im Abschnitt Foren), dazu `teaser/assets/images/box-setup-de.png`.
+
+**Titel:** Projektvorstellung und Tester gesucht: KNX Monitor, Busmonitor und Diagnose für Home Assistant, Linux und Raspberry Pi
+
+Hallo zusammen,
+
+ich bin Daniel, und KNX Monitor ist mein eigenes Projekt. Das hier ist also
+eine Vorstellung in eigener Sache, verbunden mit einer Bitte: Ich suche Leute,
+die es an ihrer Anlage ausprobieren und mir ehrlich sagen, was fehlt oder
+nicht stimmt. Gerade von euch, die täglich mit der ETS arbeiten, würde mich
+das interessieren.
+
+**Wofür ich es gebaut habe**
+
+Am meisten Zeit kosten mich und viele hier im Forum die Fehler, die nur
+manchmal auftreten. Deshalb zeichnet KNX Monitor den Bus dauerhaft auf. Wenn
+das Licht wieder von allein angeht, tippt jemand im Haus „Es ist gerade
+passiert“, und ihr seht genau, was zu dem Zeitpunkt auf dem Bus los war.
+
+**Was sonst noch drin ist**
+
+- Telegramme live mit Absender, Ziel und Wert, eingeordnet mit dem ETS-Projekt
+  (`.knxproj` bis ETS6, auch mit Passwort)
+- Busmonitor mit ACK/NAK, Wiederholungen und Buslast, dazu Topologie
+- Gesundheitsprüfung: verstummte Geräte, Zyklen, falsche Datentypen,
+  unbeantwortete Leseanfragen, mit PDF-Bericht
+- Projekt-Abgleich: was fehlt, was unbekannt ist, was nie sendet
+- Inbetriebnahme mit Checkliste und Protokoll für die Übergabe
+- Tunnel (UDP/TCP), Routing und KNX IP Secure, Data Secure mit dem Keyring aus
+  der ETS
+
+Schreiben auf den Bus ist möglich, aber nur, wenn ihr es selbst auslöst. Vorher
+erscheint ein Hinweis, dass das ein Eingriff in die Anlage ist.
+
+**Wo es läuft**
+
+- **Home-Assistant-Add-on:** kostenlos, alle Werkzeuge, für eine Installation.
+  Es kann die Verbindung der KNX-Integration mitnutzen, ihr braucht dann keinen
+  weiteren Tunnel.
+- **Linux-App:** ebenfalls kostenlos, für eine Installation.
+- **Docker:** derselbe Server für NAS, Proxmox oder neben ioBroker.
+- **KNX-Box (Vorschau):** ein Raspberry Pi, der vor Ort aufzeichnet und ein
+  eigenes WLAN aufspannt, am IP-Gateway oder direkt am TP mit dem kBerry-Modul.
+  Geprüft habe ich sie auf einem Pi 4 am echten Bus. Der Pi 5 und der Dauereinsatz
+  auf einer Baustelle stehen noch aus, und im kBerry-Betrieb kann die Box nicht
+  senden. Wer einen Pi übrig hat: Hier hilft mir jede Rückmeldung.
+- **iPhone, iPad, Android, Mac und Windows:** sind noch im Test.
+
+**Was ihr vorab wissen solltet**
+
+- Der Quellcode ist nicht öffentlich.
+- Die Apps für Telefon, Tablet und Mac bekommen später kostenpflichtige Stufen,
+  ebenso die Kopplung einer App mit der Box. Das Add-on bleibt kostenlos.
+- Add-on und Box schicken von sich aus nichts an mich und ins Internet nur das,
+  was ihr selbst einrichtet, etwa Benachrichtigungen (die Box stellt mit Internet
+  zusätzlich ihre Uhr). Projekt und Telegramme bleiben bei euch. Die Apps brauchen
+  kein Konto. Wer eins möchte, damit ein Kauf auf mehreren Geräten gilt, legt
+  freiwillig eins an. Details stehen in der Datenschutzerklärung:
+  https://knx-monitor.de/datenschutz/
+
+**Links**
+
+- Add-on und Docker: https://knx-monitor.de/addon/
+- KNX-Box: https://knx-monitor.de/box/
+- Linux-App: https://github.com/regetskcob/KNX-Monitor/releases/latest
+- Fehler und Wünsche: https://github.com/regetskcob/KNX-Monitor/issues
+
+Falls ihr mir Projektdetails zeigen wollt, ladet bitte nicht euer ETS-Projekt
+hoch. Die App erstellt ein Diagnosepaket ohne ETS-Datei, Keyring und Passwörter,
+das ihr per Mail schicken könnt: https://knx-monitor.de/feedback/
+
+Zwei Fragen an euch: Was fehlt euch bei der Fehlersuche heute am meisten? Und
+welche Gateways nutzt ihr? Ich teste bisher vor allem mit [eigene Gateways
+eintragen].
+
+Viele Grüße
+Daniel
+
+### 1a. Antwort im Vorstellungsthread: Open Source (Entwurf 03.11.2026)
+
+Veröffentlicht: 04.11.2026 (Antwort gepostet, Startbeitrag ergänzt). Nicht erneut posten.
+
+Thread: https://knx-user-forum.de/forum/öffentlicher-bereich/knx-eib-forum/2112078
+Stand 03.11.: https://github.com/regetskcob/KNX-Monitor-Code ist öffentlich,
+der Nur-Lesen-Schalter ist mit Add-on 1.9.4 ausgeliefert. Docker hat ihn mit
+1.9.4 ebenfalls (`READ_ONLY=1`, dort ab Werk aus), die Box erst mit ihrem
+nächsten Image (aktuell box-v1.9.2). Kann sofort gepostet werden.
+
+Hallo zusammen,
+
+erst mal danke für die ehrlichen Rückmeldungen, gerade auch für die
+kritischen. Den Punkt mit dem Quellcode habe ich mir zu Herzen genommen,
+weil er berechtigt ist: Wer ein Werkzeug an seine laufende Anlage hängt, das
+auf den Bus schreiben kann und den Keyring kennt, will nachsehen können, was
+es dort tut.
+
+Deshalb steht KNX Monitor ab heute als Open Source unter der GPLv3 auf GitHub:
+https://github.com/regetskcob/KNX-Monitor-Code
+
+**Was drin ist**
+- App, Home-Assistant-Add-on, Docker und die Software der KNX-Box, also
+  alles, was bei euch läuft.
+- Alles, was der Server auf den Bus schickt, läuft durch eine einzige Datei:
+  `ha-addon/knx_monitor/server/lib/src/read_only.dart`. r4id hat recht,
+  Hunderttausende Zeilen liest niemand. Diese eine Datei schafft man aber in
+  ein paar Minuten.
+- Nicht drin sind die kommerziellen Teile, an denen ich gerade baue: das
+  Konto mit Sync, die Lösung für Elektrobetriebe und das Bauherren-Paket.
+  Alles für Einsteiger und Fortgeschrittene ist offen, App und Add-on bauen
+  und laufen ohne diese Teile.
+
+**Nur lesen**
+Seit Version 1.9.4 hat das Add-on die Option „Nur lesen“, und die ist von
+Anfang an eingeschaltet. Dann sendet der Server gar nichts auf den
+Bus, auch keine Leseanfragen. Aufzeichnung, Auswertung und
+Gesundheitsprüfung laufen ganz normal weiter. Wer schreiben will, schaltet
+sie bewusst in der Konfiguration aus. Docker hat dasselbe über
+`READ_ONLY=1`, die Box bekommt es mit ihrem nächsten Image. Noschvie, vielleicht ist das ja ein Weg, es doch einmal an der
+eigenen Anlage auszuprobieren.
+
+**Und wovon lebt das Projekt?**
+Add-on und Linux-App bleiben kostenlos, mit allen Werkzeugen. Plus und Pro
+gibt es später in den Apps aus App Store und Google Play. Bezahlt wird dann
+die fertige, signierte App auf Handy, Tablet und Mac mit Updates, und damit
+die Weiterentwicklung. Wer sich das lieber selbst baut, darf das. Nur der
+Name KNX Monitor und das Logo bleiben beim Original, damit niemand
+verwechselt, was er da installiert.
+
+**SpectrumKNX**
+Ein tolles Werkzeug, und wer damit glücklich ist, braucht KNX Monitor nicht.
+Spannend finde ich die Fälle dazwischen: der Fehler, der nur alle paar Tage
+auftritt, die Übergabe mit Protokoll, der Abgleich mit dem ETS-Projekt. Wenn
+ihr so etwas gerade auf dem Tisch habt, freue ich mich über jede
+Rückmeldung.
+
+Damit sich niemand festlegen muss: Seit 1.9.5 gibt das Add-on seinen
+Verlauf als ETS-Gruppenmonitor-Datei aus, im selben Format, das der
+Telegrammspeicher von Home Assistant und SpectrumKNX nutzen. Umgekehrt liest
+KNX Monitor deren Dateien. Wer beides nutzt, kann Aufzeichnungen also hin und
+her schieben.
+
+Fragen, Fehler und Wünsche gerne hier im Thread oder in den Issues:
+https://github.com/regetskcob/KNX-Monitor/issues
+
+Viele Grüße
+Daniel
+
+**Startbeitrag anpassen:** unter „Was ihr vorab wissen solltet“ die Zeile
+„Der Quellcode ist nicht öffentlich.“ ersetzen durch:
+
+- Der Quellcode ist offen (GPLv3): https://github.com/regetskcob/KNX-Monitor-Code
+
+Optional unter „Schreiben auf den Bus ist möglich …“ ergänzen:
+
+Im Add-on ist seit Version 1.9.4 „Nur lesen“ voreingestellt, dann sendet es
+gar nichts auf den Bus.</pre>
+      </div>
+    </article>
+    <article class="post forum-text">
+      <header><h3>2. Home Assistant Community (Englisch)</h3></header>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Text</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>- **Wo:** community.home-assistant.io, Kategorie **Share your Projects!**
+  (Unterkategorie Add-ons/Apps, falls vorhanden).
+- **Bilder:** `store/social/forum/en/` (auch auf der Socials-Seite), ein Bildschirmfoto
+  des Geräts „KNX Monitor“ in Home Assistant (MQTT) und eines Blueprints
+  (vorher in der eigenen Installation aufnehmen).
+
+**Title:** KNX Monitor: bus monitor and diagnostics add-on for KNX, with events, blueprints and an MQTT device
+
+Hi everyone,
+
+I&#x27;m the developer of **KNX Monitor**, a bus monitor and diagnostics tool for
+KNX, and I&#x27;d like to share its Home Assistant add-on. It&#x27;s free for one
+installation, with every tool, and runs fully local. The source code is open
+under GPLv3: https://github.com/regetskcob/KNX-Monitor-Code
+
+**What it does**
+
+- Every telegram live with source, destination and value, named and typed
+  from your ETS project (`.knxproj` up to ETS6, also password protected)
+- Overview of all group addresses with current value and history, by rooms
+  and functions; actuators drawn as DIN-rail devices with channel LEDs
+- Health check (silent devices, cycles, wrong datapoint types, repeats, bus
+  quality) with a PDF report; commissioning checklist; bus monitor with
+  acknowledgements; topology
+- Continuous recording without an open browser, with replay, comments and
+  a &quot;report a problem&quot; flow
+
+**Made for Home Assistant**
+
+- **Read-only by default:** since 1.9.4 the add-on sends nothing to the bus,
+  not even read requests, until you turn off `read_only` in its
+  configuration; recording and evaluations keep running
+- **No extra tunnel needed:** if the KNX integration is set up, the add-on
+  can share its connection instead of taking another tunnel slot
+- **Events for automations:** `knx_monitor_watcher`, `knx_monitor_alarm`
+  (smoke detector, leak, device fault on/off) and `knx_monitor_bus`
+- **Blueprints** to import with one click (watcher fired, alarm or fault, bus
+  connection lost)
+- **MQTT device &quot;KNX Monitor&quot;** (if you run Mosquitto): bus connected,
+  recording switch, telegrams per minute, repeats, last telegram, and device
+  triggers for each watcher
+
+**Install:** add the repository `https://github.com/regetskcob/KNX-Monitor`
+or use the button on https://knx-monitor.de/addon/
+
+Feedback and bugs: https://github.com/regetskcob/KNX-Monitor/issues. A
+dedicated integration (discovery, services, diagnostics) is planned if
+people want it, vote here:
+https://github.com/regetskcob/KNX-Monitor/issues/2
+
+If you need to share group addresses with me, please don&#x27;t upload your ETS
+project; the add-on can create a diagnostics package without passwords,
+keys or IP addresses: https://knx-monitor.de/en/feedback/
+
+I&#x27;d love to hear what you&#x27;d want next.</pre>
+      </div>
+    </article>
+    <article class="post forum-text">
+      <header><h3>3. Reddit r/homeassistant (Englisch)</h3></header>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Text</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>- **Wo:** reddit.com/r/homeassistant. Flair **Personal Setup** oder
+  **Support**/„Release“, je nach dem, was das Subreddit gerade anbietet.
+  Regeln zu Eigenwerbung vorher lesen; mit einem Account, der auch sonst
+  mitliest und kommentiert, kommt so ein Beitrag besser an.
+- **Bild/Video:** ein kurzes Bildschirmvideo (15–20 s): Taster drücken,
+  Telegramm erscheint im Add-on, Wächter-Ereignis löst eine Automation aus.
+  Reddit mag Videos mehr als Screenshots.
+
+**Title:** I built a free KNX bus monitor add-on: see every telegram with names from your ETS project, plus events and blueprints for automations
+
+If you run KNX with Home Assistant you probably know the moment where
+something doesn&#x27;t switch and you have no idea what&#x27;s happening on the bus.
+I&#x27;m the dev of KNX Monitor and built the add-on for exactly that:
+
+- every telegram live, with names, rooms and datapoint types from your ETS
+  project
+- health check for silent devices, wrong datapoint types and bus problems
+- continuous recording, even with no browser open
+- shares the KNX integration&#x27;s connection, so no extra tunnel slot
+- fires events (`knx_monitor_watcher`, `knx_monitor_alarm`,
+  `knx_monitor_bus`) with ready-made blueprints, and shows up as an MQTT
+  device with triggers
+
+Free for one installation, everything stays local, and since 1.9.4 it&#x27;s
+read-only by default. The source code is open under GPLv3:
+https://github.com/regetskcob/KNX-Monitor-Code
+
+Add-on page: https://knx-monitor.de/addon/
+
+Happy to answer questions, and feedback is very welcome.</pre>
+      </div>
+    </article>
+    <article class="post forum-text">
+      <header><h3>4. ioBroker-Forum (Deutsch)</h3></header>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Text</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>- **Wo:** forum.iobroker.net, Bereich **Tester** oder **Off Topic / Andere
+  Software** (passendes Unterforum prüfen). Als Testaufruf formuliert, nicht
+  als Produktvorstellung.
+- **Bilder:** `store/social/forum/de/` (auch auf der Socials-Seite), ein Bildschirmfoto
+  der Datenpunkte unter `mqtt.0.knx_monitor` (vorher selbst aufnehmen).
+
+**Titel:** Tester gesucht: KNX-Busmonitor als Docker-Container, Werte per MQTT in ioBroker
+
+Hallo zusammen,
+
+ich bin der Entwickler von KNX Monitor, einem Busmonitor mit Diagnose für
+KNX. Bisher gibt es ihn als Home-Assistant-Add-on und für Linux. Jetzt läuft
+derselbe Server auch als **Docker-Container** neben ioBroker, und ich suche
+ein paar Leute, die das mit ihrer Anlage ausprobieren.
+
+**Was ihr bekommt**
+
+- Busmonitor und Diagnose im Browser: jedes Telegramm mit Namen und
+  Datentypen aus dem ETS-Projekt, Gesundheitsprüfung, Daueraufzeichnung,
+  Wächter auf Gruppenadressen
+- Über den **MQTT-Adapter** (als Broker) landen die Werte als Datenpunkte
+  unter `mqtt.0.knx_monitor`: Bus verbunden, Telegramme pro Minute,
+  Wiederholungen, Wächter- und Alarm-Ereignisse als JSON, und die
+  Aufzeichnung lässt sich über `recording.set` schalten
+- Image für amd64 und arm64 (Pi 4/5 mit 64-Bit-OS), kostenlos, alles bleibt
+  im eigenen Netz
+- Der Quellcode ist offen (GPLv3), ihr könnt also nachsehen, was der
+  Container auf dem Bus tut: https://github.com/regetskcob/KNX-Monitor-Code
+
+**Anleitung mit compose.yaml:**
+https://github.com/regetskcob/KNX-Monitor/tree/main/docker
+
+**Was mich interessiert:** Klappt die Einrichtung mit eurer Umgebung? Kommen
+die Datenpunkte so an, wie ihr sie in Skripten und Blockly braucht? Was
+fehlt?
+
+Wenn genug Interesse da ist, baue ich einen echten ioBroker-Adapter (Tab im
+Admin, Datenpunkte ohne MQTT). Abstimmen mit 👍:
+https://github.com/regetskcob/KNX-Monitor/issues/3
+
+Fehler gern als Issue oder hier im Thread. Projektdetails bitte nicht als
+ETS-Datei, sondern als Diagnosepaket per Mail:
+https://knx-monitor.de/feedback/
+
+Danke und viele Grüße
+Daniel</pre>
+      </div>
+    </article></section><details id="veroeffentlicht"><summary><h2>Veröffentlicht · 6</h2></summary>
+    <article class="post" id="hero-1-rechts">
+      <header><span class="kennung">Bild · hero-1-rechts · veröffentlicht 2026-10-25</span><h3>Hero der Startseite: Kachel 1 (rechts, zuerst anpinnen)</h3></header>
+      <img class="single" src="media/hero-1-rechts.webp" alt="Gezeichneter Kleinverteiler mit Spannungsversorgung, IP-Schnittstelle und drei Aktoren, das grüne Buskabel führt in eine waagrechte grüne Linie." loading="lazy" width="1080" height="1440">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Ein Kleinverteiler, ein Buskabel, und jedes Telegramm darauf im Blick.
+
+KNX Monitor ist Busmonitor und Diagnose für KNX: live, mit deinem ETS-Projekt, zu Hause und auf der Baustelle.
+
+👉 knx-monitor.de
+
+#knx #knxsmarthome #smarthome #hausautomation #knxmonitor #elektriker #schaltschrank #busmonitor</pre>
+        <dl><dt>Alt-Text</dt><dd>Gezeichneter Kleinverteiler mit Spannungsversorgung, IP-Schnittstelle und drei Aktoren, das grüne Buskabel führt in eine waagrechte grüne Linie.</dd><dt>Erster Kommentar</dt><dd>Wie sieht euer Schaltschrank aus, ordentlich oder historisch gewachsen?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="hero-2-mitte">
+      <header><span class="kennung">Bild · hero-2-mitte · veröffentlicht 2026-10-25</span><h3>Hero der Startseite: Kachel 2 (Mitte)</h3></header>
+      <img class="single" src="media/hero-2-mitte.webp" alt="Eine leuchtende Lampe „Licht Küche 1/1/3“, darunter eine Live-Liste von Telegrammen des Demo-Hauses mit Uhrzeit, Absender, Adresse, Name und Wert." loading="lazy" width="1080" height="1440">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Licht Küche an, und in der Liste steht es sofort: Absender, Gruppenadresse, Name, Wert.
+
+So sieht der Bus in KNX Monitor aus, eingeordnet mit deinem ETS-Projekt statt Hex-Kolonnen.
+
+👉 knx-monitor.de
+
+#knx #knxsmarthome #smarthome #hausautomation #knxmonitor #ets6 #busmonitor</pre>
+        <dl><dt>Alt-Text</dt><dd>Eine leuchtende Lampe „Licht Küche 1/1/3“, darunter eine Live-Liste von Telegrammen des Demo-Hauses mit Uhrzeit, Absender, Adresse, Name und Wert.</dd><dt>Erster Kommentar</dt><dd>Welche Adresse schaut ihr euch auf dem Bus als Erstes an?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="hero-3-links">
+      <header><span class="kennung">Bild · hero-3-links · veröffentlicht 2026-10-25</span><h3>Hero der Startseite: Kachel 3 (links, zuletzt anpinnen)</h3></header>
+      <img class="single" src="media/hero-3-links.webp" alt="Das App-Symbol von KNX Monitor, darunter die Überschrift „Jedes Telegramm im Blick, zu Hause und auf der Baustelle.“ und ein kurzer Text zum ETS-Projekt und zur Prüfung der Anlage." loading="lazy" width="1080" height="1440">
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Jedes Telegramm im Blick, zu Hause und auf der Baustelle.
+
+KNX Monitor ordnet deinen Bus mit deinem ETS-Projekt ein: Geräte, Räume und Werte statt Hex-Kolonnen. Dazu prüft es die Anlage auf stille Sensoren, falsche Datentypen und Busprobleme.
+
+Heute kostenlos als Home-Assistant-Add-on und für Linux. iPhone, iPad, Android, Mac und Windows folgen. Deine Anlagendaten bleiben in deinem Netz.
+
+👉 knx-monitor.de (Link in der Bio)
+
+#knx #knxsmarthome #smarthome #hausautomation #knxmonitor #homeassistant #elektriker #busmonitor #ets6</pre>
+        <dl><dt>Alt-Text</dt><dd>Das App-Symbol von KNX Monitor, darunter die Überschrift „Jedes Telegramm im Blick, zu Hause und auf der Baustelle.“ und ein kurzer Text zum ETS-Projekt und zur Prüfung der Anlage.</dd><dt>Erster Kommentar</dt><dd>Was würdet ihr als Erstes auf eurem Bus nachsehen?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-diagnose">
+      <header><span class="kennung">Reel · reel-diagnose · veröffentlicht 2026-10-27</span><h3>Reels: Diagnose</h3></header>
+      <video class="reel" src="media/reel-diagnose.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: Fünf Befundkarten erscheinen nacheinander, danach die Gesundheitsprüfung auf dem iPhone."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Dein Bus weiß, was kaputt ist.
+
+Verstummte Geräte, Wiederholungen, falsche Datentypen, Buslast und unbeantwortete Leseanfragen: Die Gesundheitsprüfung in KNX Monitor findet sie in einem Lauf.
+
+👉 knx-monitor.de
+
+#knx #knxsmarthome #smarthome #hausautomation #knxmonitor #elektriker #elektroinstallation #schaltschrank #ets6 #fehlersuche</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: Fünf Befundkarten erscheinen nacheinander, danach die Gesundheitsprüfung auf dem iPhone.</dd><dt>Erster Kommentar</dt><dd>Welchen Fehler hättet ihr gern früher gefunden?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-live">
+      <header><span class="kennung">Reel · reel-live · veröffentlicht 2026-10-28</span><h3>Reels: Live-Monitor</h3></header>
+      <video class="reel" src="media/reel-live.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: Ein gezeichneter Kleinverteiler, darüber erscheinen Telegramme mit Namen und Werten, danach der Live-Monitor auf einem Android-Handy."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Was passiert gerade auf deinem Bus?
+
+KNX Monitor zeigt jedes Telegramm live, mit den Namen aus deinem ETS-Projekt. Kostenlos als Home-Assistant-Add-on und für Linux, die Apps folgen.
+
+👉 knx-monitor.de
+
+#knx #knxsmarthome #smarthome #hausautomation #knxmonitor #elektriker #elektroinstallation #schaltschrank #ets6 #homeassistant #homeautomation</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: Ein gezeichneter Kleinverteiler, darüber erscheinen Telegramme mit Namen und Werten, danach der Live-Monitor auf einem Android-Handy.</dd><dt>Erster Kommentar</dt><dd>Was schaut ihr euch auf dem Bus am liebsten an?</dd></dl>
+      </div>
+    </article>
+    <article class="post" id="reel-topologie">
+      <header><span class="kennung">Reel · reel-topologie · veröffentlicht 2026-10-29</span><h3>Reels: Topologie und Geräte</h3></header>
+      <video class="reel" src="media/reel-topologie.mp4" controls muted loop playsinline preload="metadata" aria-label="Animation: Eine Linie mit 22 Geräten baut sich auf, ein Schaltaktor wird angetippt, in seinem Gerätefenster gehen die Kanäle nacheinander an. Danach die Topologie auf dem iPhone."></video>
+      <div class="caption">
+        <div class="caption-head"><span class="kennung">Caption</span><button type="button" class="copy">Kopieren</button></div>
+        <pre>Deine Anlage, Linie für Linie.
+
+Die Topologie in KNX Monitor zeigt jede Linie mit ihren Geräten. Ein Tipp öffnet das Gerät: Kanäle, Gruppenadressen, Zustände und wie viele Telegramme es gesendet und empfangen hat.
+
+👉 knx-monitor.de
+
+#knx #knxsmarthome #smarthome #hausautomation #knxmonitor #elektriker #elektroinstallation #schaltschrank #ets6 #topologie</pre>
+        <dl><dt>Alt-Text</dt><dd>Animation: Eine Linie mit 22 Geräten baut sich auf, ein Schaltaktor wird angetippt, in seinem Gerätefenster gehen die Kanäle nacheinander an. Danach die Topologie auf dem iPhone.</dd><dt>Erster Kommentar</dt><dd>Was wollt ihr in einem Gerätefenster unbedingt sehen?</dd></dl>
+      </div>
+    </article></details>
+</main>
+<script>
+  for (const b of document.querySelectorAll('.copy')) {
+    b.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(b.closest('.caption').querySelector('pre').textContent);
+        b.textContent = 'Kopiert'; b.classList.add('done');
+        setTimeout(() => { b.textContent = 'Kopieren'; b.classList.remove('done'); }, 1500);
+      } catch { b.textContent = 'Bitte markieren'; }
+    });
+  }
+</script>
+</body>
+</html>
