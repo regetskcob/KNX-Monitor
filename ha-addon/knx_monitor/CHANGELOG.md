@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.11.1
+
+- Fixed: on a phone the overview could not be scrolled once the card "Last 7
+  days" was there. The card stood above the list and took the whole screen. It
+  now scrolls with the overview.
+- The card "Last 7 days" can be collapsed to its headline, hidden for the
+  current week, or switched off. It comes back with the switch "Weekly overview
+  in the overview" in the menu "More". The choice is kept per device.
+- Connecting: the connection type comes before gateway and port. With "Home
+  Assistant", routing or the KNX HAT the two fields are gone, because they are
+  not used.
+- KNX RF: radio lines from the project (ETS, XKNX Editor, Home Assistant) are
+  marked as radio in the topology, and radio devices no longer count as "no
+  telegram" in the weekly overview: a battery-powered transmitter only speaks
+  when it has something to say. Signal strength and battery state per radio
+  device are up for a vote:
+  [#13](https://github.com/regetskcob/KNX-Monitor/issues/13). Import the
+  project again to get the marking.
+
 ## 1.11.0
 
 - Fewer false "stopped sending" alerts: group addresses that send in bursts
