@@ -1,5 +1,19 @@
 # Changelog
 
+## 1.11.2
+
+- "Stopped sending" only after a long silence: the repair in the Busclear
+  integration now needs at least twelve hours without a telegram, however
+  short the address's usual interval is. A presence detector that is quiet
+  for an hour or a night is no longer reported. The hours can be set: option
+  "Stopped sending after (hours)" (`silent_after_hours`; Docker and box
+  `SILENT_AFTER_HOURS`).
+- Time the recording did not cover no longer counts as silence. After a pause
+  of the recording, a lost connection or a restart, cyclic addresses were
+  reported as silent although nothing had been recorded at all.
+- Quick start as PDF, also for people new to KNX:
+  <https://busclear.de/en/schnellstart/busclear-quick-start.pdf>.
+
 ## 1.11.1
 
 - Fixed: on a phone the overview could not be scrolled once the card "Last 7
